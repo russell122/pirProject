@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Детальная статистика</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="web/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__burger"><span></span></div>
+          <div class="header__wrap"><a class="header__logo" href="/"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__tool">
+              <p>Инструмент управления<br>СМС - рассылками</p>
+            </div>
+            <div class="header__btn"><a class="button" href="/">СОЗДАТЬ РАССЫЛКУ</a></div>
+            <div class="header__phone order-2"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div>
+            <div class="header__balance order-1"><a class="header__balance-img headerIcon" href="/">
+                <svg class="svg-sprite-icon icon-wallet">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#wallet"></use>
+                </svg></a>
+              <div class="header__balance-body">
+                <p class="headLink rub">Баланс <br> 132,96</p><a class="phone-bodyText" href="/">Пополнить счет</a>
+              </div>
+            </div>
+            <div class="header__mail"><a class="header__mail-img headerIcon" href="/">
+                <svg class="svg-sprite-icon icon-user">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#user"></use>
+                </svg></a>
+              <div class="header__mail-body"><a class="headLink" href="mailto:gajarin@mail.ru">gajarin@mail.ru</a><a class="phone-bodyText" href="/">Выйти</a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__menu">
+          <div class="container">
+            <ul class="topmenu">
+              <li class="topmenu__item"><a href="#">ПРОФИЛЬ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">РАССЫЛКА</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">СТАТИСТИКА</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">ФИНАНСЫ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">РАЗРАБОТЧИКАМ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">БАЗА ЗНАНИЙ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="/">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="top-line"></div>
+            <div class="header__phone-small"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div><a class="header__exit" href="/">Выйти</a>
+          </div>
+        </nav>
+      </header>
+      <div class="header__showLBlock">
+        <div class="container">
+          <div class="header__showLBlock__wrap"><a class="header__showLBlock-img" href="/"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__btn-small"><a class="button" href="/">СОЗДАТЬ РАССЫЛКУ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <section class="detailedStatistics section-indent">
+          <div class="container">
+            <h2 class="title-5">Детальная статистика</h2>
+            <div class="g-tabs detailedStatistics__tabs">
+              <div class="g-tabs__item detailedStatistics__tabs-elem active">
+                <svg class="svg-sprite-icon icon-1">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                </svg><a class="g-tabs__link" href="#">SMS РАССЫЛКУ</a>
+              </div>
+              <div class="g-tabs__item detailedStatistics__tabs-elem">
+                <svg class="svg-sprite-icon icon-2">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                </svg><a class="g-tabs__link" href="#">VIBER РАССЫЛКА</a>
+              </div>
+              <div class="g-tabs__item detailedStatistics__tabs-elem">
+                <svg class="svg-sprite-icon icon-3">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
+                </svg><a class="g-tabs__link" href="#">VK РАССЫЛКА</a>
+              </div>
+            </div>
+            <div class="g-content-wrap detailedStatistics__content-wrap">
+              <div class="g-content-item detailedStatistics__content-item">
+                <form class="g-content-elem">
+                  <div class="detailedStatistics__content-elem">
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Отправитель"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Номер получателя"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Название рассылки"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Текст СМС"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detailedStatistics__content-line myInp">
+                    <input type="checkbox" id="check30" checked>
+                    <label for="check30">Каскадная</label>
+                  </div>
+                  <div class="detailedStatistics__content-bottom">
+                    <p>Время отправки СМС</p>
+                    <div class="myCalendar">
+                      <div class="myCalendar__elem"><span>c</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="myCalendar__elem"><span>до</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="button-accent2">ОТФИЛЬТРОВАТЬ</button>
+                  </div>
+                </form>
+                <div class="statistics__top">
+                  <div class="statistics__top-elems">
+                    <svg class="svg-sprite-icon icon-exel">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                    </svg>
+                    <p>в Excel <br>(максимальный <br>срок 3 месяца)</p><a class="statistics__top-elem active" href="/">
+                      <svg class="svg-sprite-icon icon-icon-table">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                      </svg></a><a class="statistics__top-elem" href="/">
+                      <svg class="svg-sprite-icon icon-icon-cards">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="g-table-big statistics__content-item g-table-big1">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>id сообщения<br>id сегмента</th>
+                        <th>Номер <br> получателя</th>
+                        <th>Текст сообщения</th>
+                        <th>Отправитель</th>
+                        <th>Оператор</th>
+                        <th>Название<br>рассылки</th>
+                        <th>Время <br>отправки SMS</th>
+                        <th>Время<br>смены <br>состояния</th>
+                        <th>Статус</th>
+                        <th>Стоимость</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111
+                          <div class="block__icon">
+                            <svg class="svg-sprite-icon icon-1">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                            </svg>
+                            <svg class="svg-sprite-icon icon-5">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#5"></use>
+                            </svg>
+                          </div>
+                        </td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и <br>получи первое занятие бесплатно.Подробности по<br> телефону: 39853<br> Сайт: fitnessruss.ru
+                          <p>1 СМС, 200 символов</p>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Beeline</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr class="bg">
+                        <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111
+                          <div class="block__icon">
+                            <svg class="svg-sprite-icon icon-1">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                            </svg>
+                          </div>
+                        </td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и <br>получи первое занятие бесплатно.Подробности по<br> телефону: 39853<br> Сайт: fitnessruss.ru
+                          <p>1 СМС, 200 символов</p>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Skylink</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Статус">Не доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr>
+                        <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и <br>получи первое занятие бесплатно.Подробности по<br> телефону: 39853<br> Сайт: fitnessruss.ru
+                          <p>1 СМС, 200 символов</p>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr class="bg">
+                        <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и <br>получи первое занятие бесплатно.Подробности по<br> телефону: 39853<br> Сайт: fitnessruss.ru
+                          <p>1 СМС, 200 символов</p>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Мегафон</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="myPaginations">
+                  <div class="myPaginations__pagin"><a class="myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                    <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+                  </div>
+                  <div class="myPaginations__value">
+                    <p>Записей на странице:</p>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>50</option>
+                          <option>75</option>
+                          <option>100</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-right">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="statistics__top">
+                  <div class="statistics__top-elems">
+                    <svg class="svg-sprite-icon icon-exel">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                    </svg>
+                    <p>в Excel <br>(максимальный <br>срок 3 месяца)</p><a class="statistics__top-elem" href="/">
+                      <svg class="svg-sprite-icon icon-icon-table">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                      </svg></a><a class="statistics__top-elem active" href="/">
+                      <svg class="svg-sprite-icon icon-icon-cards">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="g-card g-card1">
+                  <div class="g-card__row">
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-1">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-1">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-1">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="myPaginations">
+                  <div class="myPaginations__pagin"><a class="myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                    <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="g-content-item detailedStatistics__content-item">
+                <form class="g-content-elem">
+                  <div class="detailedStatistics__content-elem">
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Отправитель"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Номер получателя"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Название рассылки"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Текст СМС"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detailedStatistics__content-line myInp">
+                    <input type="checkbox" id="check31" checked>
+                    <label for="check31">Каскадная</label>
+                    <input type="checkbox" id="check32" checked>
+                    <label for="check32">С изображением</label>
+                    <input type="checkbox" id="check33" checked>
+                    <label for="check33">С кнопкой</label>
+                  </div>
+                  <div class="detailedStatistics__content-bottom">
+                    <p>Время отправки СМС</p>
+                    <div class="myCalendar">
+                      <div class="myCalendar__elem"><span>c</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="myCalendar__elem"><span>до</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="button-accent2">ОТФИЛЬТРОВАТЬ</button>
+                  </div>
+                </form>
+                <div class="statistics__top">
+                  <div class="statistics__top-elems">
+                    <svg class="svg-sprite-icon icon-exel">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                    </svg>
+                    <p>в Excel <br>(максимальный <br>срок 3 месяца)</p><a class="statistics__top-elem active" href="/">
+                      <svg class="svg-sprite-icon icon-icon-table">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                      </svg></a><a class="statistics__top-elem" href="/">
+                      <svg class="svg-sprite-icon icon-icon-cards">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="g-table-big statistics__content-item g-table-big2">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Индификатор<br>сообщения</th>
+                        <th>Индификатор<br>Viber</th>
+                        <th>Номер<br>получателя</th>
+                        <th>Текст сообщения</th>
+                        <th>Отправитель</th>
+                        <th>Оператор</th>
+                        <th>Название<br>рассылки</th>
+                        <th>Время <br>отправки SMS</th>
+                        <th>Время<br>смены <br>состояния</th>
+                        <th>Статус</th>
+                        <th>Стоимость</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                          <div class="block__icon">
+                            <svg class="svg-sprite-icon icon-2">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                            </svg>
+                            <svg class="svg-sprite-icon icon-5">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#5"></use>
+                            </svg>
+                          </div>
+                        </td>
+                        <td aria-label="Индификатор Viber">0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: fitnessruss.ru<br><a class="button-accent" href="#">кнопка</a>
+                          <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                            <p>1 СМС, 200 символов</p>
+                          </div>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Beeline</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr class="bg">
+                        <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                          <div class="block__icon">
+                            <svg class="svg-sprite-icon icon-2">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                            </svg>
+                          </div>
+                        </td>
+                        <td aria-label="Индификатор Viber">0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: fitnessruss.ru<br><a class="button-accent" href="#">кнопка</a>
+                          <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                            <p>1 СМС, 200 символов</p>
+                          </div>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Skylink</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Статус">Не доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr>
+                        <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                          <div class="block__icon"></div>
+                        </td>
+                        <td aria-label="Индификатор Viber">0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: fitnessruss.ru<br><a class="button-accent" href="#">кнопка</a>
+                          <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                            <p>1 СМС, 200 символов</p>
+                          </div>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                      <tr class="bg">
+                        <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                          <div class="block__icon"></div>
+                        </td>
+                        <td aria-label="Индификатор Viber">0111</td>
+                        <td aria-label="Номер получателя">+7891236578</td>
+                        <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: fitnessruss.ru<br><a class="button-accent" href="#">кнопка</a>
+                          <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt="img"/>
+                            <p>1 СМС, 200 символов</p>
+                          </div>
+                        </td>
+                        <td aria-label="Отправитель">Имя<br>отправителя</td>
+                        <td aria-label="Оператор">Мегафон</td>
+                        <td aria-label="Название рассылки">Название<br>рассылки</td>
+                        <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
+                        <td aria-label="Статус">Доставлено</td>
+                        <td aria-label="Стоимость">100₽</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="myPaginations">
+                  <div class="myPaginations__pagin"><a class="myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                    <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+                  </div>
+                  <div class="myPaginations__value">
+                    <p>Записей на странице:</p>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>50</option>
+                          <option>75</option>
+                          <option>100</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-right">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="statistics__top">
+                  <div class="statistics__top-elems">
+                    <svg class="svg-sprite-icon icon-exel">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                    </svg>
+                    <p>в Excel <br>(максимальный <br>срок 3 месяца)</p><a class="statistics__top-elem" href="/">
+                      <svg class="svg-sprite-icon icon-icon-table">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                      </svg></a><a class="statistics__top-elem active" href="/">
+                      <svg class="svg-sprite-icon icon-icon-cards">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="g-card g-card2">
+                  <div class="g-card__row">
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-2">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-images">
+                            <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                            <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-2">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-images">
+                            <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                            <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card1__item-head">
+                          <p>0111/0111</p>
+                          <div class="g-card1__item-head-top">
+                            <svg class="svg-sprite-icon icon-2">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                            </svg>
+                            <p>Имя отправителя</p>
+                          </div>
+                        </div>
+                        <div class="g-card1__item-info">
+                          <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
+                          <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
+                          <div class="g-card1__item-name">
+                            <p>+7891236578</p>
+                            <p>Tele2</p>
+                          </div>
+                          <div class="g-card1__item-name">
+                            <p>Название рассылки</p>
+                            <p>Доставлено</p>
+                          </div>
+                          <div class="g-card1__item-images">
+                            <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                            <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
+                          </div>
+                          <div class="g-card1__item-date bg">
+                            <div class="g-card1__item-date-elem">
+                              <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                            <div class="g-card1__item-date-elem">
+                              <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
+                            </div>
+                          </div>
+                          <div class="g-card1__item-bgWhite"></div>
+                          <div class="bg g-card1__item-price">
+                            <p>Стоимость:</p>
+                            <p><span>2000</span>руб.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="myPaginations">
+                  <div class="myPaginations__pagin"><a class="myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                    <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="g-content-item detailedStatistics__content-item">
+                <form class="g-content-elem">
+                  <div class="detailedStatistics__content-elem">
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Отправитель"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Номер получателя"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Название рассылки"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Текст СМС"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detailedStatistics__content-line myInp">
+                    <input type="checkbox" id="check34" checked>
+                    <label for="check34">Каскадная</label>
+                  </div>
+                  <div class="detailedStatistics__content-bottom">
+                    <p>Время отправки СМС</p>
+                    <div class="myCalendar">
+                      <div class="myCalendar__elem"><span>c</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="myCalendar__elem"><span>до</span>
+                        <div class="myCalendar__style">
+                          <input class="time-calendar g-input" type="text">
+                          <svg class="svg-sprite-icon icon-calendar">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="button-accent2">ОТФИЛЬТРОВАТЬ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </footer>
+    </div>
+    <script src="web/js/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <script src="web/js/vendor/libs.js"></script>
+    <script src="web/js/plugins.js"></script>
+    <script src="web/js/ajax-settings.js"></script>
+    <script src="web/js/main.js"></script>
+  </body>
+</html>
