@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="web/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__burger"><span></span></div>
+          <div class="header__wrap"><a class="header__logo" href="index.html"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__tool">
+              <p>Инструмент управления<br>СМС - рассылками</p>
+            </div>
+            <div class="header__btn"><a class="button" href="/">СОЗДАТЬ РАССЫЛКА</a></div>
+            <div class="header__phone order-2"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div>
+            <div class="header__balance order-1"><a class="header__balance-img headerIcon" href="/">
+                <svg class="svg-sprite-icon icon-wallet">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#wallet"></use>
+                </svg></a>
+              <div class="header__balance-body">
+                <p class="headLink rub">Баланс <br> 132,96</p><a class="phone-bodyText" href="/">Пополнить счет</a>
+              </div>
+            </div>
+            <div class="header__mail"><a class="header__mail-img headerIcon" href="/">
+                <svg class="svg-sprite-icon icon-user">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#user"></use>
+                </svg></a>
+              <div class="header__mail-body"><a class="headLink" href="mailto:gajarin@mail.ru">gajarin@mail.ru</a><a class="phone-bodyText" href="/">Выйти</a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__menu">
+          <div class="container">
+            <ul class="topmenu">
+              <li class="topmenu__item"><a href="#">ПРОФИЛЬ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">РАССЫЛКА</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">СТАТИСТИКА</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">ФИНАНСЫ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">РАЗРАБОТЧИКАМ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">БАЗА ЗНАНИЙ</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="detailedStatistics.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="issuedInvoices.html">Подписка на уведомления</a></li>
+                  <li class="submenu__li"><a href="/">Новости</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="top-line"></div>
+            <div class="header__phone-small"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div><a class="header__exit" href="/">Выйти</a>
+          </div>
+        </nav>
+      </header>
+      <div class="header__showLBlock">
+        <div class="container">
+          <div class="header__showLBlock__wrap"><a class="header__showLBlock-img" href="/"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__btn-small"><a class="button" href="/">СОЗДАТЬ РАССЫЛКУ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <section class="issuedInvoices section-indent">
+          <div class="container">
+            <h2 class="title-5">История пополнения</h2>
+            <div class="issuedInvoices__replenish">
+              <p>Текущий баданс:<span class="rub">2.00 </span></p><a class="button-accent2" href="#">ПОПОЛНИТЬ</a>
+            </div>
+            <div class="g-content-wrap issuedInvoices__content-wrap">
+              <div class="g-content-item issuedInvoices__content-item">
+                <form class="g-content-elem issuedInvoices__content-elem">
+                  <div class="issuedInvoices__content-info">
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Тип оплаты: Электронный платеж</option>
+                          <option>Тип оплаты: Наличный платеж</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="myCalendar__elem">
+                      <div class="myCalendar__style">
+                        <input class="g-input" type="text" placeholder="Искать по дате, сумме, id"/>
+                        <svg class="svg-sprite-icon icon-search">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="issuedInvoices__content-bottom-text">
+                    <p>Введите дату</p>
+                    <p>Введите сумму</p>
+                  </div>
+                  <div class="issuedInvoices__content-bottom">
+                    <div class="issuedInvoices__content-bottom-elem">
+                      <div class="myCalendar">
+                        <div class="myCalendar__elem"><span>От </span>
+                          <div class="myCalendar__style">
+                            <input class="time-calendar g-input" type="text">
+                            <svg class="svg-sprite-icon icon-calendar">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="myCalendar__elem"><span>До </span>
+                          <div class="myCalendar__style">
+                            <input class="time-calendar g-input" type="text">
+                            <svg class="svg-sprite-icon icon-calendar">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="issuedInvoices__content-value">
+                      <div class="issuedInvoices__content-value-elem"><span>От </span>
+                        <input class="g-input" type="text" placeholder="120.00"><span class="rub"></span>
+                      </div>
+                      <div class="issuedInvoices__content-value-elem"><span>До </span>
+                        <input class="g-input" type="text" placeholder="500.00"><span class="rub"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="issuedInvoices__content-btn">
+                    <button class="button-accent2">ОТФИЛЬТРОВАТЬ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="g-table-big statistics__content-item g-table-big4">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Дата оплаты</th>
+                    <th>Тип оплаты</th>
+                    <th>Транзакция</th>
+                    <th>Статус оплаты</th>
+                    <th>Сумма оплаты</th>
+                    <th>Квитанция</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td aria-label="Дата оплаты">30.09.2020 14:50</td>
+                    <td aria-label="Тип оплаты">simplepay</td>
+                    <td aria-label="Транзакция">35342</td>
+                    <td aria-label="Статус оплаты">Оплачено</td>
+                    <td aria-label="Сумма оплаты">800 руб</td>
+                    <td aria-label="Квитанция"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr class="bg">
+                    <td aria-label="Дата оплаты">30.09.2020 14:50</td>
+                    <td aria-label="Тип оплаты">simplepay</td>
+                    <td aria-label="Транзакция"> </td>
+                    <td aria-label="Статус оплаты">Ошибка оплаты</td>
+                    <td aria-label="Сумма оплаты">800 руб</td>
+                    <td aria-label="Квитанция"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#"></use>
+                        </svg><span class="g-table-icon-ind"></span></a></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Дата оплаты">30.09.2020 14:50</td>
+                    <td aria-label="Тип оплаты">simplepay</td>
+                    <td aria-label="Транзакция">35342</td>
+                    <td aria-label="Статус оплаты">Оплачено</td>
+                    <td aria-label="Сумма оплаты">800 руб</td>
+                    <td aria-label="Квитанция"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr class="td">
+                    <td aria-label="Дата оплаты">30.09.2020 14:50</td>
+                    <td aria-label="Тип оплаты">simplepay</td>
+                    <td aria-label="Транзакция">35342</td>
+                    <td aria-label="Статус оплаты">Оплачено</td>
+                    <td aria-label="Сумма оплаты">800 руб</td>
+                    <td aria-label="Квитанция"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Дата оплаты">30.09.2020 14:50</td>
+                    <td aria-label="Тип оплаты">simplepay</td>
+                    <td aria-label="Транзакция">35342</td>
+                    <td aria-label="Статус оплаты">Оплачено</td>
+                    <td aria-label="Сумма оплаты">800 руб</td>
+                    <td aria-label="Квитанция"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="myPaginations">
+              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+              </div>
+              <div class="myPaginations__value">
+                <p>Записей на странице:</p>
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>50</option>
+                      <option>75</option>
+                      <option>100</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="issuedInvoices__btn"><a class="button-accent2" href="#">Пополнить</a></div>
+            <div class="statistics__top">
+              <div class="statistics__top-elems"><a class="statistics__top-elem active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="g-table-big statistics__content-item g-table-big4">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Номер счета</th>
+                    <th>Дата создания<br>счет договора</th>
+                    <th>Дата зачисления <br>на баланс</th>
+                    <th>Статус </th>
+                    <th>Сумма оплаты</th>
+                    <th>Транзакция</th>
+                    <th>Счет-договор</th>
+                    <th>Акт</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td aria-label="Номер счета">#789976</td>
+                    <td aria-label="Дата создания счет договора">30.09.2020 14:50</td>
+                    <td aria-label="Дата зачисления на баланс">30.09.2020 14:50</td>
+                    <td aria-label="Статус">Оплачено</td>
+                    <td aria-label="Сумма оплаты">2000 руб</td>
+                    <td aria-label="Транзакция">43546</td>
+                    <td aria-label="Счет-договор"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                    <td aria-label="Акт"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr class="bg">
+                    <td aria-label="Номер счета">#789976</td>
+                    <td aria-label="Дата создания счет договора">30.09.2020 14:50</td>
+                    <td aria-label="Дата зачисления на баланс">30.09.2020 14:50</td>
+                    <td aria-label="Статус">Ожидает оплаты</td>
+                    <td aria-label="Сумма оплаты">2000 руб</td>
+                    <td aria-label="Транзакция">43546</td>
+                    <td aria-label="Счет-договор"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                    <td aria-label="Акт"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#"></use>
+                        </svg><span class="g-table-icon-ind"> </span></a></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Номер счета">#789976</td>
+                    <td aria-label="Дата создания счет договора">30.09.2020 14:50</td>
+                    <td aria-label="Дата зачисления на баланс">30.09.2020 14:50</td>
+                    <td aria-label="Статус">Оплачено</td>
+                    <td aria-label="Сумма оплаты">2000 руб</td>
+                    <td aria-label="Транзакция">43546</td>
+                    <td aria-label="Счет-договор"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                    <td aria-label="Акт"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr class="bg">
+                    <td aria-label="Номер счета">#789976</td>
+                    <td aria-label="Дата создания счет договора">30.09.2020 14:50</td>
+                    <td aria-label="Дата зачисления на баланс">30.09.2020 14:50</td>
+                    <td aria-label="Статус">Оплачено</td>
+                    <td aria-label="Сумма оплаты">2000 руб</td>
+                    <td aria-label="Транзакция">43546</td>
+                    <td aria-label="Счет-договор"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                    <td aria-label="Акт"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Номер счета">#789976</td>
+                    <td aria-label="Дата создания счет договора">30.09.2020 14:50</td>
+                    <td aria-label="Дата зачисления на баланс">30.09.2020 14:50</td>
+                    <td aria-label="Статус">Оплачено</td>
+                    <td aria-label="Сумма оплаты">2000 руб</td>
+                    <td aria-label="Транзакция">43546</td>
+                    <td aria-label="Счет-договор"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                    <td aria-label="Акт"><a class="g-table-big4-ic" href="#">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span class="g-table-icon-ind">Скачать</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="myPaginations">
+              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+              </div>
+              <div class="myPaginations__value">
+                <p>Записей на странице:</p>
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>50</option>
+                      <option>75</option>
+                      <option>100</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="statistics__top">
+              <div class="statistics__top-elems"><a class="statistics__top-elem" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="g-card g-card4">
+              <div class="g-card__row">
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card4__date bg g-card4-elem">
+                      <div class="g-card4__date-dates">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                      <div class="g-card4__date-value">
+                        <p>#789976</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__status g-card4-elem">
+                      <div class="g-card4__status-value">
+                        <p>2000 руб.</p>
+                      </div>
+                      <div class="g-card4__status-stat">
+                        <p>Оплачено</p>
+                      </div>
+                      <div class="g-card4__status-date">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__info g-card4-elem bg">
+                      <div class="g-card4__info-name">
+                        <p>Электронный платеж</p>
+                      </div>
+                      <div class="g-card4__info-value">
+                        <p> 43546</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__line g-card4-elem"></div>
+                    <div class="g-card4__down g-card4-elem bg"><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Счет-договор</span></a><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Акт</span></a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card4__date bg g-card4-elem">
+                      <div class="g-card4__date-dates">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                      <div class="g-card4__date-value">
+                        <p>#789976</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__status g-card4-elem">
+                      <div class="g-card4__status-value">
+                        <p>2000 руб.</p>
+                      </div>
+                      <div class="g-card4__status-stat">
+                        <p>Оплачено</p>
+                      </div>
+                      <div class="g-card4__status-date">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__info g-card4-elem bg">
+                      <div class="g-card4__info-name">
+                        <p>Электронный платеж</p>
+                      </div>
+                      <div class="g-card4__info-value">
+                        <p> 43546</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__line g-card4-elem"></div>
+                    <div class="g-card4__down g-card4-elem bg"><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Счет-договор</span></a><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Акт</span></a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card4__date bg g-card4-elem">
+                      <div class="g-card4__date-dates">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                      <div class="g-card4__date-value">
+                        <p>#789976</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__status g-card4-elem">
+                      <div class="g-card4__status-value">
+                        <p>2000 руб.</p>
+                      </div>
+                      <div class="g-card4__status-stat">
+                        <p>Оплачено</p>
+                      </div>
+                      <div class="g-card4__status-date">
+                        <p>30.09.2020 14:50</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__info g-card4-elem bg">
+                      <div class="g-card4__info-name">
+                        <p>Электронный платеж</p>
+                      </div>
+                      <div class="g-card4__info-value">
+                        <p> 43546</p>
+                      </div>
+                    </div>
+                    <div class="g-card4__line g-card4-elem"></div>
+                    <div class="g-card4__down g-card4-elem bg"><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Счет-договор</span></a><a class="g-card4__down-link" href="#" download="download">
+                        <svg class="svg-sprite-icon icon-download">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
+                        </svg><span>Акт</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </footer>
+    </div>
+    <script src="web/js/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <script src="web/js/vendor/libs.js"></script>
+    <script src="web/js/plugins.js"></script>
+    <script src="web/js/ajax-settings.js"></script>
+    <script src="web/js/main.js"></script>
+  </body>
+</html>

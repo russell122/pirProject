@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
         hideElems();
         showElems();
       }
-    };
+    }; // tabs('.newsletter__tabs-elem', '.newsletter__content-item');
 
-    tabs('.newsletter__tabs-elem', '.newsletter__content-item');
+
     tabs('.recipients__tabs-elem1', '.recipients__content-item1');
     tabs('.recipients__tabs-elem2', '.recipients__content-item2');
     tabs('.recipients__tabs-elem3', '.recipients__content-item3');
@@ -145,7 +145,45 @@ document.addEventListener('DOMContentLoaded', function () {
   myProlapse(); // end accordion
 });
 $(document).ready(function () {
-  // Зададим стартовую дату
+  var slider = new Swiper('.mySlider', {
+    autoHeight: true,
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: true,
+    observer: true,
+    observeParents: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      }
+    } // autoplay: {
+    // 	delay: 5000,
+    // },
+
+  }); // Зададим стартовую дату
+
   var start = new Date(),
       prevDay,
       startHours = 9; // 09:00
@@ -210,73 +248,56 @@ $(document).ready(function () {
     } // $(this).find('.submenu').slideToggle()
     // }
 
-  }); // $('#check1').on('change', function () {
-  // 	$('.newsletter__transliteration-text').toggleClass('active');
-  // })
-
+  });
   var newsletterTransliterationText = document.querySelectorAll('.newsletter__transliteration-text');
   var checkTransElems = document.querySelectorAll('.checkTrans');
   checkTransElems.forEach(function (elem, i) {
     elem.addEventListener('change', function (e) {
-      console.log(e.target.getAttribute('data-check'));
-      console.log(newsletterTransliterationText[i].getAttribute('data-check-trans'));
-
       if (e.target.getAttribute('data-check') === newsletterTransliterationText[i].getAttribute('data-check-trans')) {
         newsletterTransliterationText[i].classList.toggle('active');
       }
     });
-  });
-  var slider;
+  }); // let myDataNumber = document.querySelectorAll('[data-number]');
+  // let myTxt = document.querySelector('.txt');
+  // let newsletterFormTextSymbol = document.querySelector('.newsletter__form-text-symbol > span');
+  // let newsletterFormTextSms = document.querySelector('.newsletter__form-text-sms > span');
 
-  var activeSlider = function activeSlider() {
-    slider = new Swiper('.mySlider', {
-      autoHeight: true,
-      slidesPerView: 2,
-      spaceBetween: 10,
-      loop: true,
-      observer: true,
-      observeParents: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        },
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        }
-      } // autoplay: {
-      // 	delay: 5000,
-      // },
+  var numberOfMessages = function numberOfMessages(myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS) {
+    var elems = document.querySelectorAll(myElems);
+    var txt = document.querySelector(myTxt);
+    var lengthLetters = document.querySelector(myLengthLetters);
+    var lengthSMS = document.querySelector(myLengthSMS);
+    var translengthLetters = document.querySelector(myTransLengthLetters);
+    var transLengthSMS = document.querySelector(myTransLengthSMS);
 
-    });
-  };
+    if (lengthLetters && lengthSMS) {
+      lengthLetters.innerHTML = txt.value.length;
+      lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
+    }
 
-  var breakpoint = window.matchMedia('(min-width:767px)');
+    if (txt) {
+      txt.addEventListener('input', function (e) {
+        lengthLetters.innerHTML = e.target.value.length;
+        lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
+        translengthLetters.innerHTML = e.target.value.length;
+        transLengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
+      });
+    }
 
-  var checkerBreakpoint = function checkerBreakpoint() {
-    if (breakpoint.matches === true) {
-      if (slider !== undefined && slider.initialized) {
-        slider.destroy(true, true);
-      }
-
-      return;
-    } else if (breakpoint.matches === false) {
-      return activeSlider();
+    if (elems) {
+      elems.forEach(function (elem) {
+        elem.addEventListener('click', function (e) {
+          lengthLetters.innerHTML = txt.value.length + e.target.getAttribute('data-number').length;
+          lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
+          translengthLetters.innerHTML = txt.value.length + e.target.getAttribute('data-number').length;
+          transLengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
+        });
+      });
     }
   };
 
-  breakpoint.addListener(checkerBreakpoint);
-  checkerBreakpoint();
+  numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
+  numberOfMessages(false, '.txtTrans', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
   $('[data-number]').on('click', function (e) {
     e.preventDefault();
     var parentElem = $(this).closest('.newsletter__form-text');
@@ -338,31 +359,21 @@ function rus_to_latin(str) {
   return n_str.join('');
 }
 
-var numberMask = IMask(document.getElementById('number-mask'), {
+var numbersInputs = document.querySelectorAll('.numbers');
+var maskOptions = {
   mask: Number,
   min: -10000,
   max: 10000,
   maxLength: 2,
   thousandsSeparator: ' '
+};
+numbersInputs.forEach(function (el) {
+  var mask = IMask(el, maskOptions);
 });
-var numberMask2 = IMask(document.getElementById('number-mask2'), {
-  mask: Number,
-  min: -10000,
-  max: 10000,
-  maxLength: 2,
-  thousandsSeparator: ' '
-});
-var numberMask3 = IMask(document.getElementById('number-mask3'), {
-  mask: Number,
-  min: -10000,
-  max: 10000,
-  maxLength: 2,
-  thousandsSeparator: ' '
-});
-var numberMask4 = IMask(document.getElementById('number-mask4'), {
-  mask: Number,
-  min: -10000,
-  max: 10000,
-  maxLength: 2,
-  thousandsSeparator: ' '
+var numbersPhone = document.querySelectorAll('.numbersPhone');
+var maskOptionsPhone = {
+  mask: '+{7}(000)000-00-00'
+};
+numbersPhone.forEach(function (el) {
+  var mask = IMask(el, maskOptionsPhone);
 });
