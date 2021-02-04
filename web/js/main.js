@@ -55,8 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs('.recipients__tabs-elem2', '.recipients__content-item2');
     tabs('.recipients__tabs-elem3', '.recipients__content-item3');
     tabs('.recipients__tabs-elem4', '.recipients__content-item4'); // tabs('.statistics__top-elem', '.statistics__content-item');
-
-    tabs('.detailedStatistics__tabs-elem', '.detailedStatistics__content-item');
+    // tabs('.detailedStatistics__tabs-elem', '.detailedStatistics__content-item');
   };
 
   myTabs(); //end tabs
@@ -140,11 +139,156 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     prolapse('.settings__more-target', '.settings__more-info');
+    prolapse('.newsletter__left-top', '.newsletter__left-wrap');
+    prolapse('.newsletter__right-top', '.newsletter__right-wrap');
   };
 
   myProlapse(); // end accordion
+  // 
+
+  var mySelectionInTheEkNewsletter = function mySelectionInTheEkNewsletter() {
+    var selectionInTheEkNewsletter = function selectionInTheEkNewsletter(myTextArea, mySelectName, mySelectNumber, myInputName, myInputNumber) {
+      var selectName = document.querySelector(mySelectName);
+      var selectNumber = document.querySelector(mySelectNumber);
+      var inputName = document.querySelector(myInputName);
+      var inputNumber = document.querySelector(myInputNumber);
+      var textarea = document.querySelector(myTextArea);
+      var rezSelectName = 'Выберите имя';
+      var rezSelectNumber = 'Выберите номер';
+
+      if (selectName) {
+        selectName.addEventListener('change', function (e) {
+          rezSelectName = e.target.value;
+          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
+        });
+      }
+
+      if (selectNumber) {
+        selectNumber.addEventListener('change', function (e) {
+          rezSelectNumber = e.target.value;
+          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
+        });
+      }
+
+      if (inputName) {
+        inputName.addEventListener('input', function (e) {
+          rezSelectName = e.target.value;
+          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
+        });
+      }
+
+      if (inputNumber) {
+        inputNumber.addEventListener('input', function (e) {
+          rezSelectNumber = e.target.value;
+          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
+        });
+      }
+    };
+
+    selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-vkTemplate-baz-name > select', '.newsletter__form-vkTemplate-baz-number > select', '.newsletter__form-vkTemplate-manually-name > input', '.newsletter__form-vkTemplate-manually-number > input');
+  };
+
+  mySelectionInTheEkNewsletter(); //
 });
 $(document).ready(function () {
+  var ddData = [{
+    text: "Viber",
+    value: 1,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/2.svg"
+  }, {
+    text: "SMS",
+    value: 3,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/1.svg"
+  }, {
+    text: "ВКОНТАКТЕ",
+    value: 2,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/3.svg"
+  }];
+  var ddData2 = [{
+    text: "Viber",
+    value: 2,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/2.svg"
+  }, {
+    text: "SMS",
+    value: 3,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/1.svg"
+  }, {
+    text: "ВКОНТАКТЕ",
+    value: 1,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/3.svg"
+  }];
+  var ddData3 = [{
+    text: "Viber",
+    value: 1,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/2.svg"
+  }, {
+    text: "SMS",
+    value: 3,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/1.svg"
+  }, {
+    text: "ВКОНТАКТЕ",
+    value: 2,
+    selected: false,
+    description: "",
+    imageSrc: "web/images/content/3.svg"
+  }];
+  $('.demoBasic').ddslick({
+    data: ddData,
+    defaultSelectedIndex: 3,
+    width: 150,
+    imagePosition: "left",
+    selectText: "Select your favorite social network",
+    onSelected: function onSelected(data) {
+      console.log(data);
+    }
+  });
+  $('.demoBasic2').ddslick({
+    data: ddData2,
+    defaultSelectedIndex: 2,
+    width: 150,
+    imagePosition: "left",
+    selectText: "",
+    onSelected: function onSelected(data) {
+      console.log(data);
+    }
+  });
+  $('.demoBasic3').ddslick({
+    data: ddData3,
+    defaultSelectedIndex: 1,
+    width: 150,
+    imagePosition: "left",
+    selectText: "",
+    onSelected: function onSelected(data) {
+      console.log(data);
+    }
+  });
+  $('input[type=file]').each(function () {
+    var $input = $(this),
+        $label = $input.next('.js-labelFile'),
+        labelVal = $label.html();
+    $input.hide();
+    $input.on('change', function (element) {
+      var fileName = '';
+      if (element.target.value) fileName = element.target.value.split('\\').pop();
+      fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+    });
+  });
   var slider = new Swiper('.mySlider', {
     autoHeight: true,
     slidesPerView: 4,
@@ -262,7 +406,7 @@ $(document).ready(function () {
   // let newsletterFormTextSymbol = document.querySelector('.newsletter__form-text-symbol > span');
   // let newsletterFormTextSms = document.querySelector('.newsletter__form-text-sms > span');
 
-  var numberOfMessages = function numberOfMessages(myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS) {
+  var numberOfMessages = function numberOfMessages(myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS, searchElem) {
     var elems = document.querySelectorAll(myElems);
     var txt = document.querySelector(myTxt);
     var lengthLetters = document.querySelector(myLengthLetters);
@@ -287,17 +431,19 @@ $(document).ready(function () {
     if (elems) {
       elems.forEach(function (elem) {
         elem.addEventListener('click', function (e) {
-          lengthLetters.innerHTML = txt.value.length + e.target.getAttribute('data-number').length;
+          lengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
           lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-          translengthLetters.innerHTML = txt.value.length + e.target.getAttribute('data-number').length;
+          translengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
           transLengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
         });
       });
     }
   };
 
-  numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
+  numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span', 'data-number');
   numberOfMessages(false, '.txtTrans', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
+  numberOfMessages('[data-number2]', '.txt2', '.newsletter__form-text-symbol2 > span', '.newsletter__form-text-sms2 > span', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span', 'data-number2');
+  numberOfMessages(false, '.txtTrans2', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span');
   $('[data-number]').on('click', function (e) {
     e.preventDefault();
     var parentElem = $(this).closest('.newsletter__form-text');
@@ -313,6 +459,22 @@ $(document).ready(function () {
     var txtValue = $(this).val();
     var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]"));
     transElem.val(rus_to_latin(txtValue));
+  });
+  $('[data-number2]').on('click', function (e) {
+    e.preventDefault();
+    var parentElem2 = $(this).closest('.newsletter__form-text2');
+    var txt2 = parentElem2.find('.txt2');
+    var dataText2 = txt2.attr('data-txt2');
+    var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]")); // let textValue = txt.val();
+
+    txt2.val(txt2.val() + $(this).attr('data-number2'));
+    transElem2.val(rus_to_latin(txt2.val()));
+  });
+  $('.txt2').on('input', function (e) {
+    var dataText2 = $(this).attr('data-txt2');
+    var txtValue2 = $(this).val();
+    var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]"));
+    transElem2.val(rus_to_latin(txtValue2));
   });
 });
 

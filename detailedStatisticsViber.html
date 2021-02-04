@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Детальная статистика</title><!--[if IE]>
+    <title>Детальная статистика Viber</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -138,11 +138,11 @@
         <section class="detailedStatistics section-indent">
           <div class="container">
             <h2 class="title-5">Детальная статистика</h2>
-            <div class="g-tabs detailedStatistics__tabs"><a class="g-tabs__item detailedStatistics__tabs-elem active" href="detailedStatistics.html">
+            <div class="g-tabs detailedStatistics__tabs"><a class="g-tabs__item detailedStatistics__tabs-elem" href="detailedStatistics.html">
                 <svg class="svg-sprite-icon icon-1">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
                 </svg>
-                <div class="g-tabs__link">SMS РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem" href="detailedStatisticsViber.html">
+                <div class="g-tabs__link">SMS РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem active" href="detailedStatisticsViber.html">
                 <svg class="svg-sprite-icon icon-2">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                 </svg>
@@ -213,8 +213,12 @@
                     </div>
                   </div>
                   <div class="detailedStatistics__content-line myInp">
-                    <input type="checkbox" id="check30" checked>
-                    <label for="check30">Каскадная</label>
+                    <input type="checkbox" id="check31" checked>
+                    <label for="check31">Каскадная</label>
+                    <input type="checkbox" id="check32" checked>
+                    <label for="check32">С изображением</label>
+                    <input type="checkbox" id="check33" checked>
+                    <label for="check33">С кнопкой</label>
                   </div>
                   <div class="detailedStatistics__content-bottom">
                     <p>Время отправки СМС</p>
@@ -257,12 +261,13 @@
                   </svg></a>
               </div>
             </div>
-            <div class="g-table-big statistics__content-item g-table-big1">
+            <div class="g-table-big statistics__content-item g-table-big2">
               <table>
                 <thead>
                   <tr>
-                    <th>id сообщения<br>id сегмента</th>
-                    <th>Номер <br> получателя</th>
+                    <th>Индификатор<br>сообщения</th>
+                    <th>Индификатор<br>Viber</th>
+                    <th>Номер<br>получателя</th>
                     <th>Текст сообщения</th>
                     <th>Отправитель</th>
                     <th>Оператор</th>
@@ -275,73 +280,89 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111
+                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
                       <div class="block__icon">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                        <svg class="svg-sprite-icon icon-2">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                         </svg>
                         <svg class="svg-sprite-icon icon-5">
                           <use xlink:href="web/images/sprite/symbol/sprite.svg#5"></use>
                         </svg>
                       </div>
                     </td>
+                    <td aria-label="Индификатор Viber">0111</td>
                     <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="g-table-fix-elem" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a href="#">fitnessruss.ru</a>
-                      <p>1 СМС, 200 символов</p>
+                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a><a class="button-accent" href="#">кнопка</a>
+                      <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                        <p>1 СМС, 200 символов</p>
+                      </div>
                     </td>
                     <td aria-label="Отправитель">Имя<br>отправителя</td>
                     <td aria-label="Оператор">Beeline</td>
                     <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
                     <td aria-label="Статус">Доставлено</td>
                     <td aria-label="Стоимость">100₽</td>
                   </tr>
                   <tr class="bg">
-                    <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111
+                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
                       <div class="block__icon">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                        <svg class="svg-sprite-icon icon-2">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                         </svg>
                       </div>
                     </td>
+                    <td aria-label="Индификатор Viber">0111</td>
                     <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="g-table-fix-elem" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a href="#">fitnessruss.ru</a>
-                      <p>1 СМС, 200 символов</p>
+                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a><a class="button-accent" href="#">кнопка</a>
+                      <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                        <p>1 СМС, 200 символов</p>
+                      </div>
                     </td>
                     <td aria-label="Отправитель">Имя<br>отправителя</td>
                     <td aria-label="Оператор">Skylink</td>
                     <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
                     <td aria-label="Статус">Не доставлено</td>
                     <td aria-label="Стоимость">100₽</td>
                   </tr>
                   <tr>
-                    <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111</td>
+                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                      <div class="block__icon"></div>
+                    </td>
+                    <td aria-label="Индификатор Viber">0111</td>
                     <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="g-table-fix-elem" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a href="#">fitnessruss.ru</a>
-                      <p>1 СМС, 200 символов</p>
+                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a><a class="button-accent" href="#">кнопка</a>
+                      <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt=""/>
+                        <p>1 СМС, 200 символов</p>
+                      </div>
                     </td>
                     <td aria-label="Отправитель">Имя<br>отправителя</td>
                     <td aria-label="Оператор">Tele2</td>
                     <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
                     <td aria-label="Статус">Доставлено</td>
                     <td aria-label="Стоимость">100₽</td>
                   </tr>
                   <tr class="bg">
-                    <td class="block__icon-td" aria-label="id сообщения id сегмента">0111<br>0111</td>
+                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
+                      <div class="block__icon"></div>
+                    </td>
+                    <td aria-label="Индификатор Viber">0111</td>
                     <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="g-table-fix-elem" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a href="#">fitnessruss.ru</a>
-                      <p>1 СМС, 200 символов</p>
+                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a><a class="button-accent" href="#">кнопка</a>
+                      <div class="img__block"><img class="img" src="web/images/content/table-img.png" alt="img"/>
+                        <p>1 СМС, 200 символов</p>
+                      </div>
                     </td>
                     <td aria-label="Отправитель">Имя<br>отправителя</td>
                     <td aria-label="Оператор">Мегафон</td>
                     <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br> 19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br> 19:30:00</td>
+                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
+                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
                     <td aria-label="Статус">Доставлено</td>
                     <td aria-label="Стоимость">100₽</td>
                   </tr>
@@ -382,15 +403,15 @@
                   </svg></a>
               </div>
             </div>
-            <div class="g-card g-card1">
+            <div class="g-card g-card2">
               <div class="g-card__row">
                 <div class="g-card__column">
                   <div class="g-card__item">
                     <div class="g-card1__item-head">
                       <p>0111/0111</p>
                       <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                        <svg class="svg-sprite-icon icon-2">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                         </svg>
                         <p>Имя отправителя</p>
                       </div>
@@ -405,6 +426,10 @@
                       <div class="g-card1__item-name">
                         <p>Название рассылки</p>
                         <p>Доставлено</p>
+                      </div>
+                      <div class="g-card1__item-images">
+                        <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                        <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
                       </div>
                       <div class="g-card1__item-date bg">
                         <div class="g-card1__item-date-elem">
@@ -427,8 +452,8 @@
                     <div class="g-card1__item-head">
                       <p>0111/0111</p>
                       <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                        <svg class="svg-sprite-icon icon-2">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                         </svg>
                         <p>Имя отправителя</p>
                       </div>
@@ -443,6 +468,10 @@
                       <div class="g-card1__item-name">
                         <p>Название рассылки</p>
                         <p>Доставлено</p>
+                      </div>
+                      <div class="g-card1__item-images">
+                        <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                        <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
                       </div>
                       <div class="g-card1__item-date bg">
                         <div class="g-card1__item-date-elem">
@@ -465,8 +494,8 @@
                     <div class="g-card1__item-head">
                       <p>0111/0111</p>
                       <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                        <svg class="svg-sprite-icon icon-2">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                         </svg>
                         <p>Имя отправителя</p>
                       </div>
@@ -481,6 +510,10 @@
                       <div class="g-card1__item-name">
                         <p>Название рассылки</p>
                         <p>Доставлено</p>
+                      </div>
+                      <div class="g-card1__item-images">
+                        <div class="g-card1__item-images-btn"><a class="button-accent" href="#">кнопка</a></div>
+                        <div class="g-card1__item-images-elem"><img src="web/images/content/table-img.png" alt="img"/></div>
                       </div>
                       <div class="g-card1__item-date bg">
                         <div class="g-card1__item-date-elem">
