@@ -8,7 +8,53 @@ document.addEventListener('DOMContentLoaded', function () {
         return Array.isArray(v) ? a.concat(f(v)) : a.concat(v);
       }, []);
     }(this);
-  }; // tabs
+  }; // input range
+
+  var sliderInp = document.querySelector('.sliderInp');
+  var rangeInput = document.querySelector('.block__range-wrap > input');
+  var blockRangeValue = document.querySelector('.block__range-value > p >span');
+  sliderInp.addEventListener('input', function (e) {
+    blockRangeValue.innerHTML = e.target.value;
+  });
+  rangeInput.addEventListener('input', function (e) {
+    blockRangeValue.innerHTML = e.target.value;
+    sliderInp.value = e.target.value;
+  }); // input end range
+  // modal
+
+  var modal = function modal() {
+    function activeModal(btnsTarget, modalWrap, activeClass) {
+      var btns = document.querySelectorAll(btnsTarget);
+      var modal = document.querySelector(modalWrap);
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          modal.classList.add(activeClass.replace(/\D/, ""));
+          document.body.style.overflow = 'hidden';
+        });
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal || e.target.getAttribute('data-close') == '') {
+            modal.classList.remove(activeClass.replace(/\D/, ""));
+            document.body.style.overflow = '';
+          }
+        });
+        document.addEventListener('keyup', function (e) {
+          if (modal.classList.contains(activeClass.replace(/\D/, "")) && e.key == 'Escape') {
+            modal.classList.remove(activeClass.replace(/\D/, ""));
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    }
+
+    activeModal('.modal1__target', '.popup', '.popup-active');
+  };
+
+  modal(); // end modal
+  // document.getElementById("myinput").oninput = function () {
+  // 	this.style.background = 'linear-gradient(to right, #305BAF 0%, #305BAF ' + this.value + '%, #E4E4E4 ' + this.value + '%, #E4E4E4 100%)'
+  // };
+  // tabs
 
   var myTabs = function myTabs() {
     var tabs = function tabs(myTargets, myContents) {
@@ -54,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs('.recipients__tabs-elem1', '.recipients__content-item1');
     tabs('.recipients__tabs-elem2', '.recipients__content-item2');
     tabs('.recipients__tabs-elem3', '.recipients__content-item3');
-    tabs('.recipients__tabs-elem4', '.recipients__content-item4'); // tabs('.statistics__top-elem', '.statistics__content-item');
-    // tabs('.detailedStatistics__tabs-elem', '.detailedStatistics__content-item');
+    tabs('.recipients__tabs-elem4', '.recipients__content-item4');
+    tabs('.statistics__top-elemModal', '.statistics__content-itemModal'); // tabs('.detailedStatistics__tabs-elem', '.detailedStatistics__content-item');
   };
 
   myTabs(); //end tabs
@@ -147,50 +193,61 @@ document.addEventListener('DOMContentLoaded', function () {
   // 
 
   var mySelectionInTheEkNewsletter = function mySelectionInTheEkNewsletter() {
-    var selectionInTheEkNewsletter = function selectionInTheEkNewsletter(myTextArea, mySelectName, mySelectNumber, myInputName, myInputNumber) {
-      var selectName = document.querySelector(mySelectName);
-      var selectNumber = document.querySelector(mySelectNumber);
-      var inputName = document.querySelector(myInputName);
-      var inputNumber = document.querySelector(myInputNumber);
-      var textarea = document.querySelector(myTextArea);
-      var rezSelectName = 'Выберите имя';
-      var rezSelectNumber = 'Выберите номер';
+    var selectionInTheEkNewsletter = function selectionInTheEkNewsletter(myTextArea, myGSelect, mySelectName, mySelectNumber, myInputName, myInputNumber) {
+      // let selectName = document.querySelector(mySelectName);
+      // let selectNumber = document.querySelector(mySelectNumber);
+      // let inputName = document.querySelector(myInputName);
+      // let inputNumber = document.querySelector(myInputNumber);
+      var gSelect = document.querySelector(myGSelect);
+      var textarea = document.querySelector(myTextArea); // let rezSelectName = 'Выберите имя';
+      // let rezSelectNumber = 'Выберите номер';
 
-      if (selectName) {
-        selectName.addEventListener('change', function (e) {
-          rezSelectName = e.target.value;
-          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
+      if (gSelect) {
+        gSelect.addEventListener('change', function (e) {
+          textarea.innerHTML = e.target.value;
         });
-      }
+      } // if (selectName) {
+      // 	selectName.addEventListener('change', (e) => {
+      // 		rezSelectName = e.target.value;
+      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
+      // 	})
+      // }
+      // if (selectNumber) {
+      // 	selectNumber.addEventListener('change', (e) => {
+      // 		rezSelectNumber = e.target.value;
+      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
+      // 	})
+      // }
+      // if (inputName) {
+      // 	inputName.addEventListener('input', (e) => {
+      // 		rezSelectName = e.target.value;
+      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
+      // 	})
+      // }
+      // if (inputNumber) {
+      // 	inputNumber.addEventListener('input', (e) => {
+      // 		rezSelectNumber = e.target.value;
+      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
+      // 	})
+      // }
 
-      if (selectNumber) {
-        selectNumber.addEventListener('change', function (e) {
-          rezSelectNumber = e.target.value;
-          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
-        });
-      }
-
-      if (inputName) {
-        inputName.addEventListener('input', function (e) {
-          rezSelectName = e.target.value;
-          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
-        });
-      }
-
-      if (inputNumber) {
-        inputNumber.addEventListener('input', function (e) {
-          rezSelectNumber = e.target.value;
-          textarea.innerHTML = "".concat(rezSelectName, " ").concat(rezSelectNumber);
-        });
-      }
     };
 
-    selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-vkTemplate-baz-name > select', '.newsletter__form-vkTemplate-baz-number > select', '.newsletter__form-vkTemplate-manually-name > input', '.newsletter__form-vkTemplate-manually-number > input');
+    selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-selVk-el > select', '', '', '', ''); // selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-vkTemplate-baz-name > select', '.newsletter__form-vkTemplate-baz-number > select', '.newsletter__form-vkTemplate-manually-name > input', '.newsletter__form-vkTemplate-manually-number > input');
   };
 
   mySelectionInTheEkNewsletter(); //
 });
 $(document).ready(function () {
+  var $slider = $("#slider");
+  var $fill = $(".bar .fill");
+
+  function setBar() {
+    $fill.css("width", $slider.val() + "%");
+  }
+
+  $slider.on("input", setBar);
+  setBar();
   var ddData = [{
     text: "Viber",
     value: 1,
@@ -405,76 +462,112 @@ $(document).ready(function () {
   // let myTxt = document.querySelector('.txt');
   // let newsletterFormTextSymbol = document.querySelector('.newsletter__form-text-symbol > span');
   // let newsletterFormTextSms = document.querySelector('.newsletter__form-text-sms > span');
+  // const numberOfMessages = (myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS, searchElem) => {
+  // 	let elems = document.querySelectorAll(myElems);
+  // 	let txt = document.querySelector(myTxt);
+  // 	let lengthLetters = document.querySelector(myLengthLetters);
+  // 	let lengthSMS = document.querySelector(myLengthSMS);
+  // 	let translengthLetters = document.querySelector(myTransLengthLetters);
+  // 	let transLengthSMS = document.querySelector(myTransLengthSMS);
+  // 	let i = 1;
+  // 	let value = 10;
+  // 	// if (lengthLetters && lengthSMS) {
+  // 	// 	lengthLetters.innerHTML = txt.value.length;
+  // 	// 	lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
+  // 	// }
+  // 	if (txt) {
+  // 		txt.addEventListener('input', (e) => {
+  // 			if (txt.value.length >= 1 && txt.value.length < value) {
+  // 				lengthSMS.innerHTML = i;
+  // 			}
+  // 			if (txt.value.length >= value) {
+  // 				lengthSMS.innerHTML = i++;
+  // 				value = value + 10;
+  // 			}
+  // 			lengthLetters.innerHTML = e.target.value.length;
+  // 			// lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
+  // 			// translengthLetters.innerHTML = e.target.value.length;
+  // 			// transLengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
+  // 		});
+  // 	}
+  // if (elems) {
+  // 	elems.forEach(elem => {
+  // 		elem.addEventListener('click', (e) => {
+  // 			lengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
+  // 			lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 10));
+  // 			console.log(txt.value)
+  // 			console.log(document.querySelector('.txt').value)
+  // 			// lengthSMS.innerHTML = i++;
+  // 			// lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
+  // 			// translengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
+  // 			// transLengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
+  // 		});
+  // 	});
+  // }
+  // }
+  // numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span', 'data-number');
+  // numberOfMessages(false, '.txtTrans', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
+  // numberOfMessages('[data-number2]', '.txt2', '.newsletter__form-text-symbol2 > span', '.newsletter__form-text-sms2 > span', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span', 'data-number2');
+  // numberOfMessages(false, '.txtTrans2', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span');
 
-  var numberOfMessages = function numberOfMessages(myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS, searchElem) {
-    var elems = document.querySelectorAll(myElems);
-    var txt = document.querySelector(myTxt);
-    var lengthLetters = document.querySelector(myLengthLetters);
-    var lengthSMS = document.querySelector(myLengthSMS);
-    var translengthLetters = document.querySelector(myTransLengthLetters);
-    var transLengthSMS = document.querySelector(myTransLengthSMS);
+  var lengthLetters = document.querySelector('.newsletter__form-text-symbol > span');
+  var lengthSMS = document.querySelector('.newsletter__form-text-sms > span');
+  var translengthLetters = document.querySelector('.newsletter__transliteration-symbol > span');
+  var transLengthSMS = document.querySelector('.newsletter__transliteration-sms > span');
+  var lengthLetters2 = document.querySelector('.newsletter__form-text-symbol2 > span');
+  var lengthSMS2 = document.querySelector('.newsletter__form-text-sms2 > span');
+  var translengthLetters2 = document.querySelector('.newsletter__transliteration-symbol2 > span');
+  var transLengthSMS2 = document.querySelector('.newsletter__transliteration-sms2 > span');
 
-    if (lengthLetters && lengthSMS) {
-      lengthLetters.innerHTML = txt.value.length;
-      lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-    }
-
-    if (txt) {
-      txt.addEventListener('input', function (e) {
-        lengthLetters.innerHTML = e.target.value.length;
-        lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-        translengthLetters.innerHTML = e.target.value.length;
-        transLengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-      });
-    }
-
-    if (elems) {
-      elems.forEach(function (elem) {
-        elem.addEventListener('click', function (e) {
-          lengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
-          lengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-          translengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
-          transLengthSMS.innerHTML = Math.floor(lengthLetters.innerHTML / 17);
-        });
-      });
-    }
+  var countSms = function countSms(arg, sum) {
+    return Math.ceil(arg / sum);
   };
 
-  numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span', 'data-number');
-  numberOfMessages(false, '.txtTrans', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
-  numberOfMessages('[data-number2]', '.txt2', '.newsletter__form-text-symbol2 > span', '.newsletter__form-text-sms2 > span', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span', 'data-number2');
-  numberOfMessages(false, '.txtTrans2', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span');
   $('[data-number]').on('click', function (e) {
     e.preventDefault();
     var parentElem = $(this).closest('.newsletter__form-text');
     var txt = parentElem.find('.txt');
     var dataText = txt.attr('data-txt');
-    var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]")); // let textValue = txt.val();
-
+    var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]"));
     txt.val(txt.val() + $(this).attr('data-number'));
     transElem.val(rus_to_latin(txt.val()));
+    lengthLetters.innerHTML = txt.val().length;
+    lengthSMS.innerHTML = countSms(txt.val().length, 170);
+    translengthLetters.innerHTML = transElem.val().length;
+    transLengthSMS.innerHTML = countSms(transElem.val().length, 160);
   });
   $('.txt').on('input', function (e) {
     var dataText = $(this).attr('data-txt');
     var txtValue = $(this).val();
     var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]"));
     transElem.val(rus_to_latin(txtValue));
+    lengthLetters.innerHTML = $(this).val().length;
+    lengthSMS.innerHTML = countSms($(this).val().length, 170);
+    translengthLetters.innerHTML = transElem.val().length;
+    transLengthSMS.innerHTML = countSms(transElem.val().length, 160);
   });
   $('[data-number2]').on('click', function (e) {
     e.preventDefault();
     var parentElem2 = $(this).closest('.newsletter__form-text2');
     var txt2 = parentElem2.find('.txt2');
     var dataText2 = txt2.attr('data-txt2');
-    var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]")); // let textValue = txt.val();
-
+    var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]"));
     txt2.val(txt2.val() + $(this).attr('data-number2'));
     transElem2.val(rus_to_latin(txt2.val()));
+    lengthLetters2.innerHTML = txt2.val().length;
+    lengthSMS2.innerHTML = countSms(txt2.val().length, 170);
+    translengthLetters2.innerHTML = transElem2.val().length;
+    transLengthSMS2.innerHTML = countSms(transElem2.val().length, 160);
   });
   $('.txt2').on('input', function (e) {
     var dataText2 = $(this).attr('data-txt2');
     var txtValue2 = $(this).val();
     var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]"));
     transElem2.val(rus_to_latin(txtValue2));
+    lengthLetters2.innerHTML = $(this).val().length;
+    lengthSMS2.innerHTML = countSms($(this).val().length, 170);
+    translengthLetters2.innerHTML = transElem2.val().length;
+    transLengthSMS2.innerHTML = countSms(transElem2.val().length, 160);
   });
 });
 
