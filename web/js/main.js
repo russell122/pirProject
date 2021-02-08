@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var rangeInput = document.querySelector('.block__range-wrap > input');
   var blockRangeValue = document.querySelector('.block__range-value > p >span');
   sliderInp.addEventListener('input', function (e) {
-    blockRangeValue.innerHTML = e.target.value;
+    // blockRangeValue.innerHTML = e.target.value;
     rangeInput.value = e.target.value;
   });
   rangeInput.addEventListener('input', function (e) {
-    blockRangeValue.innerHTML = e.target.value;
+    // blockRangeValue.innerHTML = e.target.value;
     sliderInp.value = e.target.value;
   }); // input end range
   // modal
@@ -265,6 +265,22 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }); // end Фиксирую блок "Выбор получателей сообщения" 
+
+  var headerMenu = document.querySelector('.header__menu');
+  var myHeader = document.querySelector('.header');
+  window.addEventListener('scroll', function (e) {
+    if (window.pageYOffset > 100 && screen.width >= 991) {
+      headerMenu.classList.add('fixedMenu');
+    } else {
+      headerMenu.classList.remove('fixedMenu');
+    }
+
+    if (window.pageYOffset > 100 && screen.width < 991) {
+      myHeader.classList.add('fixedMenu');
+    } else {
+      myHeader.classList.remove('fixedMenu');
+    }
+  });
 });
 $(document).ready(function () {
   var $slider = $("#slider");
