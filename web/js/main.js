@@ -51,9 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   modal(); // end modal
-  // document.getElementById("myinput").oninput = function () {
-  // 	this.style.background = 'linear-gradient(to right, #305BAF 0%, #305BAF ' + this.value + '%, #E4E4E4 ' + this.value + '%, #E4E4E4 100%)'
-  // };
   // tabs
 
   var myTabs = function myTabs() {
@@ -194,49 +191,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var mySelectionInTheEkNewsletter = function mySelectionInTheEkNewsletter() {
     var selectionInTheEkNewsletter = function selectionInTheEkNewsletter(myTextArea, myGSelect, mySelectName, mySelectNumber, myInputName, myInputNumber) {
-      // let selectName = document.querySelector(mySelectName);
-      // let selectNumber = document.querySelector(mySelectNumber);
-      // let inputName = document.querySelector(myInputName);
-      // let inputNumber = document.querySelector(myInputNumber);
       var gSelect = document.querySelector(myGSelect);
       var textarea = document.querySelector(myTextArea); // let rezSelectName = 'Выберите имя';
-      // let rezSelectNumber = 'Выберите номер';
 
       if (gSelect) {
         gSelect.addEventListener('change', function (e) {
           textarea.innerHTML = e.target.value;
         });
-      } // if (selectName) {
-      // 	selectName.addEventListener('change', (e) => {
-      // 		rezSelectName = e.target.value;
-      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
-      // 	})
-      // }
-      // if (selectNumber) {
-      // 	selectNumber.addEventListener('change', (e) => {
-      // 		rezSelectNumber = e.target.value;
-      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
-      // 	})
-      // }
-      // if (inputName) {
-      // 	inputName.addEventListener('input', (e) => {
-      // 		rezSelectName = e.target.value;
-      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
-      // 	})
-      // }
-      // if (inputNumber) {
-      // 	inputNumber.addEventListener('input', (e) => {
-      // 		rezSelectNumber = e.target.value;
-      // 		textarea.innerHTML = `${rezSelectName} ${rezSelectNumber}`;
-      // 	})
-      // }
-
+      }
     };
 
-    selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-selVk-el > select', '', '', '', ''); // selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-vkTemplate-baz-name > select', '.newsletter__form-vkTemplate-baz-number > select', '.newsletter__form-vkTemplate-manually-name > input', '.newsletter__form-vkTemplate-manually-number > input');
+    selectionInTheEkNewsletter('.newsletter__form-vk-text > textarea', '.newsletter__form-selVk-el > select', '', '', '', '');
   };
 
   mySelectionInTheEkNewsletter(); //
+  // Показать блок с применением флекса
+
+  var myShowFlexBlock = function myShowFlexBlock() {
+    var showFlexBlock = function showFlexBlock(myTarget, myWrap) {
+      var target = document.querySelector(myTarget);
+      var wrap = document.querySelector(myWrap);
+      target.addEventListener('click', function (e) {
+        wrap.classList.toggle('myShowFlex');
+      });
+    };
+
+    showFlexBlock('.block__info', '.block__search-wrap-hide');
+  };
+
+  myShowFlexBlock(); // end Показать блок с применением флекса
+  // Фиксирую блок "Выбор получателей сообщения" 
+
+  var rightFull = document.querySelector('.newsletter__form-right-full');
+  window.addEventListener('scroll', function (e) {
+    if (rightFull) {
+      if (window.pageYOffset > 500 && screen.width >= 991) {
+        rightFull.classList.add('fixed-full');
+      } else {
+        rightFull.classList.remove('fixed-full');
+      }
+    }
+  }); // end Фиксирую блок "Выбор получателей сообщения" 
 });
 $(document).ready(function () {
   var $slider = $("#slider");
@@ -458,58 +453,7 @@ $(document).ready(function () {
         newsletterTransliterationText[i].classList.toggle('active');
       }
     });
-  }); // let myDataNumber = document.querySelectorAll('[data-number]');
-  // let myTxt = document.querySelector('.txt');
-  // let newsletterFormTextSymbol = document.querySelector('.newsletter__form-text-symbol > span');
-  // let newsletterFormTextSms = document.querySelector('.newsletter__form-text-sms > span');
-  // const numberOfMessages = (myElems, myTxt, myLengthLetters, myLengthSMS, myTransLengthLetters, myTransLengthSMS, searchElem) => {
-  // 	let elems = document.querySelectorAll(myElems);
-  // 	let txt = document.querySelector(myTxt);
-  // 	let lengthLetters = document.querySelector(myLengthLetters);
-  // 	let lengthSMS = document.querySelector(myLengthSMS);
-  // 	let translengthLetters = document.querySelector(myTransLengthLetters);
-  // 	let transLengthSMS = document.querySelector(myTransLengthSMS);
-  // 	let i = 1;
-  // 	let value = 10;
-  // 	// if (lengthLetters && lengthSMS) {
-  // 	// 	lengthLetters.innerHTML = txt.value.length;
-  // 	// 	lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
-  // 	// }
-  // 	if (txt) {
-  // 		txt.addEventListener('input', (e) => {
-  // 			if (txt.value.length >= 1 && txt.value.length < value) {
-  // 				lengthSMS.innerHTML = i;
-  // 			}
-  // 			if (txt.value.length >= value) {
-  // 				lengthSMS.innerHTML = i++;
-  // 				value = value + 10;
-  // 			}
-  // 			lengthLetters.innerHTML = e.target.value.length;
-  // 			// lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
-  // 			// translengthLetters.innerHTML = e.target.value.length;
-  // 			// transLengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
-  // 		});
-  // 	}
-  // if (elems) {
-  // 	elems.forEach(elem => {
-  // 		elem.addEventListener('click', (e) => {
-  // 			lengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
-  // 			lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 10));
-  // 			console.log(txt.value)
-  // 			console.log(document.querySelector('.txt').value)
-  // 			// lengthSMS.innerHTML = i++;
-  // 			// lengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
-  // 			// translengthLetters.innerHTML = txt.value.length + e.target.getAttribute(searchElem).length;
-  // 			// transLengthSMS.innerHTML = (Math.floor(lengthLetters.innerHTML / 17));
-  // 		});
-  // 	});
-  // }
-  // }
-  // numberOfMessages('[data-number]', '.txt', '.newsletter__form-text-symbol > span', '.newsletter__form-text-sms > span', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span', 'data-number');
-  // numberOfMessages(false, '.txtTrans', '.newsletter__transliteration-symbol > span', '.newsletter__transliteration-sms > span');
-  // numberOfMessages('[data-number2]', '.txt2', '.newsletter__form-text-symbol2 > span', '.newsletter__form-text-sms2 > span', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span', 'data-number2');
-  // numberOfMessages(false, '.txtTrans2', '.newsletter__transliteration-symbol2 > span', '.newsletter__transliteration-sms2 > span');
-
+  });
   var lengthLetters = document.querySelector('.newsletter__form-text-symbol > span');
   var lengthSMS = document.querySelector('.newsletter__form-text-sms > span');
   var translengthLetters = document.querySelector('.newsletter__transliteration-symbol > span');
