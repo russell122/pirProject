@@ -56,7 +56,7 @@
                   <li class="submenu__li"><a href="">Аккаунт</a></li>
                   <li class="submenu__li"><a href="settings.html">Настройки</a></li>
                   <li class="submenu__li"><a href="">Подписка на уведомления</a></li>
-                  <li class="submenu__li"><a href="selectingUserDatabase.html">Новости</a></li>
+                  <li class="submenu__li"><a href="databaseManagement.html">Новости</a></li>
                 </ul>
               </li>
               <li class="topmenu__item"><a href="#">Рассылки</a>
@@ -391,7 +391,7 @@
                             </div>
                             <div class="myCalendar__elem"><span></span>
                               <div class="myCalendar__style">
-                                <input class="time-calendar g-input" type="text"/>
+                                <input class="datepicker-here g-input" type="text"/>
                                 <svg class="svg-sprite-icon icon-calendar">
                                   <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                                 </svg>
@@ -404,23 +404,6 @@
                         <div class="block__search">
                           <p>Найти:</p>
                           <div class="block__search-wrap"> 
-                            <input class="g-input" type="text">
-                            <div class="mySelect__elem">
-                              <div class="mySelect__style">
-                                <select class="g-input" type="text">
-                                  <option>Во всех полях</option>
-                                  <option>Номер</option>
-                                  <option>Фамилия</option>
-                                  <option>Имя</option>
-                                  <option>Отчество</option>
-                                </select>
-                                <svg class="svg-sprite-icon icon-arrow-bottom">
-                                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block__search-wrap-hide">
                             <input class="g-input" type="text">
                             <div class="mySelect__elem">
                               <div class="mySelect__style">
@@ -459,10 +442,11 @@
                     <table>
                       <thead>
                         <tr>
-                          <th class="g-table-big5-ic">
-                            <svg class="svg-sprite-icon icon-checkb">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#checkb"></use>
-                            </svg>
+                          <th>
+                            <div class="myInp">
+                              <input class="statistics__target-myInp" id="check74" type="checkbox"/>
+                              <label for="check74"></label>
+                            </div>
                           </th>
                           <th>Номер телефона<br>(#number#)</th>
                           <th>Область</th>
@@ -478,7 +462,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check60" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check60" type="checkbox"/>
                               <label for="check60"></label>
                             </div>
                           </td>
@@ -494,7 +478,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check61" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check61" type="checkbox"/>
                               <label for="check61"></label>
                             </div>
                           </td>
@@ -510,7 +494,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check62" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check62" type="checkbox"/>
                               <label for="check62"></label>
                             </div>
                           </td>
@@ -525,8 +509,8 @@
                         </tr>
                         <tr class="bg">
                           <td aria-label="">
-                            <div class="myInp">
-                              <input id="check63" type="checkbox"/>
+                            <div class="myInp"> 
+                              <input class="statistics__checked-myInp" id="check63" type="checkbox"/>
                               <label for="check63"></label>
                             </div>
                           </td>
@@ -542,7 +526,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check64" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check64" type="checkbox"/>
                               <label for="check64"></label>
                             </div>
                           </td>
@@ -558,7 +542,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check65" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check65" type="checkbox"/>
                               <label for="check65"></label>
                             </div>
                           </td>
@@ -574,7 +558,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check66" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check66" type="checkbox"/>
                               <label for="check66"></label>
                             </div>
                           </td>
@@ -590,7 +574,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check67" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check67" type="checkbox"/>
                               <label for="check67"></label>
                             </div>
                           </td>
@@ -606,7 +590,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check68" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check68" type="checkbox"/>
                               <label for="check68"></label>
                             </div>
                           </td>
@@ -622,7 +606,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check69" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check69" type="checkbox"/>
                               <label for="check69"></label>
                             </div>
                           </td>
@@ -638,7 +622,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check70" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check70" type="checkbox"/>
                               <label for="check70"></label>
                             </div>
                           </td>
@@ -654,7 +638,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check71" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check71" type="checkbox"/>
                               <label for="check71"></label>
                             </div>
                           </td>
@@ -670,7 +654,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check72" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check72" type="checkbox"/>
                               <label for="check72"></label>
                             </div>
                           </td>
@@ -686,7 +670,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check73" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check73" type="checkbox"/>
                               <label for="check73"></label>
                             </div>
                           </td>
@@ -816,6 +800,119 @@
                   </div>
                   <div class="block__reset-btns"> 
                     <button class="button-accent" type="submit">ВЫБРАТЬ ВСЕ ОТОБРАННЫЕ НОМЕРА</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup2" data-modal>
+          <div class="g-popup__dialog popup__dialog2">
+            <div class="g-popup__content popup__content2">
+              <button class="g-popup__close popup__close2"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup2__form2">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавить новую базу абонентов</h2>
+                  </div>
+                  <div class="popup2__form2__elems">
+                    <h3 class="title-3">Введите название базы</h3>
+                    <input class="g-input" type="text">
+                    <button class="button-accent2">СОЗДАТЬ БАЗУ</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup3" data-modal>
+          <div class="g-popup__dialog popup__dialog3">
+            <div class="g-popup__content popup__content3">
+              <button class="g-popup__close popup__close3"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup3__form3">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Управление базами получателей</h2>
+                  </div>
+                  <div class="popup3__form3__elems elem__indent">
+                    <p>Вы уверены, что хотите копировать выделенную базу?</p>
+                    <button class="button-accent2">ОК</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup4" data-modal>
+          <div class="g-popup__dialog popup__dialog4">
+            <div class="g-popup__content popup__content4">
+              <button class="g-popup__close popup__close4"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup4__form4">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавление нового абонента в базу</h2>
+                  </div>
+                  <div class="popup4__form4__elems elem__indent">
+                    <div class="popup4__form4__elems-wrap">
+                      <div class="popup4__form4__elems-left"> 
+                        <input class="g-input marg-indent" type="text" placeholder="Номер телефона">
+                        <input class="g-input marg-indent" type="text" placeholder="Имя">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Мужской</option>
+                              <option>Женский</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup4__form4__elems-center">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Оператор</option>
+                              <option>Оператор2</option>
+                              <option>Оператор3</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="marg-indent2"></div>
+                        <input class="g-input marg-indent" type="text" placeholder="Фамиля">
+                        <div class="myCalendar">
+                          <div class="myCalendar__elem">
+                            <div class="myCalendar__style">
+                              <input class="datepicker-here g-input" type="text" placeholder="Дата рождения">
+                              <svg class="svg-sprite-icon icon-calendar">
+                                <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup4__form4__elems-right"> 
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Регион1</option>
+                              <option>Регион2</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="marg-indent2"></div>
+                        <input class="g-input marg-indent" type="text" placeholder="Отчество">
+                        <button class="button-accent" type="submit">ДОБАВИТЬ</button>
+                      </div>
+                    </div>
+                    <p>* В международном формате, например, +79001234567 (для России), +38023234224 (для Украины) и т.д.</p>
                   </div>
                 </div>
               </form>
@@ -1246,8 +1343,7 @@
           </div>
         </section>
       </div>
-      <footer class="footer"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </footer>
+      <footer class="footer"></footer>
     </div>
     <script src="web/js/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/imask"></script>

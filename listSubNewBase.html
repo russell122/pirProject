@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Детальная статистика Viber</title><!--[if IE]>
+    <title>Список абонентов Новая база</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -919,115 +919,257 @@
             </div>
           </div>
         </div>
-        <section class="detailedStatistics section-indent">
+        <section class="listSubNewBase section-indent">
           <div class="container">
-            <h2 class="title-5">Детальная статистика</h2>
-            <div class="g-tabs detailedStatistics__tabs"><a class="g-tabs__item detailedStatistics__tabs-elem" href="detailedStatistics.html">
-                <svg class="svg-sprite-icon icon-1">
-                  <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
-                </svg>
-                <div class="g-tabs__link">SMS РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem" href="detailedStatisticsViber.html">
-                <svg class="svg-sprite-icon icon-2">
-                  <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
-                </svg>
-                <div class="g-tabs__link">VIBER РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem active" href="detailedStatisticsVk.html">
-                <svg class="svg-sprite-icon icon-3">
-                  <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                </svg>
-                <div class="g-tabs__link">VK РАССЫЛКА</div></a></div>
-            <div class="g-content-wrap detailedStatistics__content-wrap">
-              <div class="g-content-item detailedStatistics__content-item">
-                <form class="g-content-elem">
-                  <div class="detailedStatistics__content-elem">
-                    <div class="mySelect__elem">
-                      <div class="mySelect__style">
-                        <select class="g-input" type="text">
-                          <option>Оператор</option>
-                          <option>Оператор2</option>
-                          <option>Оператор3</option>
-                        </select>
-                        <svg class="svg-sprite-icon icon-arrow-bottom">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="myCalendar__elem">
-                      <div class="myCalendar__style">
-                        <input class="g-input" type="text" placeholder="Отправитель"/>
-                        <svg class="svg-sprite-icon icon-search">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="myCalendar__elem">
-                      <div class="myCalendar__style">
-                        <input class="g-input" type="text" placeholder="Номер получателя"/>
-                        <svg class="svg-sprite-icon icon-search">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="myCalendar__elem">
-                      <div class="myCalendar__style">
-                        <input class="g-input" type="text" placeholder="Название рассылки"/>
-                        <svg class="svg-sprite-icon icon-search">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="mySelect__elem">
-                      <div class="mySelect__style">
-                        <select class="g-input" type="text">
-                          <option>Оператор</option>
-                          <option>Оператор2</option>
-                          <option>Оператор3</option>
-                        </select>
-                        <svg class="svg-sprite-icon icon-arrow-bottom">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="myCalendar__elem">
-                      <div class="myCalendar__style">
-                        <input class="g-input" type="text" placeholder="Текст СМС"/>
-                        <svg class="svg-sprite-icon icon-search">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
-                        </svg>
-                      </div>
+            <h2 class="title-5">Список абонентов “Новая база”</h2>
+            <form class="listSubNewBase__form">
+              <div class="listSubNewBase__form-left listSubNewBase__form-elem">
+                <div class="myCalendar__elem">
+                  <div class="myCalendar__style">
+                    <input class="g-input" type="text" placeholder="Поиск по тестовым полям, номер тел."/>
+                    <svg class="svg-sprite-icon icon-search">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
+                <p>Дата рождения</p>
+                <div class="myCalendar">
+                  <div class="myCalendar__elem">
+                    <div class="myCalendar__style">
+                      <input class="time-calendar g-input" type="text">
+                      <svg class="svg-sprite-icon icon-calendar">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                      </svg>
                     </div>
                   </div>
-                  <div class="detailedStatistics__content-line myInp">
-                    <input type="checkbox" id="check34" checked>
-                    <label for="check34">Каскадная</label>
-                  </div>
-                  <div class="detailedStatistics__content-bottom">
-                    <p>Время отправки СМС</p>
-                    <div class="myCalendar">
-                      <div class="myCalendar__elem"><span>c</span>
-                        <div class="myCalendar__style">
-                          <input class="time-calendar g-input" type="text">
-                          <svg class="svg-sprite-icon icon-calendar">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="myCalendar__elem"><span>до</span>
-                        <div class="myCalendar__style">
-                          <input class="time-calendar g-input" type="text">
-                          <svg class="svg-sprite-icon icon-calendar">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="button-accent2">ОТФИЛЬТРОВАТЬ</button>
-                  </div>
-                </form>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="container-small">
+              <div class="listSubNewBase__form-center listSubNewBase__form-elem">
+                <div class="myCalendar__elem">
+                  <div class="myCalendar__style">
+                    <input class="g-input" type="text" placeholder="Номер получателя"/>
+                    <svg class="svg-sprite-icon icon-search">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
+                <p>Оператор</p>
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>Оператор</option>
+                      <option>Оператор2</option>
+                      <option>Оператор3</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-bottom">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="listSubNewBase__form-right listSubNewBase__form-elem">
+                <div class="block__top-wrap">
+                  <p>Возраст: </p>
+                  <div class="block__sel"><span>от</span>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                          <option>32</option>
+                          <option>33</option>
+                          <option>34</option>
+                          <option>35</option>
+                          <option>36</option>
+                          <option>37</option>
+                          <option>38</option>
+                          <option>39</option>
+                          <option>40</option>
+                          <option>41</option>
+                          <option>42</option>
+                          <option>43</option>
+                          <option>44</option>
+                          <option>45</option>
+                          <option>46</option>
+                          <option>47</option>
+                          <option>48</option>
+                          <option>49</option>
+                          <option>50</option>
+                          <option>51</option>
+                          <option>52</option>
+                          <option>53</option>
+                          <option>54</option>
+                          <option>55</option>
+                          <option>56</option>
+                          <option>57</option>
+                          <option>58</option>
+                          <option>59</option>
+                          <option>60</option>
+                          <option>61</option>
+                          <option>62</option>
+                          <option>63</option>
+                          <option>64</option>
+                          <option>65</option>
+                          <option>66</option>
+                          <option>67</option>
+                          <option>68</option>
+                          <option>69</option>
+                          <option>70</option>
+                          <option>71</option>
+                          <option>72</option>
+                          <option>73</option>
+                          <option>74</option>
+                          <option>75</option>
+                          <option>76</option>
+                          <option>77</option>
+                          <option>78</option>
+                          <option>79</option>
+                          <option>80</option>
+                          <option>81</option>
+                          <option>82</option>
+                          <option>83</option>
+                          <option>84</option>
+                          <option>85</option>
+                          <option>86</option>
+                          <option>87</option>
+                          <option>88</option>
+                          <option>89</option>
+                          <option>90</option>
+                          <option>91</option>
+                          <option>92</option>
+                          <option>93</option>
+                          <option>94</option>
+                          <option>95</option>
+                          <option>96</option>
+                          <option>97</option>
+                          <option>98</option>
+                          <option>99</option>
+                          <option>100</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block__sel"><span>до</span>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                          <option>32</option>
+                          <option>33</option>
+                          <option>34</option>
+                          <option>35</option>
+                          <option>36</option>
+                          <option>37</option>
+                          <option>38</option>
+                          <option>39</option>
+                          <option>40</option>
+                          <option>41</option>
+                          <option>42</option>
+                          <option>43</option>
+                          <option>44</option>
+                          <option>45</option>
+                          <option>46</option>
+                          <option>47</option>
+                          <option>48</option>
+                          <option>49</option>
+                          <option>50</option>
+                          <option>51</option>
+                          <option>52</option>
+                          <option>53</option>
+                          <option>54</option>
+                          <option>55</option>
+                          <option>56</option>
+                          <option>57</option>
+                          <option>58</option>
+                          <option>59</option>
+                          <option>60</option>
+                          <option>61</option>
+                          <option>62</option>
+                          <option>63</option>
+                          <option>64</option>
+                          <option>65</option>
+                          <option>66</option>
+                          <option>67</option>
+                          <option>68</option>
+                          <option>69</option>
+                          <option>70</option>
+                          <option>71</option>
+                          <option>72</option>
+                          <option>73</option>
+                          <option>74</option>
+                          <option>75</option>
+                          <option>76</option>
+                          <option>77</option>
+                          <option>78</option>
+                          <option>79</option>
+                          <option>80</option>
+                          <option>81</option>
+                          <option>82</option>
+                          <option>83</option>
+                          <option>84</option>
+                          <option>85</option>
+                          <option>86</option>
+                          <option>87</option>
+                          <option>88</option>
+                          <option>89</option>
+                          <option>90</option>
+                          <option>91</option>
+                          <option>92</option>
+                          <option>93</option>
+                          <option>94</option>
+                          <option>95</option>
+                          <option>96</option>
+                          <option>97</option>
+                          <option>98</option>
+                          <option>99</option>
+                          <option>100</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block__btn"> 
+                  <button class="button-accent2" type="submit">ПОКАЗАТЬ</button>
+                </div>
+              </div>
+            </form>
+            <div class="listSubNewBase__settings"><a class="listSubNewBase__settings-link" href="#"><span>Настройка базы </span>
+                <svg class="svg-sprite-icon icon-settings">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#settings"></use>
+                </svg></a></div>
             <div class="statistics__top">
+              <div class="statistics__top-myBtns"><a class="button-accent2 listSubNewBase__numberModalTarget" href="#">ДОБАВИТЬ НОМЕР</a><a class="button-accent2" href="#">ЗАГРУЗИТЬ ИЗ XLS - ФАЙЛА</a><a class="button-accent2" href="#">ЗАГРУЗИТЬ ИЗ БУФЕРА</a></div>
               <div class="statistics__top-elems"><a class="statistics__top-elem-link" href="#">
                   <svg class="svg-sprite-icon icon-exel">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
@@ -1041,124 +1183,84 @@
                   </svg></a>
               </div>
             </div>
-            <div class="g-table-big statistics__content-item g-table-big3">
+            <div class="g-table-big statistics__content-item g-table-big6 g-table-big8">
               <table>
                 <thead>
                   <tr>
-                    <th>Индификатор<br>сообщения</th>
-                    <th>Индификатор<br>Viber</th>
-                    <th>Номер<br>получателя</th>
-                    <th>Текст сообщения</th>
-                    <th>Отправитель</th>
+                    <th class="g-table-big5-ic">
+                      <svg class="svg-sprite-icon icon-checkb">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#checkb"></use>
+                      </svg>
+                    </th>
+                    <th>Номер телефона</th>
+                    <th>Область</th>
                     <th>Оператор</th>
-                    <th>Название<br>рассылки</th>
-                    <th>Время <br>отправки SMS</th>
-                    <th>Время<br>смены <br>состояния</th>
-                    <th>Статус</th>
-                    <th>Стоимость</th>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+                    <th>Отчество</th>
+                    <th>Дата рождения</th>
+                    <th>Пол</th>
+                    <th>
+                      <svg class="svg-sprite-icon icon-overwrite">
+                        <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                      </svg>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
-                      <div class="block__icon">
-                        <svg class="svg-sprite-icon icon-3">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                        </svg>
-                        <svg class="svg-sprite-icon icon-5">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#5"></use>
-                        </svg>
+                    <td aria-label="">
+                      <div class="myInp">
+                        <input id="check89" type="checkbox"/>
+                        <label for="check89"></label>
                       </div>
                     </td>
-                    <td aria-label="Индификатор vk">0111</td>
-                    <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a>
-                      <p>1 СМС, 200 символов</p>
-                    </td>
-                    <td aria-label="Отправитель">Имя<br>отправителя</td>
-                    <td aria-label="Оператор">Beeline</td>
-                    <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Статус">Доставлено</td>
-                    <td aria-label="Стоимость">100₽</td>
-                  </tr>
-                  <tr class="bg">
-                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
-                      <div class="block__icon">
-                        <svg class="svg-sprite-icon icon-3">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                        </svg>
-                      </div>
-                    </td>
-                    <td aria-label="Индификатор vk">0111</td>
-                    <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a>
-                      <p>1 СМС, 200 символов</p>
-                    </td>
-                    <td aria-label="Отправитель">Имя<br>отправителя</td>
-                    <td aria-label="Оператор">Skylink</td>
-                    <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Статус">Не доставлено</td>
-                    <td aria-label="Стоимость">100₽</td>
+                    <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                    <td aria-label="Область">Воронежская область</td>
+                    <td aria-label="Оператор">билайн</td>
+                    <td aria-label="Фамилия">Тестовый</td>
+                    <td aria-label="Имя">Петр</td>
+                    <td aria-label="Отчество"></td>
+                    <td aria-label="Дата рождения">23.07.2020</td>
+                    <td aria-label="Пол">мужской</td>
+                    <td aria-label=""><a href="#"> 
+                        <svg class="svg-sprite-icon icon-overwrite">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                        </svg></a></td>
                   </tr>
                   <tr>
-                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
-                      <div class="block__icon"></div>
+                    <td aria-label="">
+                      <div class="myInp">
+                        <input id="check90" type="checkbox"/>
+                        <label for="check90"></label>
+                      </div>
                     </td>
-                    <td aria-label="Индификатор vk">0111</td>
-                    <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a>
-                      <p>1 СМС, 200 символов</p>
-                    </td>
-                    <td aria-label="Отправитель">Имя<br>отправителя</td>
+                    <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                    <td aria-label="Область">Московская область</td>
                     <td aria-label="Оператор">Tele2</td>
-                    <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Статус">Просрочено</td>
-                    <td aria-label="Стоимость">100₽</td>
-                  </tr>
-                  <tr class="bg">
-                    <td class="block__icon-td" aria-label="Индификатор сообщения">0111
-                      <div class="block__icon"></div>
-                    </td>
-                    <td aria-label="Индификатор vk">0111</td>
-                    <td aria-label="Номер получателя">+7891236578</td>
-                    <td class="text-block" aria-label="Текст сообщения">#number#lastname#name# Пора на фитнес! Запишись и получи первое занятие бесплатно.Подробности по телефону: 39853<br> Сайт: <a class="text-block-link" href="#">fitnessruss.ru<br></a>
-                      <p>1 СМС, 200 символов</p>
-                    </td>
-                    <td aria-label="Отправитель">Имя<br>отправителя</td>
-                    <td aria-label="Оператор">Мегафон</td>
-                    <td aria-label="Название рассылки">Название<br>рассылки</td>
-                    <td aria-label="Время отправки SMS">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Время смены состояния">23.07.2020, <br>19:30:00</td>
-                    <td aria-label="Статус">Доставлено</td>
-                    <td aria-label="Стоимость">100₽</td>
+                    <td aria-label="Фамилия">Петров</td>
+                    <td aria-label="Имя">Петр</td>
+                    <td aria-label="Отчество">Петрович</td>
+                    <td aria-label="Дата рождения">23.07.2020</td>
+                    <td aria-label="Пол">мужской</td>
+                    <td aria-label=""><a href="#"> 
+                        <svg class="svg-sprite-icon icon-overwrite">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                        </svg></a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="myPaginations">
-              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
-                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
-              </div>
-              <div class="myPaginations__value">
-                <p>Записей на странице:</p>
-                <div class="mySelect__elem">
-                  <div class="mySelect__style">
-                    <select class="g-input" type="text">
-                      <option>50</option>
-                      <option>75</option>
-                      <option>100</option>
-                    </select>
-                    <svg class="svg-sprite-icon icon-arrow-right">
-                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
-                    </svg>
-                  </div>
+            <div class="listSubNewBase__action">
+              <p>С выделенными</p>
+              <div class="listSubNewBase__action-wrap">
+                <div class="listSubNewBase__action-wrap-left"><a class="button-accent" href="#">СКОПИРОВАТЬ</a><span>в</span>
+                  <input class="g-input" type="text" placeholder="Название базы">
                 </div>
+                <div class="listSubNewBase__action-wrap-center"><a class="button-accent" href="#">ПЕРЕМЕСТИТЬ</a><span>в</span>
+                  <input class="g-input" type="text" placeholder="Название базы">
+                </div>
+                <div class="listSubNewBase__action-wrap-right"><a class="button-accent" href="#">УДАЛИТЬ</a><a class="button-accent button-accent-grey" href="#">УДАЛИТЬ ВСЕ</a></div>
               </div>
             </div>
             <div class="statistics__top">
@@ -1175,136 +1277,80 @@
                   </svg></a>
               </div>
             </div>
-            <div class="g-card g-card1">
+            <div class="g-card g-card7">
               <div class="g-card__row">
                 <div class="g-card__column">
                   <div class="g-card__item">
-                    <div class="g-card1__item-head">
-                      <p>0111 | 0111</p>
-                      <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-3">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                        </svg>
-                        <p>Имя отправителя</p>
-                      </div>
+                    <div class="g-card7__top g-card6__top g-card6__ind">
+                      <p>Петров Петр Петрович</p>
                     </div>
-                    <div class="g-card1__item-info">
-                      <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <div class="g-card1__item-symbol-wrap">
-                        <p>123</p>
-                        <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>+7891236578</p>
-                        <p>Tele2</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>Название рассылки</p>
-                        <p>Доставлено</p>
-                      </div>
-                      <div class="g-card1__item-date bg">
-                        <div class="g-card1__item-date-elem">
-                          <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                        <div class="g-card1__item-date-elem">
-                          <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                      </div>
-                      <div class="g-card1__item-bgWhite"></div>
-                      <div class="bg g-card1__item-price">
-                        <p>Стоимость:</p>
-                        <p><span>2000</span>руб.</p>
-                      </div>
+                    <div class="g-card7__name g-card6__ind">
+                      <p>Мужской</p>
                     </div>
+                    <div class="g-card7__phone bg g-card6__ind"><a href="tel:+7897548906">+7897548906</a>
+                      <p>Tele2</p>
+                    </div>
+                    <div class="g-card7__date g-card6__ind">
+                      <p>Дата рождения</p>
+                      <p>23.07.2020</p>
+                    </div>
+                    <div class="g-card7__adress g-card6__ind">
+                      <p>Воронежская область</p>
+                    </div>
+                    <div class="g-card7__btn g-card6__ind bg"><a class="g-card7__btn-el button-accent" href="#">
+                        <svg class="svg-sprite-icon icon-overwrite">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                        </svg><span>Редактировать</span></a></div>
                   </div>
                 </div>
                 <div class="g-card__column">
                   <div class="g-card__item">
-                    <div class="g-card1__item-head">
-                      <p>0111 | 0111</p>
-                      <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-3">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                        </svg>
-                        <p>Имя отправителя</p>
-                      </div>
+                    <div class="g-card7__top g-card6__top g-card6__ind">
+                      <p>Петров Петр Петрович</p>
                     </div>
-                    <div class="g-card1__item-info">
-                      <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <div class="g-card1__item-symbol-wrap">
-                        <p>123</p>
-                        <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>+7891236578</p>
-                        <p>Tele2</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>Название рассылки</p>
-                        <p>Доставлено</p>
-                      </div>
-                      <div class="g-card1__item-date bg">
-                        <div class="g-card1__item-date-elem">
-                          <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                        <div class="g-card1__item-date-elem">
-                          <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                      </div>
-                      <div class="g-card1__item-bgWhite"></div>
-                      <div class="bg g-card1__item-price">
-                        <p>Стоимость:</p>
-                        <p><span>2000</span>руб.</p>
-                      </div>
+                    <div class="g-card7__name g-card6__ind">
+                      <p>Мужской</p>
                     </div>
+                    <div class="g-card7__phone bg g-card6__ind"><a href="tel:+7897548906">+7897548906</a>
+                      <p>Tele2</p>
+                    </div>
+                    <div class="g-card7__date g-card6__ind">
+                      <p>Дата рождения</p>
+                      <p>23.07.2020</p>
+                    </div>
+                    <div class="g-card7__adress g-card6__ind">
+                      <p>Воронежская область</p>
+                    </div>
+                    <div class="g-card7__btn g-card6__ind bg"><a class="g-card7__btn-el button-accent" href="#">
+                        <svg class="svg-sprite-icon icon-overwrite">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                        </svg><span>Редактировать</span></a></div>
                   </div>
                 </div>
                 <div class="g-card__column">
                   <div class="g-card__item">
-                    <div class="g-card1__item-head">
-                      <p>0111 | 0111</p>
-                      <div class="g-card1__item-head-top">
-                        <svg class="svg-sprite-icon icon-3">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                        </svg>
-                        <p>Имя отправителя</p>
-                      </div>
+                    <div class="g-card7__top g-card6__top g-card6__ind">
+                      <p>Петров Петр Петрович</p>
                     </div>
-                    <div class="g-card1__item-info">
-                      <p class="g-card1__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <div class="g-card1__item-symbol-wrap">
-                        <p>123</p>
-                        <p class="g-card1__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>+7891236578</p>
-                        <p>Tele2</p>
-                      </div>
-                      <div class="g-card1__item-name">
-                        <p>Название рассылки</p>
-                        <p>Доставлено</p>
-                      </div>
-                      <div class="g-card1__item-date bg">
-                        <div class="g-card1__item-date-elem">
-                          <p>Отправка:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                        <div class="g-card1__item-date-elem">
-                          <p>Время смены состояния:</p><span> 23.07.2020, 19:30 </span>
-                        </div>
-                      </div>
-                      <div class="g-card1__item-bgWhite"></div>
-                      <div class="bg g-card1__item-price">
-                        <p>Стоимость:</p>
-                        <p><span>2000</span>руб.</p>
-                      </div>
+                    <div class="g-card7__name g-card6__ind">
+                      <p>Мужской</p>
                     </div>
+                    <div class="g-card7__phone bg g-card6__ind"><a href="tel:+7897548906">+7897548906</a>
+                      <p>Tele2</p>
+                    </div>
+                    <div class="g-card7__date g-card6__ind">
+                      <p>Дата рождения</p>
+                      <p>23.07.2020</p>
+                    </div>
+                    <div class="g-card7__adress g-card6__ind">
+                      <p>Воронежская область</p>
+                    </div>
+                    <div class="g-card7__btn g-card6__ind bg"><a class="g-card7__btn-el button-accent" href="#">
+                        <svg class="svg-sprite-icon icon-overwrite">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                        </svg><span>Редактировать</span></a></div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="myPaginations">
-              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
-                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
               </div>
             </div>
           </div>

@@ -56,7 +56,7 @@
                   <li class="submenu__li"><a href="">Аккаунт</a></li>
                   <li class="submenu__li"><a href="settings.html">Настройки</a></li>
                   <li class="submenu__li"><a href="">Подписка на уведомления</a></li>
-                  <li class="submenu__li"><a href="selectingUserDatabase.html">Новости</a></li>
+                  <li class="submenu__li"><a href="databaseManagement.html">Новости</a></li>
                 </ul>
               </li>
               <li class="topmenu__item"><a href="#">Рассылки</a>
@@ -391,7 +391,7 @@
                             </div>
                             <div class="myCalendar__elem"><span></span>
                               <div class="myCalendar__style">
-                                <input class="time-calendar g-input" type="text"/>
+                                <input class="datepicker-here g-input" type="text"/>
                                 <svg class="svg-sprite-icon icon-calendar">
                                   <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                                 </svg>
@@ -404,23 +404,6 @@
                         <div class="block__search">
                           <p>Найти:</p>
                           <div class="block__search-wrap"> 
-                            <input class="g-input" type="text">
-                            <div class="mySelect__elem">
-                              <div class="mySelect__style">
-                                <select class="g-input" type="text">
-                                  <option>Во всех полях</option>
-                                  <option>Номер</option>
-                                  <option>Фамилия</option>
-                                  <option>Имя</option>
-                                  <option>Отчество</option>
-                                </select>
-                                <svg class="svg-sprite-icon icon-arrow-bottom">
-                                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block__search-wrap-hide">
                             <input class="g-input" type="text">
                             <div class="mySelect__elem">
                               <div class="mySelect__style">
@@ -459,10 +442,11 @@
                     <table>
                       <thead>
                         <tr>
-                          <th class="g-table-big5-ic">
-                            <svg class="svg-sprite-icon icon-checkb">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#checkb"></use>
-                            </svg>
+                          <th>
+                            <div class="myInp">
+                              <input class="statistics__target-myInp" id="check74" type="checkbox"/>
+                              <label for="check74"></label>
+                            </div>
                           </th>
                           <th>Номер телефона<br>(#number#)</th>
                           <th>Область</th>
@@ -478,7 +462,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check60" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check60" type="checkbox"/>
                               <label for="check60"></label>
                             </div>
                           </td>
@@ -494,7 +478,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check61" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check61" type="checkbox"/>
                               <label for="check61"></label>
                             </div>
                           </td>
@@ -510,7 +494,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check62" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check62" type="checkbox"/>
                               <label for="check62"></label>
                             </div>
                           </td>
@@ -525,8 +509,8 @@
                         </tr>
                         <tr class="bg">
                           <td aria-label="">
-                            <div class="myInp">
-                              <input id="check63" type="checkbox"/>
+                            <div class="myInp"> 
+                              <input class="statistics__checked-myInp" id="check63" type="checkbox"/>
                               <label for="check63"></label>
                             </div>
                           </td>
@@ -542,7 +526,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check64" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check64" type="checkbox"/>
                               <label for="check64"></label>
                             </div>
                           </td>
@@ -558,7 +542,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check65" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check65" type="checkbox"/>
                               <label for="check65"></label>
                             </div>
                           </td>
@@ -574,7 +558,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check66" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check66" type="checkbox"/>
                               <label for="check66"></label>
                             </div>
                           </td>
@@ -590,7 +574,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check67" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check67" type="checkbox"/>
                               <label for="check67"></label>
                             </div>
                           </td>
@@ -606,7 +590,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check68" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check68" type="checkbox"/>
                               <label for="check68"></label>
                             </div>
                           </td>
@@ -622,7 +606,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check69" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check69" type="checkbox"/>
                               <label for="check69"></label>
                             </div>
                           </td>
@@ -638,7 +622,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check70" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check70" type="checkbox"/>
                               <label for="check70"></label>
                             </div>
                           </td>
@@ -654,7 +638,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check71" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check71" type="checkbox"/>
                               <label for="check71"></label>
                             </div>
                           </td>
@@ -670,7 +654,7 @@
                         <tr>
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check72" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check72" type="checkbox"/>
                               <label for="check72"></label>
                             </div>
                           </td>
@@ -686,7 +670,7 @@
                         <tr class="bg">
                           <td aria-label="">
                             <div class="myInp">
-                              <input id="check73" type="checkbox"/>
+                              <input class="statistics__checked-myInp" id="check73" type="checkbox"/>
                               <label for="check73"></label>
                             </div>
                           </td>
@@ -822,10 +806,404 @@
             </div>
           </div>
         </div>
-        <section class="databaseManagement"></section>
+        <div class="g-popup popup2" data-modal>
+          <div class="g-popup__dialog popup__dialog2">
+            <div class="g-popup__content popup__content2">
+              <button class="g-popup__close popup__close2"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup2__form2">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавить новую базу абонентов</h2>
+                  </div>
+                  <div class="popup2__form2__elems">
+                    <h3 class="title-3">Введите название базы</h3>
+                    <input class="g-input" type="text">
+                    <button class="button-accent2">СОЗДАТЬ БАЗУ</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup3" data-modal>
+          <div class="g-popup__dialog popup__dialog3">
+            <div class="g-popup__content popup__content3">
+              <button class="g-popup__close popup__close3"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup3__form3">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Управление базами получателей</h2>
+                  </div>
+                  <div class="popup3__form3__elems elem__indent">
+                    <p>Вы уверены, что хотите копировать выделенную базу?</p>
+                    <button class="button-accent2">ОК</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup4" data-modal>
+          <div class="g-popup__dialog popup__dialog4">
+            <div class="g-popup__content popup__content4">
+              <button class="g-popup__close popup__close4"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup4__form4">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавление нового абонента в базу</h2>
+                  </div>
+                  <div class="popup4__form4__elems elem__indent">
+                    <div class="popup4__form4__elems-wrap">
+                      <div class="popup4__form4__elems-left"> 
+                        <input class="g-input marg-indent" type="text" placeholder="Номер телефона">
+                        <input class="g-input marg-indent" type="text" placeholder="Имя">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Мужской</option>
+                              <option>Женский</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup4__form4__elems-center">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Оператор</option>
+                              <option>Оператор2</option>
+                              <option>Оператор3</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="marg-indent2"></div>
+                        <input class="g-input marg-indent" type="text" placeholder="Фамиля">
+                        <div class="myCalendar">
+                          <div class="myCalendar__elem">
+                            <div class="myCalendar__style">
+                              <input class="datepicker-here g-input" type="text" placeholder="Дата рождения">
+                              <svg class="svg-sprite-icon icon-calendar">
+                                <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup4__form4__elems-right"> 
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Регион1</option>
+                              <option>Регион2</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="marg-indent2"></div>
+                        <input class="g-input marg-indent" type="text" placeholder="Отчество">
+                        <button class="button-accent" type="submit">ДОБАВИТЬ</button>
+                      </div>
+                    </div>
+                    <p>* В международном формате, например, +79001234567 (для России), +38023234224 (для Украины) и т.д.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <section class="databaseManagement section-indent">
+          <div class="container">
+            <div class="databaseManagement__top">
+              <h2 class="title-5">Управление базами получателей</h2><a class="button-accent2 databaseManagement__modalTarget" href="#">СОЗДАТЬ БАЗУ</a>
+            </div>
+            <div class="databaseManagement__bazes">
+              <div class="databaseManagement__bazes-el">
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>Название базы1</option>
+                      <option>Название базы2</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-bottom">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>Название базы1</option>
+                      <option>Название базы2</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-bottom">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="databaseManagement__bazes-btn"><a class="button-accent databaseManagement__bazes-modalTarget" href="#">КОПИРОВАТЬ</a></div>
+            </div>
+            <div class="statistics__top-elems databaseManagement__elems">
+              <div class="databaseManagement__elem">
+                <div class="myCalendar__elem">
+                  <div class="myCalendar__style">
+                    <input class="g-input" type="text" placeholder="Искать по дате, сумме, id"/>
+                    <svg class="svg-sprite-icon icon-search">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="databaseManagement__elem-btn"><a class="button-accent2 button-accent-grey" href="globalStopList.html">ГЛОБАЛЬНЫЙ СТОП - ЛИСТ</a></div>
+              </div>
+              <div class="statistics__top-elem-wrap"><a class="statistics__top-elem statistics__top-elemdbManage active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem statistics__top-elemdbManage" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="container-small">
+            <div class="g-table-big statistics__content-item g-table-big7">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Номер базы</th>
+                    <th>Название базы</th>
+                    <th>Количество номеров</th>
+                    <th>Поздравить с днем рождения</th>
+                    <th>Действие</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td aria-label="Номер базы">65543</td>
+                    <td aria-label="Название базы"><a class="g-table-big7-targetModal" href="listSubNewBase.html">Название базы</a></td>
+                    <td aria-label="Количество номеров">65543</td>
+                    <td aria-label="Поздравить с днем рождения">
+                      <div class="myInp">
+                        <input id="check58" type="checkbox" checked="checked"/>
+                        <label for="check58"></label>
+                      </div>
+                    </td>
+                    <td aria-label="Действие">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                          <svg class="svg-sprite-icon icon-overwrite">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                          </svg></a><a class="g-table-big7__icon2" href="#">
+                          <svg class="svg-sprite-icon icon-cancel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#cancel"></use>
+                          </svg></a><a class="g-table-big7__icon3" href="#">
+                          <svg class="svg-sprite-icon icon-exel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                          </svg></a><a class="g-table-big7__icon4" href="#">
+                          <svg class="svg-sprite-icon icon-download2">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download2"></use>
+                          </svg></a></div>
+                    </td>
+                  </tr>
+                  <tr class="bg">
+                    <td aria-label="Номер базы">65543</td>
+                    <td aria-label="Название базы"><a class="g-table-big7-targetModal" href="listSubNewBase.html">Название базы</a></td>
+                    <td aria-label="Количество номеров">65543</td>
+                    <td aria-label="Поздравить с днем рождения">
+                      <div class="myInp">
+                        <input id="check59" type="checkbox" checked="checked"/>
+                        <label for="check59"></label>
+                      </div>
+                    </td>
+                    <td aria-label="Действие">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                          <svg class="svg-sprite-icon icon-overwrite">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                          </svg></a><a class="g-table-big7__icon2" href="#">
+                          <svg class="svg-sprite-icon icon-cancel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#cancel"></use>
+                          </svg></a><a class="g-table-big7__icon3" href="#">
+                          <svg class="svg-sprite-icon icon-exel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                          </svg></a><a class="g-table-big7__icon4" href="#">
+                          <svg class="svg-sprite-icon icon-download2">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download2"></use>
+                          </svg></a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Номер базы">65543</td>
+                    <td aria-label="Название базы"><a class="g-table-big7-targetModal" href="listSubNewBase.html">Название базы</a></td>
+                    <td aria-label="Количество номеров">65543</td>
+                    <td aria-label="Поздравить с днем рождения">
+                      <div class="myInp">
+                        <input id="check81" type="checkbox" checked="checked"/>
+                        <label for="check81"></label>
+                      </div>
+                    </td>
+                    <td aria-label="Действие">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                          <svg class="svg-sprite-icon icon-overwrite">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                          </svg></a><a class="g-table-big7__icon2" href="#">
+                          <svg class="svg-sprite-icon icon-cancel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#cancel"></use>
+                          </svg></a><a class="g-table-big7__icon3" href="#">
+                          <svg class="svg-sprite-icon icon-exel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                          </svg></a><a class="g-table-big7__icon4" href="#">
+                          <svg class="svg-sprite-icon icon-download2">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download2"></use>
+                          </svg></a></div>
+                    </td>
+                  </tr>
+                  <tr class="bg">
+                    <td aria-label="Номер базы">65543</td>
+                    <td aria-label="Название базы"><a class="g-table-big7-targetModal" href="listSubNewBase.html">Название базы</a></td>
+                    <td aria-label="Количество номеров">65543</td>
+                    <td aria-label="Поздравить с днем рождения">
+                      <div class="myInp">
+                        <input id="check82" type="checkbox" checked="checked"/>
+                        <label for="check82"></label>
+                      </div>
+                    </td>
+                    <td aria-label="Действие">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                          <svg class="svg-sprite-icon icon-overwrite">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                          </svg></a><a class="g-table-big7__icon2" href="#">
+                          <svg class="svg-sprite-icon icon-cancel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#cancel"></use>
+                          </svg></a><a class="g-table-big7__icon3" href="#">
+                          <svg class="svg-sprite-icon icon-exel">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                          </svg></a><a class="g-table-big7__icon4" href="#">
+                          <svg class="svg-sprite-icon icon-download2">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download2"></use>
+                          </svg></a></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="container">
+            <div class="statistics__top">
+              <div class="statistics__top-elems"><a class="statistics__top-elem" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="container-small">
+            <div class="g-card g-card6">
+              <div class="g-card__row">
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check83" type="checkbox" checked="checked"/>
+                        <label for="check83">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check84" type="checkbox" checked="checked"/>
+                        <label for="check84">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check85" type="checkbox" checked="checked"/>
+                        <label for="check85">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check86" type="checkbox" checked="checked"/>
+                        <label for="check86">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check87" type="checkbox" checked="checked"/>
+                        <label for="check87">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+                <div class="g-card__column">
+                  <div class="g-card__item">
+                    <div class="g-card6__top g-card6__ind"><a class="g-card6__top-link" href="#">Название баз</a><span>65543</span></div>
+                    <div class="g-card6__abon g-card6__ind">
+                      <p>Абонентов - <span>2 338</span></p>
+                    </div>
+                    <div class="g-card6__greeting g-card6__ind">
+                      <div class="myInp">
+                        <input id="check88" type="checkbox" checked="checked"/>
+                        <label for="check88">Поздравить с днем рождения</label>
+                      </div>
+                    </div>
+                    <div class="g-card6__export g-card6__ind bg"><a class="bg2" href="#">в CSV</a><a class="bg3" href="#">в Excel</a><a class="bg5" href="#">Редактировать</a><a class="bg4" href="#">Удалить</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <footer class="footer"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </footer>
+      <footer class="footer"></footer>
     </div>
     <script src="web/js/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
