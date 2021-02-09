@@ -236,20 +236,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var massChekedElems = function massChekedElems(myTarget, myElems) {
       var target = document.querySelector(myTarget);
       var elems = document.querySelectorAll(myElems);
-      target.addEventListener('click', function (e) {
-        if (e.target.checked == true) {
-          elems.forEach(function (el) {
-            el.checked = true;
-          });
-        } else {
-          elems.forEach(function (el) {
-            el.checked = false;
-          });
-        }
-      });
+
+      if (target) {
+        target.addEventListener('click', function (e) {
+          if (e.target.checked == true) {
+            elems.forEach(function (el) {
+              el.checked = true;
+            });
+          } else {
+            elems.forEach(function (el) {
+              el.checked = false;
+            });
+          }
+        });
+      }
     };
 
     massChekedElems('.statistics__target-myInp', '.statistics__checked-myInp');
+    massChekedElems('.statistics__target-myInp2', '.statistics__checked-myInp2');
   };
 
   myMassChekedElems(); // end Массовый cheked inp
@@ -281,40 +285,62 @@ document.addEventListener('DOMContentLoaded', function () {
       myHeader.classList.remove('fixedMenu');
     }
   });
-}); // let rangeWrap = document.querySelector('.js-range-slider');
-// rangeWrap.addEventListener('change', (e) => {
-// 	console.log(e.target.value)
-// })
-
+});
 $(document).ready(function () {
-  var $d3 = $(".js-range-slider");
-  $d3.ionRangeSlider({
-    skin: "big",
-    min: 0,
-    max: 2000,
-    from: 300
+  var $range = $(".js-range-slider");
+  var $input = $(".block__range-wrap > input");
+  var instance;
+  var min = 0;
+  var max = 1000;
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "single",
+    min: min,
+    max: max,
+    from: 500,
+    onStart: function onStart(data) {
+      $input.prop("value", data.from);
+    },
+    onChange: function onChange(data) {
+      $input.prop("value", data.from);
+    }
   });
-  $d3.on("change", function () {
-    var $inp = $(this);
-    var from = $inp.prop("value"); // reading input value
+  instance = $range.data("ionRangeSlider");
+  $input.on("input", function () {
+    var val = $(this).prop("value"); // validate
 
-    var from2 = $inp.data("from"); // reading input data-from attribute
+    if (val < min) {
+      val = min;
+    } else if (val > max) {
+      val = max;
+    }
 
-    var inpOut = $(".block__range-wrap > input"); // console.log(from, from2); // FROM value
-    // console.log($inp.val())
-    // console.log(inpOut.val())
+    instance.update({
+      from: val
+    });
+  }); // var $d3 = $(".js-range-slider");
+  // var $mm = $(".block__range-wrap > input")
+  // $d3.ionRangeSlider({
+  // 	skin: "big",
+  // 	min: 0,
+  // 	max: 2000,
+  // 	from: 300
+  // });
+  // $d3.on("change", function () {
+  // 	var $inp = $(this);
+  // 	var from = $inp.prop("value"); // reading input value
+  // 	var from2 = $inp.data("from"); // reading input data-from attribute
+  // 	var inpOut = $(".block__range-wrap > input");
+  // 	inpOut.val($inp.val());
+  // });
+  // var $slider = $("#slider");
+  // var $fill = $(".bar .fill");
+  // function setBar() {
+  // 	$fill.css("width", $slider.val() + "%");
+  // }
+  // $slider.on("input", setBar);
+  // setBar();
 
-    inpOut.val($inp.val());
-  });
-  var $slider = $("#slider");
-  var $fill = $(".bar .fill");
-
-  function setBar() {
-    $fill.css("width", $slider.val() + "%");
-  }
-
-  $slider.on("input", setBar);
-  setBar();
   var ddData = [{
     text: "Viber",
     value: 1,
