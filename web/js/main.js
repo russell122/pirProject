@@ -9,18 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }, []);
     }(this);
   }; // input range
-
-  var sliderInp = document.querySelector('.sliderInp');
-  var rangeInput = document.querySelector('.block__range-wrap > input');
-  var blockRangeValue = document.querySelector('.block__range-value > p >span');
-  sliderInp.addEventListener('input', function (e) {
-    // blockRangeValue.innerHTML = e.target.value;
-    rangeInput.value = e.target.value;
-  });
-  rangeInput.addEventListener('input', function (e) {
-    // blockRangeValue.innerHTML = e.target.value;
-    sliderInp.value = e.target.value;
-  }); // input end range
+  // let sliderInp = document.querySelector('.sliderInp');
+  // let rangeInput = document.querySelector('.block__range-wrap > input');
+  // let blockRangeValue = document.querySelector('.block__range-value > p >span');
+  // sliderInp.addEventListener('input', (e) => {
+  // 	// blockRangeValue.innerHTML = e.target.value;
+  // 	rangeInput.value = e.target.value;
+  // });
+  // rangeInput.addEventListener('input', (e) => {
+  // 	// blockRangeValue.innerHTML = e.target.value;
+  // 	sliderInp.value = e.target.value;
+  // });
+  // input end range
   // modal
 
   var modal = function modal() {
@@ -281,8 +281,31 @@ document.addEventListener('DOMContentLoaded', function () {
       myHeader.classList.remove('fixedMenu');
     }
   });
-});
+}); // let rangeWrap = document.querySelector('.js-range-slider');
+// rangeWrap.addEventListener('change', (e) => {
+// 	console.log(e.target.value)
+// })
+
 $(document).ready(function () {
+  var $d3 = $(".js-range-slider");
+  $d3.ionRangeSlider({
+    skin: "big",
+    min: 0,
+    max: 2000,
+    from: 300
+  });
+  $d3.on("change", function () {
+    var $inp = $(this);
+    var from = $inp.prop("value"); // reading input value
+
+    var from2 = $inp.data("from"); // reading input data-from attribute
+
+    var inpOut = $(".block__range-wrap > input"); // console.log(from, from2); // FROM value
+    // console.log($inp.val())
+    // console.log(inpOut.val())
+
+    inpOut.val($inp.val());
+  });
   var $slider = $("#slider");
   var $fill = $(".bar .fill");
 
