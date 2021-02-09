@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.databaseManagement__modalTarget', '.popup2', '.popup-active');
     activeModal('.databaseManagement__bazes-modalTarget', '.popup3', '.popup-active');
     activeModal('.listSubNewBase__numberModalTarget', '.popup4', '.popup-active');
+    activeModal('.listSubNewBase__xlsModalTarget', '.popup5', '.popup-active');
+    activeModal('.listSubNewBase__settings-link', '.popup7', '.popup-active');
   };
 
   modal(); // end modal
@@ -291,7 +293,7 @@ $(document).ready(function () {
   var $input = $(".block__range-wrap > input");
   var instance;
   var min = 0;
-  var max = 1000;
+  var max = 2000;
   $range.ionRangeSlider({
     skin: "round",
     type: "single",
