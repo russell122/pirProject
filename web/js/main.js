@@ -53,7 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.databaseManagement__bazes-modalTarget', '.popup3', '.popup-active');
     activeModal('.listSubNewBase__numberModalTarget', '.popup4', '.popup-active');
     activeModal('.listSubNewBase__xlsModalTarget', '.popup5', '.popup-active');
+    activeModal('.listSubNewBase__xlsModalTarget2', '.popup6', '.popup-active');
     activeModal('.listSubNewBase__settings-link', '.popup7', '.popup-active');
+    activeModal('.registerOfSenderNames__btnModalTarget', '.popup8', '.popup-active');
+    activeModal('.listSubNewBase__numberModalTarget2', '.popup9', '.popup-active');
+    activeModal('.attachDocumentTargetModal', '.popup10', '.popup-active');
   };
 
   modal(); // end modal
@@ -256,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     massChekedElems('.statistics__target-myInp', '.statistics__checked-myInp');
     massChekedElems('.statistics__target-myInp2', '.statistics__checked-myInp2');
+    massChekedElems('.statistics__target-myInp3', '.statistics__checked-myInp3');
   };
 
   myMassChekedElems(); // end Массовый cheked inp

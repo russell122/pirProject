@@ -70,7 +70,7 @@
                   <li class="submenu__li"><a href="">Входящие SMS</a></li>
                   <li class="submenu__li"><a href="">Шаблоны и конструктор</a></li>
                   <li class="submenu__li"><a href="">Базы получателей</a></li>
-                  <li class="submenu__li"><a href="">Реест имен отправителей</a></li>
+                  <li class="submenu__li"><a href="registerOfSenderNames.html">Реест имен отправителей</a></li>
                 </ul>
               </li>
               <li class="topmenu__item"><a href="#">Статистика</a>
@@ -89,7 +89,7 @@
                 </svg>
                 <ul class="submenu">
                   <li class="submenu__li"><a href="issuedInvoices.html">Счета и оплаты</a></li>
-                  <li class="submenu__li"><a href="">Тарифы</a></li>
+                  <li class="submenu__li"><a href="tariffs.html">Тарифы</a></li>
                   <li class="submenu__li"><a href="">Расходы</a></li>
                 </ul>
               </li>
@@ -1007,15 +1007,215 @@
                     <div class="popup7__wrap">
                       <div class="popup7__left">
                         <div class="popup7__left-wrap"> 
-                          <div class="popup7__left-el"> 
-                            <p>Текущее название базы</p>
-                            <input class="g-input" type="text">
+                          <div class="popup7__left-el popup7__left-el-col">
+                            <div class="popup7__left-el-text">
+                              <p>Текущее название базы</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <input class="g-input" type="text">
+                            </div>
                           </div>
-                          <div class="popup7__left-el"> 
-                            <p>Поздравить с днем рождения</p>
-                            <div class="myInp myInpInd">
-                              <input id="check81" type="checkbox">
-                              <label for="check81"></label>
+                          <div class="popup7__left-el">
+                            <div class="popup7__left-el-text">
+                              <p>Поздравить с днем рождения</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="myInp myInpInd">
+                                <input id="check81" type="checkbox" checked>
+                                <label for="check81"></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup7__left-el popup7__left-el-col">
+                            <div class="popup7__left-el-text">
+                              <p>Время поздравления</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="block__top-wrap">
+                                <div class="block__sel">
+                                  <div class="mySelect__elem"><span></span>
+                                    <div class="mySelect__style">
+                                      <select class="g-input" type="text">
+                                        <option>00 часов</option>
+                                        <option>01 час</option>
+                                        <option>02 часа</option>
+                                        <option>03 часа</option>
+                                        <option>04 часа</option>
+                                        <option>05 часов</option>
+                                        <option>06 часов</option>
+                                        <option>07 часов</option>
+                                        <option>08 часов</option>
+                                        <option>09 часов</option>
+                                        <option>10 часов</option>
+                                        <option>11 часов</option>
+                                        <option>12 часов</option>
+                                        <option>13 часов</option>
+                                        <option>14 часов</option>
+                                        <option>15 часов</option>
+                                        <option>16 часов</option>
+                                        <option>17 часов</option>
+                                        <option>18 часов</option>
+                                        <option>19 часов</option>
+                                        <option>20 часов</option>
+                                        <option>21 час</option>
+                                        <option>22 часа</option>
+                                        <option>23 часа</option>
+                                        <option>24 часа</option>
+                                      </select>
+                                      <svg class="svg-sprite-icon icon-arrow-right">
+                                        <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                                      </svg>
+                                    </div>
+                                  </div><span class="block__sel-line"></span>
+                                </div>
+                                <div class="block__sel">
+                                  <div class="mySelect__elem"><span></span>
+                                    <div class="mySelect__style">
+                                      <select class="g-input" type="text">
+                                        <option>00 минут</option>
+                                        <option>01 минута</option>
+                                        <option>02 минуты</option>
+                                        <option>03 минуты</option>
+                                        <option>04 минуты</option>
+                                        <option>05 минут</option>
+                                        <option>06 минут</option>
+                                        <option>07 минут</option>
+                                        <option>08 минут</option>
+                                        <option>09 минут</option>
+                                        <option>10 минут</option>
+                                        <option>11 минут</option>
+                                        <option>12 минут</option>
+                                        <option>13 минут</option>
+                                        <option>14 минут</option>
+                                        <option>15 минут</option>
+                                        <option>16 минут</option>
+                                        <option>17 минут</option>
+                                        <option>18 минут</option>
+                                        <option>18 минут</option>
+                                        <option>19 минут</option>
+                                        <option>20 минут</option>
+                                        <option>21 минута</option>
+                                        <option>22 минуты</option>
+                                        <option>23 минуты</option>
+                                        <option>24 минуты</option>
+                                        <option>25 минут</option>
+                                        <option>26 минут</option>
+                                        <option>27 минут</option>
+                                        <option>28 минут</option>
+                                        <option>29 минут</option>
+                                        <option>30 минут</option>
+                                        <option>31 минута</option>
+                                        <option>32 минуты</option>
+                                        <option>33 минуты</option>
+                                        <option>34 минуты</option>
+                                        <option>35 минут</option>
+                                        <option>36 минут</option>
+                                        <option>37 минут</option>
+                                        <option>38 минут</option>
+                                        <option>39 минут</option>
+                                        <option>40 минут</option>
+                                        <option>41 минута</option>
+                                        <option>42 минуты</option>
+                                        <option>43 минуты</option>
+                                        <option>44 минуты</option>
+                                        <option>45 минут</option>
+                                        <option>46 минут</option>
+                                        <option>47 минут</option>
+                                        <option>48 минут</option>
+                                        <option>49 минут</option>
+                                        <option>50 минут</option>
+                                        <option>51 минута</option>
+                                        <option>52 минуты</option>
+                                        <option>53 минуты</option>
+                                        <option>54 минуты</option>
+                                        <option>55 минут</option>
+                                        <option>56 минут</option>
+                                        <option>57 минут</option>
+                                        <option>58 минут</option>
+                                        <option>59 минут</option>
+                                      </select>
+                                      <svg class="svg-sprite-icon icon-arrow-right">
+                                        <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup7__left-el">
+                            <div class="popup7__left-el-text">
+                              <p>Локальное время</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="myInp myInpInd">
+                                <input id="check82" type="checkbox" checked>
+                                <label for="check82"></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup7__left-el">
+                            <div class="popup7__left-el-text">
+                              <p>Дублирующие номера тел.</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="myInp myInpInd">
+                                <input id="check83" type="checkbox" checked>
+                                <label for="check83"></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup7__left-el popup7__left-el-col">
+                            <div class="popup7__left-el-text">
+                              <p>Поздравить за</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="block__top-wrap">
+                                <div class="block__sel">
+                                  <div class="mySelect__elem"><span></span>
+                                    <div class="mySelect__style">
+                                      <select class="g-input" type="text">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                      </select>
+                                      <svg class="svg-sprite-icon icon-arrow-right">
+                                        <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                                      </svg>
+                                    </div>
+                                  </div><span>дней до дня рождения</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup7__left-el popup7__left-el-col">
+                            <div class="popup7__left-el-text">
+                              <p>Отправить поздравление от</p>
+                            </div>
+                            <div class="popup7__left-el-body">
+                              <div class="block__top-wrap block__top-wrap-dir">
+                                <div class="block__sel">
+                                  <div class="mySelect__elem">
+                                    <div class="mySelect__style">
+                                      <select class="g-input" type="text">
+                                        <option>Выберите отправителя</option>
+                                        <option>Отправитель 1</option>
+                                        <option>Отправитель 2</option>
+                                      </select>
+                                      <svg class="svg-sprite-icon icon-arrow-bottom">
+                                        <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div><a href="#">Добавить отправителя</a>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1048,8 +1248,8 @@
                         </div>
                         <div class="newsletter__transliteration">
                           <div class="newsletter__transliteration-top myInp">
-                            <input class="checkTrans" id="check1" type="checkbox" data-check="1">
-                            <label for="check1">Включить транслитерацию</label>
+                            <input class="checkTrans" id="check84" type="checkbox" data-check="1">
+                            <label for="check84">Включить транслитерацию</label>
                             <button class="myToolTips" data-tooltip="Info">
                               <svg class="svg-sprite-icon icon-qw">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#qw"></use>
@@ -1066,8 +1266,260 @@
                         </div>
                       </div>
                       <div class="popup7__right">
-                        <h1>Hello2</h1>
+                        <div class="popup7__right-wrap">
+                          <div class="popup7__right-body">
+                            <p>Отметь галочками поля, которые будут использоваться в данной базе</p>
+                          </div>
+                          <div class="popup7__right-elems">
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check85" type="checkbox" checked>
+                                <label for="check85"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Область" for="check85">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check86" type="checkbox" checked>
+                                <label for="check86"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Оператор" for="check86">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check87" type="checkbox" checked>
+                                <label for="check87"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Имя" for="check87">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check88" type="checkbox" checked>
+                                <label for="check88"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Фамилия" for="check88">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check89" type="checkbox" checked>
+                                <label for="check89"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Отчество" for="check89">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check90" type="checkbox" checked>
+                                <label for="check90"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Дата рождения" for="check90">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check91" type="checkbox" checked>
+                                <label for="check91"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Пол" for="check91">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check92" type="checkbox">
+                                <label for="check92"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Параметр1" for="check92">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check93" type="checkbox">
+                                <label for="check93"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Параметр2" for="check93">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check94" type="checkbox">
+                                <label for="check94"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Параметр3" for="check94">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check95" type="checkbox">
+                                <label for="check95"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Параметр4" for="check95">
+                            </div>
+                            <div class="popup7__right-elem">
+                              <div class="myInp myInpInd">
+                                <input id="check96" type="checkbox">
+                                <label for="check96"></label>
+                              </div>
+                              <input class="g-input" type="text" placeholder="Параметр5" for="check96">
+                            </div>
+                            <div class="popup7__right-info">
+                              <p>! -- Все поля можно переименовать, в том числе доп. поля --</p>
+                            </div>
+                            <div class="popup7__right-bottom-btn">
+                              <button class="button-accent2" type="submit">СОХРАНИТЬ</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup8" data-modal>
+          <div class="g-popup__dialog popup__dialog8">
+            <div class="g-popup__content popup__content8">
+              <button class="g-popup__close popup__close8"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup8__form8">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавление нового имени отправителя Вонтакте</h2>
+                  </div>
+                  <div class="popup8__form8__elems elem__indent">
+                    <div class="popup8__topInfo">
+                      <p>Для регистрации отправителя необходимо заполнить регистрационную анкету. Также необходимо <a href="#">подать уведомление о доверии</a></p>на право рассылать сообщения от имени группы
+                    </div>
+                    <div class="popup8__wrap"> 
+                      <div class="popup8__left">
+                        <h3 class="title-3">Заполняет клиент</h3>
+                        <input class="g-input" type="text" placeholder="Название компании">
+                        <input class="g-input" type="text" placeholder="Название группы">
+                        <input class="g-input" type="text" placeholder="Ссылка на группу">
+                        <div class="newsletter__right-down">
+                          <div class="newsletter__right-down-wrap">
+                            <input class="g-input" type="text">
+                            <label class="form-control">
+                              <input class="form-control" type="file" name="data[file]" placeholder="Прикрепите файл" style="display: none;"><span class="form-control-name">Обзор</span>
+                              <button class="js-labelFile"><span class="js-fileName">Прикрепить файл</span></button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup8__right">
+                        <h3 class="title-3">Заполняет компания</h3>
+                        <input class="g-input" type="text" placeholder="Логин">
+                        <input class="g-input" type="text" placeholder="Subject">
+                        <input class="g-input" type="text" placeholder="Service Name">
+                        <div class="newsletter__right-down">
+                          <div class="newsletter__right-down-wrap">
+                            <label class="form-control">
+                              <input class="form-control" type="file" name="data[file]" placeholder="Прикрепите файл" style="display: none;"><span class="form-control-name">ЗАГРУЗИТЬ СКАН</span>
+                              <button class="js-labelFile"><span class="js-fileName">Прикрепить файл</span></button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup9" data-modal>
+          <div class="g-popup__dialog popup__dialog6">
+            <div class="g-popup__content popup__content6">
+              <button class="g-popup__close popup__close6"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup6__form6">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Добавление нового имени отправителя SMS</h2>
+                  </div>
+                  <div class="popup4__form5__elems elem__indent">
+                    <div class="popup9__top-input"> 
+                      <input class="g-input" type="text" placeholder="Имя отправителя">
+                      <input class="g-input" type="text" placeholder="Юр.лицо">
+                      <input class="g-input" type="text" placeholder="ИНН">
+                      <input class="g-input" type="text" placeholder="Комментарий">
+                    </div>
+                    <div class="popup4__form5__check"> <span>Оператор</span>
+                      <div class="myInp">
+                        <input id="check105" type="checkbox">
+                        <label for="check105">Мегафон (бесплатно)</label>
+                      </div>
+                      <div class="myInp">
+                        <input id="check106" type="checkbox">
+                        <label for="check106">Tele2 (бесплатно)</label>
+                      </div>
+                      <div class="myInp">
+                        <input id="check107" type="checkbox">
+                        <label for="check107">МТС (платно)</label>
+                      </div>
+                      <div class="myInp">
+                        <input id="check108" type="checkbox">
+                        <label for="check108">Beeline ?</label>
+                      </div>
+                    </div>
+                    <div class="popup9__btn">
+                      <button class="button-accent">Добавить</button>
+                    </div>
+                    <div class="popup9__text"> 
+                      <p>Внимание! Подача имен на степовую тарификацию по операторам МТС, Билайн, Мегафон, Теле2 осуществляются только через Вашего персонального менеджера.</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="g-popup popup10" data-modal>
+          <div class="g-popup__dialog popup__dialog5">
+            <div class="g-popup__content popup__content5">
+              <button class="g-popup__close popup__close5"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup5__form5">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Прикрепить документ</h2>
+                  </div>
+                  <div class="popup4__form5__elems elem__indent">
+                    <p>Имя отправителя, МСС = 250 MNC = 20 Tele2</p>
+                    <p>Загрузите скан документа в формате (jpg|jpeg|gif|png|pdf)(max 5 MB)</p>
+                    <div class="newsletter__right-down">
+                      <div class="newsletter__right-down-wrap">
+                        <input class="g-input" type="text">
+                        <label class="form-control">
+                          <input class="form-control" type="file" name="data[file]" placeholder="Прикрепите файл" style="display: none;"><span class="form-control-name">Обзор</span>
+                          <button class="js-labelFile"><span class="js-fileName">Прикрепить файл</span></button>
+                        </label>
+                      </div>
+                      <div class="popup4__form5__rightElem"> 
+                        <button class="button-accent" type="submit">Загрузить</button>
+                      </div>
+                    </div>
+                    <div class="g-table-big statistics__content-item g-table-big10">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>id</th>
+                            <th>Ссылка назагруженный документ</th>
+                            <th>Тип</th>
+                            <th>Комментарий</th>
+                            <th>Действие</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td aria-label="id">3213</td>
+                            <td aria-label="Ссылка назагруженный документ"><a href="#">Ссылка </a></td>
+                            <td aria-label="Тип"><a href="#">jpg </a></td>
+                            <td aria-label="Комментарий"></td>
+                            <td aria-label="Документы">
+                              <div class="popup10__icons"><a class="attachDocumentTargetModal" href="#">
+                                  <svg class="svg-sprite-icon icon-overwrite">
+                                    <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
+                                  </svg></a><a class="g-table-big9__icon2" href="#">
+                                  <svg class="svg-sprite-icon icon-cancel">
+                                    <use xlink:href="web/images/sprite/symbol/sprite.svg#cancel"></use>
+                                  </svg></a></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -1078,7 +1530,7 @@
         <section class="databaseManagement section-indent">
           <div class="container">
             <div class="databaseManagement__top">
-              <h2 class="title-5">Управление базами получателей</h2><a class="button-accent2 databaseManagement__modalTarget" href="#">СОЗДАТЬ БАЗУ</a>
+              <h2 class="title-5">Управление базами получателей</h2><a class="button-accent databaseManagement__modalTarget" href="#">СОЗДАТЬ БАЗУ</a>
             </div>
             <div class="databaseManagement__bazes">
               <div class="databaseManagement__bazes-el">
@@ -1104,8 +1556,8 @@
                     </svg>
                   </div>
                 </div>
+                <div class="databaseManagement__bazes-btn"><a class="button-accent databaseManagement__bazes-modalTarget" href="#">КОПИРОВАТЬ</a></div>
               </div>
-              <div class="databaseManagement__bazes-btn"><a class="button-accent databaseManagement__bazes-modalTarget" href="#">КОПИРОВАТЬ</a></div>
             </div>
             <div class="statistics__top-elems databaseManagement__elems">
               <div class="databaseManagement__elem">
@@ -1117,7 +1569,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="databaseManagement__elem-btn"><a class="button-accent2 button-accent-grey" href="globalStopList.html">ГЛОБАЛЬНЫЙ СТОП - ЛИСТ</a></div>
+                <div class="databaseManagement__elem-btn"><a class="button-accent button-accent-grey" href="globalStopList.html">ГЛОБАЛЬНЫЙ СТОП - ЛИСТ</a></div>
               </div>
               <div class="statistics__top-elem-wrap"><a class="statistics__top-elem statistics__top-elemdbManage active" href="/">
                   <svg class="svg-sprite-icon icon-icon-table">
@@ -1359,7 +1811,8 @@
           </div>
         </section>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </footer>
     </div>
     <script src="web/js/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
