@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.listSubNewBase__numberModalTarget2', '.popup9', '.popup-active');
     activeModal('.attachDocumentTargetModal', '.popup10', '.popup-active');
     activeModal('.templates__TargetModal', '.popup11', '.popup-active');
-    activeModal('.templates__TargetModalVk', '.popup8', '.popup-active');
+    activeModal('.templates__TargetModalVk', '.popup13', '.popup-active');
     activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
   };
 
