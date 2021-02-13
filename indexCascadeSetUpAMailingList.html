@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная Viber</title><!--[if IE]>
+    <title>Главная cascade</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -192,39 +192,38 @@
         <section class="newsletter">
           <div class="container">
             <ul class="newsletter__tabs">
-              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="index.html">
+              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexsetUpAMailingList.html">
                   <svg class="svg-sprite-icon icon-1">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
                   </svg>
                   <div class="newsletter__tabs-link">SMS РАССЫЛКА</div></a></li>
-              <li class="newsletter__tabs-elem g-hover-tabs active" data-tabs="1"><a class="newsletter__tabs-fl" href="indexViber.html">
+              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexViberSetUpAMailingList.html">
                   <svg class="svg-sprite-icon icon-2">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
                   </svg>
                   <div class="newsletter__tabs-link"> VIBER РАССЫЛКА</div></a></li>
-              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexVk.html">
+              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexVkSetUpAMailingList.html">
                   <svg class="svg-sprite-icon icon-3">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
                   </svg>
                   <div class="newsletter__tabs-link"> VK РАССЫЛКА</div></a></li>
-              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexCascade.html">
+              <li class="newsletter__tabs-elem g-hover-tabs active" data-tabs="1"><a class="newsletter__tabs-fl" href="indexCascadeSetUpAMailingList.html">
                   <svg class="svg-sprite-icon icon-4">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#4"></use>
                   </svg>
                   <div class="newsletter__tabs-link"> КАСКАДНАЯ РАССЫЛКА</div></a></li>
-              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexCascadeCreate.html">
+              <li class="newsletter__tabs-elem g-hover-tabs" data-tabs="1"><a class="newsletter__tabs-fl" href="indexCascadeCreateSetUpAMailingList.html">
                   <svg class="svg-sprite-icon icon-4">
                     <use xlink:href="web/images/sprite/symbol/sprite.svg#4"></use>
                   </svg>
                   <div class="newsletter__tabs-link"> Создание каскадной рассылки</div></a></li>
             </ul>
-            <div class="newsletter__content-wrap">
-              <form class="newsletter__content-item newsletter__form">
+            <form class="newsletter__content-wrap newsletter__content-wrap-cascade">
+              <div class="newsletter__content-item newsletter__form newsletter__form-cascade">
                 <div class="newsletter__form-row">
                   <div class="newsletter__form-left">
                     <div class="newsletter__form-sms">
                       <h3 class="title-3">Viber рассылка</h3>
-                      <input class="g-input" type="text" placeholder="введите имя рассылки">
                     </div>
                     <div class="newsletter__form-sel">
                       <div class="newsletter__form-sender newsletter__form-sel-el">
@@ -245,7 +244,7 @@
                       </div>
                     </div>
                     <div class="newsletter__form-text">
-                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="2"></textarea>
+                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="1"></textarea>
                       <div class="newsletter__form-text-block">
                         <p class="newsletter__form-text-symbol">Введено <span value="220">0</span>символов</p>
                         <p class="newsletter__form-text-sms">Итого: <span value="2">0</span>sms</p><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button" href="/">Отправить</a>
@@ -282,7 +281,7 @@
                         </button>
                       </div>
                       <div class="newsletter__transliteration-text" data-check-trans="2">
-                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="2" readonly></textarea>
+                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="1" readonly></textarea>
                         <div class="newsletter__transliteration-block">
                           <p class="newsletter__transliteration-symbol">Введено <span value="220">0 </span>символов</p>
                           <p class="newsletter__transliteration-sms">Итого: <span value="2">0</span>sms</p>
@@ -336,64 +335,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="newsletter__mailingList">
-                      <div class="newsletter__mailingList-top">
-                        <h2 class="title-3">Запланировать рассылку</h2>
-                        <button class="myToolTips" data-tooltip="Info">
-                          <svg class="svg-sprite-icon icon-qw">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#qw"></use>
-                          </svg>
-                        </button>
-                      </div>
-                      <div class="newsletter__mailingList-block">
-                        <div class="myCalendar">
-                          <div class="myCalendar__elem"><span>с</span>
-                            <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text"/>
-                              <svg class="svg-sprite-icon icon-calendar">
-                                <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
-                              </svg>
-                            </div>
-                          </div>
-                          <div class="myCalendar__elem"><span>до</span>
-                            <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text"/>
-                              <svg class="svg-sprite-icon icon-calendar">
-                                <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="block__wrap">
-                          <div class="block__left">
-                            <div class="block__left-el myInp">
-                              <input id="check17" type="checkbox" checked>
-                              <label for="check17">Использовать часовой пояс абонента</label>
-                            </div>
-                            <div class="block__left-el myInp">
-                              <input id="check18" type="checkbox">
-                              <label for="check18">по МСК, GMT+4:00</label>
-                            </div>
-                            <div class="block__left-el myInp">
-                              <input id="check19" type="checkbox" checked>
-                              <label for="check19">Плавная рассылка</label>
-                            </div>
-                          </div>
-                          <div class="block__right">
-                            <div class="block__left-el myInp">
-                              <input id="check20" type="checkbox">
-                              <label for="check20">Ограничивать срок жизни SMS</label>
-                            </div>
-                            <div class="block__right-inp">
-                              <input class="numbers" id="number-mask" type="text" placeholder="72"><span>часа</span>
-                              <input class="numbers" id="number-mask2" type="text" placeholder="00"><span>минут</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
-                  <div class="newsletter__form-right">
+                  <div class="newsletter__form-right newsletter__form-right-full">
                     <div class="recipients">
                       <h3 class="title-3">Выбор получателей сообщения</h3>
                       <div class="g-tabs recipients__tabs">
@@ -526,793 +469,198 @@
                         </div>
                       </div>
                       <div class="recipients__exceptions-value recipients__exceptions-value2">
-                        <p>Стоимость рассылки по заданным параметрам ~ <br><span class="rub" value="200">200 </span></p>
-                        <div class="newsletter__form-flobalBtn">
-                          <button class="button-accent button-form">ОТПРАВИТЬ</button>
+                        <p>Стоимость рассылки по заданным параметрам ~ <br><span class="rub rubBold" value="200">200 </span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="newsletter__content-item newsletter__form newsletter__form-cascade newsletter__form-cascade-small">
+                <div class="newsletter__form-row newsletter__form-row-cascade">
+                  <div class="newsletter__form-left">
+                    <div class="newsletter__form-sms">
+                      <h3 class="title-3">Рассылка Вконтакте</h3>
+                      <input class="g-input" type="text" placeholder="введите имя рассылки">
+                    </div>
+                    <div class="newsletter__form-vk-info">
+                      <p>Рассылка во Вконтакте идет только по утвержденным шаблонам!</p>
+                    </div>
+                    <div class="newsletter__form-sel">
+                      <div class="newsletter__form-template newsletter__form-sel-el newsletter__form-selVk-el">
+                        <select class="g-select">
+                          <option>выберите шаблон Вконтакте</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select><a href="/">Добавить шаблон</a>
+                      </div>
+                    </div>
+                    <div class="newsletter__form-vk-text">
+                      <textarea placeholder="#Name1# #Number1#"></textarea>
+                    </div>
+                    <div class="newsletter__form-vkTemplate">
+                      <div class="newsletter__form-vkTemplate-name"><span> </span><span>#Name1#</span><span>#Namber1#</span></div>
+                      <div class="newsletter__form-vkTemplate-baz">
+                        <p>Из базы</p>
+                        <div class="newsletter__form-vkTemplate-baz-name">
+                          <select class="g-select">
+                            <option value="Имя">Имя</option>
+                            <option value="Имя2">Имя2</option>
+                          </select>
+                        </div>
+                        <div class="newsletter__form-vkTemplate-baz-number">
+                          <select class="g-select">
+                            <option value="Номер">Номер</option>
+                            <option value="Номер2">Номер2</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="newsletter__form-vkTemplate-manually">
+                        <p>Вручную</p>
+                        <div class="newsletter__form-vkTemplate-manually-name">
+                          <input class="g-input" type="text" placeholder="#Name1#">
+                        </div>
+                        <div class="newsletter__form-vkTemplate-manually-number">
+                          <input class="g-input" type="text" placeholder="#Number1#">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </section>
-        <section class="statistics">
-          <div class="container-small">
-            <div class="statistics__top">
-              <div class="statistics__top-title">
-                <h2 class="title-2">Статистика по рассылкам</h2>
               </div>
-              <div class="statistics__top-elems"><a class="statistics__top-elem active" href="/">
-                  <svg class="svg-sprite-icon icon-icon-table">
-                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
-                  </svg></a><a class="statistics__top-elem" href="/">
-                  <svg class="svg-sprite-icon icon-icon-cards">
-                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
-                  </svg></a>
+              <div class="newsletter__content-item newsletter__form newsletter__form-cascade newsletter__form-cascade-small">
+                <div class="newsletter__form-row newsletter__form-row-cascade">
+                  <div class="newsletter__form-left">
+                    <div class="newsletter__form-sms">
+                      <h3 class="title-3">SMS рассылка</h3>
+                      <input class="g-input" type="text" placeholder="введите имя рассылки">
+                    </div>
+                    <div class="newsletter__form-sel">
+                      <div class="newsletter__form-sender newsletter__form-sel-el">
+                        <select class="g-select">
+                          <option>выберите отправителя</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select><a href="/">Добавить отправителя</a>
+                      </div>
+                      <div class="newsletter__form-template newsletter__form-sel-el">
+                        <select class="g-select">
+                          <option>выберите шаблон</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select><a href="/">Добавить шаблон</a>
+                      </div>
+                    </div>
+                    <div class="newsletter__form-text newsletter__form-text2">
+                      <textarea class="txt2" placeholder="введите текст sms сообщения" data-txt2="1"></textarea>
+                      <div class="newsletter__form-text-block">
+                        <p class="newsletter__form-text-symbol newsletter__form-text-symbol2">Введено <span value="220">0 </span>символов</p>
+                        <p class="newsletter__form-text-sms newsletter__form-text-sms2">Итого: <span value="2">0</span>sms</p><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button" href="/">Отправить</a>
+                      </div>
+                      <div class="newsletter__form-personalisation personalisation">
+                        <div class="personalisation__head"><span>Персонализация </span></div>
+                        <div class="personalisation__wrap">
+                          <div class="personalisation__left">
+                            <button data-number2="#number">номер телефона</button>
+                            <button data-number2="#lastname">фамилия</button>
+                            <button data-number2="#name">имя</button>
+                            <button data-number2="#patronymic">отчество</button>
+                            <button data-number2="#dateBirth">дата рождения</button>
+                          </div>
+                          <div class="personalisation__right">
+                            <button data-number2="#floor">пол</button>
+                            <button data-number2="#note1">примечание1</button>
+                            <button data-number2="#note2">примечание2</button>
+                            <button data-number2="#note3">примечание3</button>
+                            <button data-number2="#endings">окончания -ый/-ая</button>
+                          </div>
+                        </div>
+                        <div class="personalisation__btn-small"><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button-accent" href="/">Отправить</a></div>
+                      </div>
+                    </div>
+                    <div class="newsletter__transliteration">
+                      <div class="newsletter__transliteration-top myInp">
+                        <input class="checkTrans" id="check1" type="checkbox" data-check="1">
+                        <label for="check1">Включить транслитерацию</label>
+                        <button class="myToolTips" data-tooltip="Info">
+                          <svg class="svg-sprite-icon icon-qw">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#qw"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="newsletter__transliteration-text" data-check-trans="1">
+                        <textarea class="txtTrans2" placeholder="введите текст sms сообщения" data-txtTrans2="1" readonly></textarea>
+                        <div class="newsletter__transliteration-block">
+                          <p class="newsletter__transliteration-symbol newsletter__transliteration-symbol2">Введено <span value="220">0 </span>символов</p>
+                          <p class="newsletter__transliteration-sms newsletter__transliteration-sms2">Итого: <span value="2">0</span>sms</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="g-table-big statistics__content-item statistics__content-item1">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Название<br>рассылки</th>
-                    <th>Тип</th>
-                    <th>Отправитель</th>
-                    <th>Текст SMS</th>
-                    <th>Абонентов<br>Готово|<br>Осталось</th>
-                    <th>Название <br>базы</th>
-                    <th>База для<br>исключения</th>
-                    <th>Локальное время|<br>Главная отправка|<br>Дублирующие номера</th>
-                    <th>Время<br>отправки<br>SMS</th>
-                    <th>Срок<br>жизни<br>SMS</th>
-                    <th>Статус</th>
-                    <th>Стоимость</th>
-                    <th> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td aria-label="Название рассылки">Пробная<br> рассылка</td>
-                    <td aria-label="Тип">
-                      <div class="td__icon">
-                        <svg class="svg-sprite-icon icon-1">
-                          <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+              <div class="newsletter__mailingList newsletter__form-cascade-small">
+                <div class="newsletter__mailingList-top">
+                  <h2 class="title-3">Запланировать рассылку</h2>
+                  <button class="myToolTips" data-tooltip="Info">
+                    <svg class="svg-sprite-icon icon-qw">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#qw"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="newsletter__mailingList-block">
+                  <div class="myCalendar">
+                    <div class="myCalendar__elem"><span>с</span>
+                      <div class="myCalendar__style">
+                        <input class="time-calendar g-input" type="text"/>
+                        <svg class="svg-sprite-icon icon-calendar">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                         </svg>
                       </div>
-                    </td>
-                    <td aria-label="Отправитель">Имя <br>отправителя</td>
-                    <td class="g-table-fix-elem" aria-label="Текст SMS">#number#lastname#name# Пора на фитнес! Запишись и получипервое занятие бесплатно.Подробности по телефону: 39853<br> Сайт:  <a href="#">fitnessruss.ru</a></td>
-                    <td aria-label="Абонентов Готово|Осталось">1 | 0</td>
-                    <td aria-label="Название базы">Название базы <br>(7000 | 433)</td>
-                    <td aria-label="База для исключения">База для <br>исключения<br>(600)</td>
-                    <td aria-label="Локальное время| Главная отправка|Дублирующие номера">Нет | нет | да</td>
-                    <td aria-label="Время отпрвки SMS">23.07.2020,<br> 19:30 - <br>24.07.2020,<br> 19:30</td>
-                    <td aria-label="Срок жизни SMS">72:00</td>
-                    <td aria-label="Статус">Запланировано</td>
-                    <td aria-label="Стоимость">100₽</td>
-                    <td aria-label="">
-                      <div class="g-table-big__wrap-icon"><a class="g-table-big-update" href="/">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg></a><a class="g-table-big-download" href="/" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg></a></div>
-                    </td>
-                  </tr>
-                  <tr class="bg">
-                    <td aria-label="Название рассылки">Пробная<br> рассылка</td>
-                    <td aria-label="Тип">
-                      <svg class="svg-sprite-icon icon-2">
-                        <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
-                      </svg>
-                    </td>
-                    <td aria-label="Отправитель">Имя <br>отправителя</td>
-                    <td class="g-table-fix-elem" aria-label="Текст SMS">#number#lastname#name# Пора на фитнес! Запишись и получипервое занятие бесплатно.Подробности по телефону: 39853<br> Сайт:  <a href="#">fitnessruss.ru</a></td>
-                    <td aria-label="Абонентов Готово|Осталось">1 | 0</td>
-                    <td aria-label="Название базы">Название базы <br>(7000 | 433)</td>
-                    <td aria-label="База для исключения">База для <br>исключения<br>(600)</td>
-                    <td aria-label="Локальное время| Главная отправка|Дублирующие номера">Нет | нет | да</td>
-                    <td aria-label="Время отпрвки SMS">23.07.2020,<br> 19:30 - <br>24.07.2020,<br> 19:30</td>
-                    <td aria-label="Срок жизни SMS">72:00</td>
-                    <td aria-label="Статус">Запланиро-<br>вано</td>
-                    <td aria-label="Стоимость">100₽</td>
-                    <td aria-label="">
-                      <div class="g-table-big__wrap-icon"><a class="g-table-big-update" href="/">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg></a><a class="g-table-big-download" href="/" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg></a></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td aria-label="Название рассылки">Пробная<br> рассылка</td>
-                    <td aria-label="Тип">
-                      <svg class="svg-sprite-icon icon-3">
-                        <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
-                      </svg>
-                    </td>
-                    <td aria-label="Отправитель">Имя <br>отправителя</td>
-                    <td class="g-table-fix-elem" aria-label="Текст SMS">#number#lastname#name# Пора на фитнес! Запишись и получипервое занятие бесплатно.Подробности по телефону: 39853<br> Сайт:  <a href="#">fitnessruss.ru</a></td>
-                    <td aria-label="Абонентов Готово|Осталось">1 | 0</td>
-                    <td aria-label="Название базы">Название базы <br>(7000 | 433)</td>
-                    <td aria-label="База для исключения">База для <br>исключения<br>(600)</td>
-                    <td aria-label="Локальное время| Главная отправка|Дублирующие номера">Нет | нет | да</td>
-                    <td aria-label="Время отпрвки SMS">23.07.2020,<br> 19:30 - <br>24.07.2020,<br> 19:30</td>
-                    <td aria-label="Срок жизни SMS">72:00</td>
-                    <td aria-label="Статус">Запланиро-<br>вано</td>
-                    <td aria-label="Стоимость">100₽</td>
-                    <td aria-label="">
-                      <div class="g-table-big__wrap-icon"><a class="g-table-big-update" href="/">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg></a><a class="g-table-big-download" href="/" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg></a></div>
-                    </td>
-                  </tr>
-                  <tr class="bg">
-                    <td aria-label="Название рассылки">Пробная<br> рассылка</td>
-                    <td aria-label="Тип">
-                      <svg class="svg-sprite-icon icon-4">
-                        <use xlink:href="web/images/sprite/symbol/sprite.svg#4"></use>
-                      </svg>
-                    </td>
-                    <td aria-label="Отправитель">Имя <br>отправителя</td>
-                    <td class="g-table-fix-elem" aria-label="Текст SMS">#number#lastname#name# Пора на фитнес! Запишись и получипервое занятие бесплатно.Подробности по телефону: 39853<br> Сайт:  <a href="#">fitnessruss.ru</a></td>
-                    <td aria-label="Абонентов Готово|Осталось">1 | 0</td>
-                    <td aria-label="Название базы">Название базы <br>(7000 | 433)</td>
-                    <td aria-label="База для исключения">База для <br>исключения<br>(600)</td>
-                    <td aria-label="Локальное время| Главная отправка|Дублирующие номера">Нет | нет | да</td>
-                    <td aria-label="Время отпрвки SMS">23.07.2020,<br> 19:30 - <br>24.07.2020,<br> 19:30</td>
-                    <td aria-label="Срок жизни SMS">72:00</td>
-                    <td aria-label="Статус">Запланиро-<br>вано</td>
-                    <td aria-label="Стоимость">100₽</td>
-                    <td aria-label="">
-                      <div class="g-table-big__wrap-icon"><a class="g-table-big-update" href="/">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg></a><a class="g-table-big-download" href="/" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg></a></div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="container-small">
-            <div class="statistics__top">
-              <div class="statistics__top-title">
-                <h2 class="title-2">Статистика по рассылкам</h2>
-              </div>
-              <div class="statistics__top-elems"><a class="statistics__top-elem" href="/">
-                  <svg class="svg-sprite-icon icon-icon-table">
-                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
-                  </svg></a><a class="statistics__top-elem active" href="/">
-                  <svg class="svg-sprite-icon icon-icon-cards">
-                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
-                  </svg></a>
-              </div>
-            </div>
-            <div class="g-card statistics__card statistics__content-item statistics__content-item1">
-              <div class="g-card__row statistics__row">
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
                     </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
+                    <div class="myCalendar__elem"><span>до</span>
+                      <div class="myCalendar__style">
+                        <input class="time-calendar g-input" type="text"/>
+                        <svg class="svg-sprite-icon icon-calendar">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                        </svg>
                       </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
                     </div>
                   </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
+                  <div class="block__wrap">
+                    <div class="block__left">
+                      <div class="block__left-el myInp">
+                        <input id="check12" type="checkbox" checked>
+                        <label for="check12">Использовать часовой пояс абонента</label>
                       </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
+                      <div class="block__left-el myInp">
+                        <input id="check13" type="checkbox">
+                        <label for="check13">по МСК, GMT+4:00</label>
                       </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
+                      <div class="block__left-el myInp">
+                        <input id="check14" type="checkbox" checked>
+                        <label for="check14">Плавная рассылка</label>
                       </div>
                     </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
+                    <div class="block__right">
+                      <div class="block__left-el myInp">
+                        <input id="check15" type="checkbox">
+                        <label for="check15">Ограничивать срок жизни SMS</label>
                       </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
+                      <div class="block__right-inp">
+                        <input class="numbers" id="number-mask3" type="text" placeholder="72"><span>часа</span>
+                        <input class="numbers" id="number-mask4" type="text" placeholder="00"><span>минут</span>
                       </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="g-card__column statistics__column">
-                  <div class="g-card__item statistics__item">
-                    <div class="statistics__item-head">
-                      <div class="statistics__item-head-top">
-                        <p class="statistics__item-head-top-act">Пробная рассылка</p>
-                        <p>СМС</p>
-                      </div>
-                      <div class="statistics__item-head-bottom">
-                        <p>от Отправитель</p>
-                      </div>
-                    </div>
-                    <div class="statistics__item-info">
-                      <p class="statistics__item-value">#number#lastname#name#Пора на фитнес! Запишись и получи первое занятие бесплатно. Подробности по телефону: 39853 Сайт: <a href="#">fitnessruss.ru</a></p>
-                      <p class="statistics__item-symbol"><span>220</span>символов, <span>2</span> СМС</p>
-                      <div class="statistics__item-name">
-                        <p class="statistics__item-name-act">Название базы</p>
-                        <p>(8000 | 2000)</p>
-                      </div>
-                      <div class="statistics__item-name">
-                        <p>База для исключения</p>
-                        <p>(500)</p>
-                      </div>
-                      <div class="statistics__item-tabl">
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Всего</p>
-                          <p>100</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Готово</p>
-                          <p>90</p>
-                        </div>
-                        <div class="statistics__item-tabl-elem">
-                          <p class="statistics__item-tabl-act">Осталось</p>
-                          <p>10</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-date bg">
-                        <p>Отправка с <span>23.07.2020, 19:30</span>  до <span>24.07.2020, 19:30</span></p>
-                      </div>
-                      <div class="statistics__item-timing">
-                        <ul class="statistics__item-timing-left">
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Локальное время</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Плавная отправка</span>
-                          </li>
-                          <li>
-                            <svg class="svg-sprite-icon icon-check">
-                              <use xlink:href="web/images/sprite/symbol/sprite.svg#check"></use>
-                            </svg><span>Дублирующие номера</span>
-                          </li>
-                        </ul>
-                        <div class="statistics__item-timing-right">
-                          <p>Срок жизни смс: <span>72:00</span></p>
-                          <p class="statistics__item-timing-right-acc">Запланировано</p>
-                        </div>
-                      </div>
-                      <div class="statistics__item-price bg">
-                        <p>Стоимость:</p>
-                        <p><span class="rub">2000 </span></p>
-                      </div>
-                      <div class="statistics__item-btns"><a class="statistics__item-btn bg2" href="#">
-                          <svg class="svg-sprite-icon icon-update">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#update"></use>
-                          </svg><span>Повтор</span></a><a class="statistics__item-btn bg3" href="#" download>
-                          <svg class="svg-sprite-icon icon-download">
-                            <use xlink:href="web/images/sprite/symbol/sprite.svg#download"></use>
-                          </svg><span>Экспорт</span></a></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="newsletter__form-flobalBtn">
+                <button class="button-accent button-form">ОТПРАВИТЬ</button>
+              </div>
+            </form>
           </div>
         </section>
         <div class="popup" data-modal>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Статистика по дням</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" type="text/css" href="web/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__burger"><span></span></div>
+          <div class="header__wrap"><a class="header__logo" href="index.html"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__tool">
+              <p>Инструмент управления<br>СМС - рассылками</p>
+            </div>
+            <div class="header__btn"><a class="button" href="indexsetUpAMailingList.html">СОЗДАТЬ РАССЫЛКУ</a></div>
+            <div class="header__phone order-2"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div>
+            <div class="header__balance order-1"><a class="header__balance-img headerIcon" href="issuedInvoices.html">
+                <svg class="svg-sprite-icon icon-wallet">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#wallet"></use>
+                </svg></a>
+              <div class="header__balance-body"><a class="headLink rub" href="issuedInvoices.html">Баланс <br> 132,96</a><a class="phone-bodyText" href="">Пополнить счет</a></div>
+            </div>
+            <div class="header__mail"><a class="header__mail-img headerIcon" href="account.html">
+                <svg class="svg-sprite-icon icon-user">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#user"></use>
+                </svg></a>
+              <div class="header__mail-body"><a class="headLink" href="account.html">gajarin@mail.ru</a><a class="phone-bodyText" href="/">Выйти</a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__menu">
+          <div class="container">
+            <ul class="topmenu">
+              <li class="topmenu__item"><a href="#">Профиль</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="account.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="news.html">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">Рассылки</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="plannedDistributions.html">Запланированные </a></li>
+                  <li class="submenu__li"><a href="pendingPayment.html">Ожидает оплату</a></li>
+                  <li class="submenu__li"><a href="incoming.html">Входящие SMS</a></li>
+                  <li class="submenu__li"><a href="templates.html">Шаблоны и конструктор</a></li>
+                  <li class="submenu__li"><a href="databaseManagement.html">Базы получателей</a></li>
+                  <li class="submenu__li"><a href="registerOfSenderNames.html">Реест имен отправителей</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">Статистика</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="statisticsByDay.html">Статистика по дням</a></li>
+                  <li class="submenu__li"><a href="detailedStatistics.html">Детальная статистика</a></li>
+                  <li class="submenu__li"><a href="reportsForDownload.html">Отчеты для скачивания</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">Финансы </a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="issuedInvoices.html">Счета и оплаты</a></li>
+                  <li class="submenu__li"><a href="tariffs.html">Тарифы</a></li>
+                  <li class="submenu__li"><a href="expenses.html">Расходы</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">Разрабочикам </a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="authorisation.html">api</a></li>
+                  <li class="submenu__li"><a href="">Документация для программистов</a></li>
+                  <li class="submenu__li"><a href="">Интеграция с метрикой/коллтрекингом</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="#">База знаний</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="">Руководство пользователя</a></li>
+                  <li class="submenu__li"><a href="">Поддержка</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="top-line"></div>
+            <div class="header__phone-small"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div><a class="header__exit" href="/">Выйти</a>
+          </div>
+        </nav>
+      </header>
+      <div class="header__showLBlock">
+        <div class="container">
+          <div class="header__showLBlock__wrap"><a class="header__showLBlock-img" href="/"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__btn-small"><a class="button" href="/">СОЗДАТЬ РАССЫЛКУ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <section class="statisticsByDay section-indent">
+          <div class="container"> 
+            <h2 class="title-5">Статистика по дням</h2>
+            <div class="g-tabs detailedStatistics__tabs"><a class="g-tabs__item detailedStatistics__tabs-elem" href="statisticsByDay.html">
+                <svg class="svg-sprite-icon icon-1">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#1"></use>
+                </svg>
+                <div class="g-tabs__link">SMS РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem" href="statisticsByDayViber.html">
+                <svg class="svg-sprite-icon icon-2">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#2"></use>
+                </svg>
+                <div class="g-tabs__link">VIBER РАССЫЛКА</div></a><a class="g-tabs__item detailedStatistics__tabs-elem active" href="statisticsByDayVk.html">
+                <svg class="svg-sprite-icon icon-3">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#3"></use>
+                </svg>
+                <div class="g-tabs__link">VK РАССЫЛКА</div></a></div>
+            <div class="g-content-wrap detailedStatistics__content-wrap">
+              <div class="g-content-item detailedStatistics__content-item">
+                <form class="g-content-elem">
+                  <div class="detailedStatistics__content-elem">
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>SMS РАССЫЛКА</option>
+                          <option>VIBER РАССЫЛКА</option>
+                          <option>VK РАССЫЛКА</option>
+                          <option>КАСКАДНАЯ РАССЫЛКА</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Выберите отправителя</option>
+                          <option>Отправитель 1</option>
+                          <option>Отправитель 2</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Оператор</option>
+                          <option>Оператор2</option>
+                          <option>Оператор3</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="mySelect__elem">
+                      <div class="mySelect__style">
+                        <select class="g-input" type="text">
+                          <option>Россия</option>
+                          <option>Украина</option>
+                          <option>Беларусь</option>
+                        </select>
+                        <svg class="svg-sprite-icon icon-arrow-bottom">
+                          <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detailedStatistics__content-bottom">
+                    <div class="myCalendar">
+                      <div class="myCalendar__wrap-top">
+                        <div class="myCalendar__elem"><span>c</span>
+                          <div class="myCalendar__style">
+                            <input class="time-calendar g-input" type="text">
+                            <svg class="svg-sprite-icon icon-calendar">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="myCalendar__elem"><span>до</span>
+                          <div class="myCalendar__style">
+                            <input class="time-calendar g-input" type="text">
+                            <svg class="svg-sprite-icon icon-calendar">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <p>Окно диапазона дат можно ввести только 2 месяца.Ввод даты может быть в любое окно.</p>
+                    </div>
+                    <button class="button-accent">ОТФИЛЬТРОВАТЬ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="statisticsByDay__top">
+              <div class="statisticsByDay__top-group">
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>Группировка1</option>
+                      <option>Группировка2</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-bottom">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="statisticsByDay__top-link"> <a class="g-link" href="#">Количество</a><a class="g-link" href="#">Проценты </a></div>
+            </div>
+            <div class="chart">
+              <canvas id="myChart" width="400" height="400"></canvas>
+              <div id="legend"></div>
+            </div>
+            <div class="statisticsByDay__body"> 
+              <div class="myInp">
+                <input id="check12" type="checkbox" checked>
+                <label for="check12">Не показывать нулевые значения</label>
+              </div>
+            </div>
+          </div>
+          <div class="container-small">
+            <div class="statistics__top">
+              <div class="statistics__top-elems"><a class="statistics__top-elem-link" href="#">
+                  <svg class="svg-sprite-icon icon-exel">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                  </svg>
+                  <p>в Excel <br>(максимальный <br>срок 3 месяца)</p></a><a class="statistics__top-elem active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="g-table-big statistics__content-item g-table-big4 g-table-big15">
+              <table class="table" id="dataTable">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Отправлено</th>
+                    <th>Доставлено</th>
+                    <th>Не получен статус</th>
+                    <th>Не доставленные</th>
+                    <th>Просроченные</th>
+                    <th>Списано</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="myPaginations">
+              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+              </div>
+              <div class="myPaginations__value">
+                <p>Записей на странице:</p>
+                <div class="mySelect__elem">
+                  <div class="mySelect__style">
+                    <select class="g-input" type="text">
+                      <option>50</option>
+                      <option>75</option>
+                      <option>100</option>
+                    </select>
+                    <svg class="svg-sprite-icon icon-arrow-right">
+                      <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="statistics__top">
+              <div class="statistics__top-elems"><a class="statistics__top-elem-link" href="#">
+                  <svg class="svg-sprite-icon icon-exel">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#exel"></use>
+                  </svg>
+                  <p>в Excel <br>(максимальный <br>срок 3 месяца)</p></a><a class="statistics__top-elem" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a>
+              </div>
+            </div>
+            <div class="g-card g-card4 g-card9">
+              <div class="g-card__row"></div>
+            </div>
+            <div class="myPaginations">
+              <div class="myPaginations__pagin"><a class="active myPaginations__elem" href="#"><span>1</span></a><a class="myPaginations__elem" href="#"><span>2</span></a><a class="myPaginations__elem" href="#"><span>3</span></a><a class="myPaginations__elem" href="#"><span>4</span></a>
+                <p>...</p><a class="myPaginations__elem" href="#"><span>100</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+    <script src="web/js/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="web/js/vendor/libs.js"></script>
+    <script src="web/js/plugins.js"></script>
+    <script src="web/js/ajax-settings.js"></script>
+    <script src="web/js/main.js"></script>
+  </body>
+</html>

@@ -27,25 +27,32 @@ document.addEventListener('DOMContentLoaded', function () {
     function activeModal(btnsTarget, modalWrap, activeClass) {
       var btns = document.querySelectorAll(btnsTarget);
       var modal = document.querySelector(modalWrap);
-      btns.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          modal.classList.add(activeClass.replace(/\D/, ""));
-          document.body.style.overflow = 'hidden';
-        });
-        modal.addEventListener('click', function (e) {
-          if (e.target === modal || e.target.getAttribute('data-close') == '') {
-            modal.classList.remove(activeClass.replace(/\D/, ""));
-            document.body.style.overflow = '';
+
+      if (btns) {
+        btns.forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.classList.add(activeClass.replace(/\D/, ""));
+            document.body.style.overflow = 'hidden';
+          });
+
+          if (modal) {
+            modal.addEventListener('click', function (e) {
+              if (e.target === modal || e.target.getAttribute('data-close') == '') {
+                modal.classList.remove(activeClass.replace(/\D/, ""));
+                document.body.style.overflow = '';
+              }
+            });
           }
+
+          document.addEventListener('keyup', function (e) {
+            if (modal.classList.contains(activeClass.replace(/\D/, "")) && e.key == 'Escape') {
+              modal.classList.remove(activeClass.replace(/\D/, ""));
+              document.body.style.overflow = '';
+            }
+          });
         });
-        document.addEventListener('keyup', function (e) {
-          if (modal.classList.contains(activeClass.replace(/\D/, "")) && e.key == 'Escape') {
-            modal.classList.remove(activeClass.replace(/\D/, ""));
-            document.body.style.overflow = '';
-          }
-        });
-      });
+      }
     }
 
     activeModal('.modal1__target', '.popup', '.popup-active');
@@ -58,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.registerOfSenderNames__btnModalTarget', '.popup8', '.popup-active');
     activeModal('.listSubNewBase__numberModalTarget2', '.popup9', '.popup-active');
     activeModal('.attachDocumentTargetModal', '.popup10', '.popup-active');
+    activeModal('.templates__TargetModal', '.popup11', '.popup-active');
+    activeModal('.templates__TargetModalVk', '.popup8', '.popup-active');
+    activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
   };
 
   modal(); // end modal
@@ -223,13 +233,16 @@ document.addEventListener('DOMContentLoaded', function () {
       var wraps = document.querySelectorAll(myWrap);
       var blockSearch = document.querySelector('.block__search');
       var i = 0;
-      target.addEventListener('click', function (e) {
-        i++;
 
-        if (i < 4) {
-          blockSearch.innerHTML += "\n\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t<input type=\"text\" class=\"g-input\">\n\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\">\n\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t";
-        }
-      });
+      if (target) {
+        target.addEventListener('click', function (e) {
+          i++;
+
+          if (i < 4) {
+            blockSearch.innerHTML += "\n\t\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t\t<input type=\"text\" class=\"g-input\">\n\t\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\">\n\t\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t";
+          }
+        });
+      }
     };
 
     showFlexBlock('.block__info', '.block__search-wrap-hide');
@@ -261,6 +274,13 @@ document.addEventListener('DOMContentLoaded', function () {
     massChekedElems('.statistics__target-myInp', '.statistics__checked-myInp');
     massChekedElems('.statistics__target-myInp2', '.statistics__checked-myInp2');
     massChekedElems('.statistics__target-myInp3', '.statistics__checked-myInp3');
+    massChekedElems('.statistics__target-myInp4', '.statistics__checked-myInp4');
+    massChekedElems('.statistics__target-myInp5', '.statistics__checked-myInp5');
+    massChekedElems('.statistics__target-myInp6', '.statistics__checked-myInp6');
+    massChekedElems('.statistics__target-myInp7', '.statistics__checked-myInp7');
+    massChekedElems('.statistics__target-myInp8', '.statistics__checked-myInp8');
+    massChekedElems('.statistics__target-myInp9', '.statistics__checked-myInp9');
+    massChekedElems('.statistics__target-myInp10', '.statistics__checked-myInp10');
   };
 
   myMassChekedElems(); // end Массовый cheked inp
@@ -292,8 +312,185 @@ document.addEventListener('DOMContentLoaded', function () {
       myHeader.classList.remove('fixedMenu');
     }
   });
+}); //
+
+var tableBig15 = document.querySelector('.g-table-big15 > table > tbody');
+var gCard9 = document.querySelector('.g-card9 > .g-card__row');
+var myObj = {
+  arr1: [0, 100, 100, 0, 100, 100],
+  arr2: [2000, 2000, 1000, 2000, 2000, 1000],
+  arr3: [0, 400, 100, 0, 400, 100],
+  arr4: [0, 0, 300, 0, 0, 300],
+  arrLab: ['30.09.2020', '31.09.2020', '31.09.2020', '30.09.2020', '31.09.2020', '31.09.2020']
+};
+var wrapArrObj = [{
+  date: '30.09.2020',
+  type: 'СМС',
+  sentby: 2000,
+  delivered: 2000,
+  deliveredPercent: '100%',
+  noStatusReceived: 0,
+  noStatusReceivedPercent: '0%',
+  undelivered: 0,
+  undeliveredPercent: '0%',
+  overdue: 0,
+  overduePercent: '0%',
+  writtenOff: '120.00'
+}, {
+  date: '31.09.2020',
+  type: 'СМС',
+  sentby: 2500,
+  delivered: 2000,
+  deliveredPercent: '75%',
+  noStatusReceived: 400,
+  noStatusReceivedPercent: '20%',
+  undelivered: 100,
+  undeliveredPercent: '5%',
+  overdue: 0,
+  overduePercent: '0%',
+  writtenOff: '150.00'
+}, {
+  date: '31.09.2020',
+  type: 'СМС',
+  sentby: 1500,
+  delivered: 1000,
+  deliveredPercent: '75%',
+  noStatusReceived: 100,
+  noStatusReceivedPercent: '5%',
+  undelivered: 100,
+  undeliveredPercent: '5%',
+  overdue: 300,
+  overduePercent: '15%',
+  writtenOff: '350.00'
+}, {
+  date: '30.09.2020',
+  type: 'СМС',
+  sentby: 2000,
+  delivered: 2000,
+  deliveredPercent: '100%',
+  noStatusReceived: 0,
+  noStatusReceivedPercent: '0%',
+  undelivered: 0,
+  undeliveredPercent: '0%',
+  overdue: 0,
+  overduePercent: '0%',
+  writtenOff: '120.00'
+}, {
+  date: '31.09.2020',
+  type: 'СМС',
+  sentby: 2500,
+  delivered: 2000,
+  deliveredPercent: '75%',
+  noStatusReceived: 400,
+  noStatusReceivedPercent: '20%',
+  undelivered: 100,
+  undeliveredPercent: '5%',
+  overdue: 0,
+  overduePercent: '0%',
+  writtenOff: '150.00'
+}, {
+  date: '31.09.2020',
+  type: 'СМС',
+  sentby: 1500,
+  delivered: 1000,
+  deliveredPercent: '75%',
+  noStatusReceived: 100,
+  noStatusReceivedPercent: '5%',
+  undelivered: 100,
+  undeliveredPercent: '5%',
+  overdue: 300,
+  overduePercent: '15%',
+  writtenOff: '350.00'
+}];
+wrapArrObj.forEach(function (elem) {
+  unlObj(elem);
 });
+
+function unlObj(obj) {
+  if (obj && tableBig15) {
+    tableBig15.innerHTML += "\n\t\t<tr class=\"tableBig15__tr\">\n\t\t\t<td>".concat(obj.date, "</td>\n\t\t\t<td>").concat(obj.sentby, "</td>\n\t\t\t<td>").concat(obj.delivered, "/").concat(obj.deliveredPercent, "</td>\n\t\t\t<td>").concat(obj.noStatusReceived, "/").concat(obj.noStatusReceivedPercent, "</td>\n\t\t\t<td>").concat(obj.undelivered, "/").concat(obj.undeliveredPercent, "</td>\n\t\t\t<td>").concat(obj.overdue, "/").concat(obj.overduePercent, "</td>\n\t\t\t<td>").concat(obj.writtenOff, "</td>\n\t\t</tr>\n\t");
+    gCard9.innerHTML += "\n\t\t<div class=\"g-card__column\">\n\t\t\t<div class=\"g-card__item\">\n\t\t\t\t<div class=\"g-card4__date g-card4-elem\">\n\t\t\t\t\t<div class=\"g-card4__date-value\">\n\t\t\t\t\t\t<p>".concat(obj.date, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__date-dates\">\n\t\t\t\t\t\t<p>").concat(obj.type, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem\">\n\t\t\t\t\t<div class=\"g-card4__status-stat\">\n\t\t\t\t\t\t<p>\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__info-value\">\n\t\t\t\t\t\t<p>").concat(obj.sentby, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem g-card9__delivered bg\">\n\t\t\t\t\t<div class=\"g-card4__status-stat\">\n\t\t\t\t\t\t<p>\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043E</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__info-value\">\n\t\t\t\t\t\t<p>").concat(obj.delivered, "/").concat(obj.deliveredPercent, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem g-card9__notReceived\">\n\t\t\t\t\t<div class=\"g-card4__status-stat\">\n\t\t\t\t\t\t<p>\u041D\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D \u0441\u0442\u0430\u0442\u0443\u0441</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__info-value\">\n\t\t\t\t\t\t<p>").concat(obj.noStatusReceived, "/").concat(obj.noStatusReceivedPercent, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem g-card9__undelivered bg\">\n\t\t\t\t\t<div class=\"g-card4__status-stat\">\n\t\t\t\t\t\t<p>\u041D\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043E</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__info-value\">\n\t\t\t\t\t\t<p>").concat(obj.undelivered, "/").concat(obj.undeliveredPercent, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem g-card9__overdue\">\n\t\t\t\t\t<div class=\"g-card4__status-stat\">\n\t\t\t\t\t\t<p>\u041F\u0440\u043E\u0441\u0440\u043E\u0447\u0435\u043D\u043E</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__info-value\">\n\t\t\t\t\t\t<p>").concat(obj.overdue, "/").concat(obj.overduePercent, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"g-card4__status g-card4-elem bg\">\n\t\t\t\t\t<div class=\"g-card4__info-name\">\n\t\t\t\t\t\t<p>\u0421\u043F\u0438\u0441\u0430\u043D\u043E</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"g-card4__status-value\">\n\t\t\t\t\t\t<p class=\"rub rubBold\">").concat(obj.writtenOff, "</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
+  }
+}
+
+var tableBig15__tr = document.querySelectorAll('.tableBig15__tr');
+tableBig15__tr.forEach(function (el, i) {
+  if (i % 2 != 0) {
+    el.classList.add('bg');
+  }
+}); //
+// [
+// 	{
+// 		label: 'Категория',
+// 		backgroundColor: 'red',
+// 		data: [
+// 		]
+// 	}
+// ]
+
 $(document).ready(function () {
+  var ctx = document.getElementById("myChart");
+
+  if (ctx) {
+    ctx.getContext('2d');
+  }
+
+  if (ctx) {
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: myObj.arrLab,
+        datasets: [{
+          label: 'Недоставленные',
+          backgroundColor: "#305BAF",
+          data: myObj.arr1
+        }, {
+          label: 'Доставленные',
+          backgroundColor: "#29A6CE",
+          data: myObj.arr2
+        }, {
+          label: 'В процессе доставки',
+          backgroundColor: "#D1D35C",
+          data: myObj.arr3
+        }, {
+          label: 'Просрочено',
+          backgroundColor: "#EC744E",
+          data: myObj.arr4
+        }]
+      },
+      options: {
+        tooltips: {
+          displayColors: true,
+          callbacks: {
+            mode: 'x'
+          }
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            gridLines: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            ticks: {
+              beginAtZero: true
+            },
+            type: 'linear'
+          }]
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        // legend: { position: 'bottom' },
+        legend: {
+          display: false
+        }
+      }
+    });
+    document.getElementById('legend').innerHTML = myChart.generateLegend();
+  }
+
   var $range = $(".js-range-slider");
   var $input = $(".block__range-wrap > input");
   var instance;
