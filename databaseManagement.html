@@ -57,7 +57,7 @@
                   <li class="submenu__li"><a href="news.html">Новости</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Рассылки</a>
+              <li class="topmenu__item"><a href="indexsetUpAMailingList.html">Рассылки</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -1202,9 +1202,9 @@
                                   <div class="mySelect__elem">
                                     <div class="mySelect__style">
                                       <select class="g-input" type="text">
-                                        <option>Выберите отправителя</option>
                                         <option>Отправитель 1</option>
                                         <option>Отправитель 2</option>
+                                        <option>Отправитель 3</option>
                                       </select>
                                       <svg class="svg-sprite-icon icon-arrow-bottom">
                                         <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
@@ -1649,6 +1649,96 @@
             </div>
           </div>
         </div>
+        <div class="g-popup popup14" data-modal>
+          <div class="g-popup__dialog popup__dialog14">
+            <div class="g-popup__content popup__content14">
+              <button class="g-popup__close popup__close14"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup14__form14">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Пополнение счета</h2>
+                  </div>
+                  <div class="popup8__form8__elems elem__indent">
+                    <div class="popup14__top">
+                      <div class="popup14__top-left">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Электронный платеж</option>
+                              <option>Банковский платеж</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup14__top-right">
+                        <div class="popup14__top-right-column">
+                          <input class="g-input g-input-ind" type="text" placeholder="Сумма платежа">
+                          <p>Минимальная сумма - <span class="rub">800 </span></p>
+                        </div>
+                        <div class="popup14__top-right-btn"> 
+                          <button class="button-accent" type="submit">Пополнить</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popup14__info"> 
+                      <p>Введите сумму платежа. Внимание: из платежа через электронные кошельки Qiwi, Webmoney, Yandex, банковские карты, мобильный телефон будет удержана комиссия платежной системы в размере до 7% в зависимости от вида электронного кошелька. При оплате через расчетный счет комиссии НЕ УДЕРЖИВАЮТСЯ. Данные СМС подсчитываются автоматически по максимальной цене в Вашем прайс-листе.</p>
+                    </div>
+                    <div class="popup14__top">
+                      <div class="popup14__top-left">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Электронный платеж</option>
+                              <option>Банковский платеж</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup14__top-right">
+                        <div class="popup14__top-right-column">
+                          <div class="popup14__top-right-elem">
+                            <input class="g-input g-input-ind" type="text" placeholder="Сумма платежа">
+                            <p>Минимальная сумма - <span class="rub">800 </span></p>
+                            <p class="g-input-ind">НДС, 20%</p>
+                          </div>
+                          <div class="popup14__top-right-elem">
+                            <h5 class="g-input-ind">Плательщик</h5>
+                            <div class="mySelect__elem">
+                              <div class="mySelect__style">
+                                <select class="g-input" type="text">
+                                  <option>ООО “Интрид”</option>
+                                  <option>ООО “Рога и копыта”</option>
+                                </select>
+                                <svg class="svg-sprite-icon icon-arrow-bottom">
+                                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="g-input-top-ind">Денежные средства будут зачислены<br> на заказ без учета НДС</p>
+                          </div>
+                        </div>
+                        <div class="popup14__top-right-btn">
+                          <button class="button-accent" type="submit">Выставить счет</button>
+                          <div class="popup14__top-right-summary">
+                            <p>Итого без налогов: <span class="rub rubBold">12 500,00 </span></p>
+                            <p>НДС: <span class="rub rubBold">2 500,00 </span></p>
+                            <p>Всего к оплате: <span class="rub rubBold">15 000,00 </span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <section class="databaseManagement section-indent">
           <div class="container">
             <div class="databaseManagement__top">
@@ -1726,7 +1816,10 @@
                       </div>
                     </td>
                     <td aria-label="Действие">
-                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                      <div class="g-table-big7__wrapIcon"><a class="g-table-big7__icon5 listSubNewBase__settings-link" href="#">
+                          <svg class="svg-sprite-icon icon-settings">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#settings"></use>
+                          </svg></a><a class="g-table-big7__icon1" href="#">
                           <svg class="svg-sprite-icon icon-overwrite">
                             <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
                           </svg></a><a class="g-table-big7__icon2" href="#">
@@ -1752,7 +1845,10 @@
                       </div>
                     </td>
                     <td aria-label="Действие">
-                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                      <div class="g-table-big7__wrapIcon"><a class="g-table-big7__icon5 listSubNewBase__settings-link" href="#">
+                          <svg class="svg-sprite-icon icon-settings">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#settings"></use>
+                          </svg></a><a class="g-table-big7__icon1" href="#">
                           <svg class="svg-sprite-icon icon-overwrite">
                             <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
                           </svg></a><a class="g-table-big7__icon2" href="#">
@@ -1778,7 +1874,10 @@
                       </div>
                     </td>
                     <td aria-label="Действие">
-                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon5 listSubNewBase__settings-link" href="#">
+                          <svg class="svg-sprite-icon icon-settings">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#settings"></use>
+                          </svg></a><a class="g-table-big7__icon1" href="#">
                           <svg class="svg-sprite-icon icon-overwrite">
                             <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
                           </svg></a><a class="g-table-big7__icon2" href="#">
@@ -1804,7 +1903,10 @@
                       </div>
                     </td>
                     <td aria-label="Действие">
-                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon1" href="#">
+                      <div class="g-table-big7__wrapIcon"> <a class="g-table-big7__icon5 listSubNewBase__settings-link" href="#">
+                          <svg class="svg-sprite-icon icon-settings">
+                            <use xlink:href="web/images/sprite/symbol/sprite.svg#settings"></use>
+                          </svg></a><a class="g-table-big7__icon1" href="#">
                           <svg class="svg-sprite-icon icon-overwrite">
                             <use xlink:href="web/images/sprite/symbol/sprite.svg#overwrite"></use>
                           </svg></a><a class="g-table-big7__icon2" href="#">

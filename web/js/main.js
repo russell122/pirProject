@@ -21,6 +21,31 @@ document.addEventListener('DOMContentLoaded', function () {
   // 	sliderInp.value = e.target.value;
   // });
   // input end range
+  // Обрезаю кол-во симолов
+
+  var myCharacterCropping = function myCharacterCropping() {
+    var characterCropping = function characterCropping(myElems) {
+      var elems = document.querySelectorAll(myElems);
+      var arr = [];
+      elems.forEach(function (elem, i) {
+        arr[i] = elem.innerHTML;
+
+        if (elem.innerHTML.length >= 160) {
+          elem.innerHTML = elem.innerHTML.substring(0, 160) + '...';
+        }
+
+        elem.addEventListener('click', function (e) {
+          if (elem.getAttribute('data-cropTarget') == i) {
+            elem.innerHTML = arr[i];
+          }
+        });
+      });
+    };
+
+    characterCropping('.g-table-cropTarget');
+  };
+
+  myCharacterCropping(); // end обрезки символов
   // modal
 
   var modal = function modal() {
@@ -68,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.templates__TargetModal', '.popup11', '.popup-active');
     activeModal('.templates__TargetModalVk', '.popup13', '.popup-active');
     activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
+    activeModal('.issuedInvoices-modalTarget', '.popup14', '.popup-active');
   };
 
   modal(); // end modal
@@ -199,9 +225,9 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         });
       });
-    };
+    }; // prolapse('.settings__more-target', '.settings__more-info');
 
-    prolapse('.settings__more-target', '.settings__more-info');
+
     prolapse('.newsletter__left-top', '.newsletter__left-wrap');
     prolapse('.newsletter__right-top', '.newsletter__right-wrap');
   };
