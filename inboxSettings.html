@@ -47,7 +47,7 @@
         <nav class="header__menu">
           <div class="container">
             <ul class="topmenu">
-              <li class="topmenu__item"><a href="#">Профиль</a>
+              <li class="topmenu__item"><a href="account.html">Профиль</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -70,7 +70,7 @@
                   <li class="submenu__li"><a href="registerOfSenderNames.html">Реест имен отправителей</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Статистика</a>
+              <li class="topmenu__item"><a href="statisticsByDay.html">Статистика</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -80,7 +80,7 @@
                   <li class="submenu__li"><a href="reportsForDownload.html">Отчеты для скачивания</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Финансы </a>
+              <li class="topmenu__item"><a href="issuedInvoices.html">Финансы </a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -90,7 +90,7 @@
                   <li class="submenu__li"><a href="expenses.html">Расходы</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Разрабочикам </a>
+              <li class="topmenu__item"><a href="api.html">Разрабочикам </a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -100,7 +100,7 @@
                   <li class="submenu__li"><a href="integrations.html">Интеграция с метрикой/коллтрекингом</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">База знаний</a>
+              <li class="topmenu__item"><a href="userManual.html">База знаний</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -130,6 +130,96 @@
         </div>
       </div>
       <div class="content">
+        <div class="g-popup popup14" data-modal>
+          <div class="g-popup__dialog popup__dialog14">
+            <div class="g-popup__content popup__content14">
+              <button class="g-popup__close popup__close14"><strong data-close>&#10005</strong></button>
+              <form>
+                <div class="g-popup__form popup14__form14">
+                  <div class="g-popup__form-top elem__indent">
+                    <h2 class="title-5">Пополнение счета</h2>
+                  </div>
+                  <div class="popup8__form8__elems elem__indent">
+                    <div class="popup14__top">
+                      <div class="popup14__top-left">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Электронный платеж</option>
+                              <option>Банковский платеж</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup14__top-right">
+                        <div class="popup14__top-right-column">
+                          <input class="g-input g-input-ind" type="text" placeholder="Сумма платежа">
+                          <p>Минимальная сумма - <span class="rub">800 </span></p>
+                        </div>
+                        <div class="popup14__top-right-btn"> 
+                          <button class="button-accent" type="submit">Пополнить</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popup14__info"> 
+                      <p>Введите сумму платежа. Внимание: из платежа через электронные кошельки Qiwi, Webmoney, Yandex, банковские карты, мобильный телефон будет удержана комиссия платежной системы в размере до 7% в зависимости от вида электронного кошелька. При оплате через расчетный счет комиссии НЕ УДЕРЖИВАЮТСЯ. Данные СМС подсчитываются автоматически по максимальной цене в Вашем прайс-листе.</p>
+                    </div>
+                    <div class="popup14__top">
+                      <div class="popup14__top-left">
+                        <div class="mySelect__elem">
+                          <div class="mySelect__style">
+                            <select class="g-input" type="text">
+                              <option>Электронный платеж</option>
+                              <option>Банковский платеж</option>
+                            </select>
+                            <svg class="svg-sprite-icon icon-arrow-bottom">
+                              <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup14__top-right">
+                        <div class="popup14__top-right-column">
+                          <div class="popup14__top-right-elem">
+                            <input class="g-input g-input-ind" type="text" placeholder="Сумма платежа">
+                            <p>Минимальная сумма - <span class="rub">800 </span></p>
+                            <p class="g-input-ind">НДС, 20%</p>
+                          </div>
+                          <div class="popup14__top-right-elem">
+                            <h5 class="g-input-ind">Плательщик</h5>
+                            <div class="mySelect__elem">
+                              <div class="mySelect__style">
+                                <select class="g-input" type="text">
+                                  <option>ООО “Интрид”</option>
+                                  <option>ООО “Рога и копыта”</option>
+                                </select>
+                                <svg class="svg-sprite-icon icon-arrow-bottom">
+                                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <p class="g-input-top-ind">Денежные средства будут зачислены<br> на заказ без учета НДС</p>
+                          </div>
+                        </div>
+                        <div class="popup14__top-right-btn">
+                          <button class="button-accent" type="submit">Выставить счет</button>
+                          <div class="popup14__top-right-summary">
+                            <p>Итого без налогов: <span class="rub rubBold">12 500,00 </span></p>
+                            <p>НДС: <span class="rub rubBold">2 500,00 </span></p>
+                            <p>Всего к оплате: <span class="rub rubBold">15 000,00 </span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="container-small">
           <div class="inboxSettings">
             <div class="g-table-big statistics__content-item g-table-big4 g-table-big20">

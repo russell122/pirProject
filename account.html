@@ -47,7 +47,7 @@
         <nav class="header__menu">
           <div class="container">
             <ul class="topmenu">
-              <li class="topmenu__item"><a href="#">Профиль</a>
+              <li class="topmenu__item"><a href="account.html">Профиль</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -70,7 +70,7 @@
                   <li class="submenu__li"><a href="registerOfSenderNames.html">Реест имен отправителей</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Статистика</a>
+              <li class="topmenu__item"><a href="statisticsByDay.html">Статистика</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -80,7 +80,7 @@
                   <li class="submenu__li"><a href="reportsForDownload.html">Отчеты для скачивания</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Финансы </a>
+              <li class="topmenu__item"><a href="issuedInvoices.html">Финансы </a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -90,7 +90,7 @@
                   <li class="submenu__li"><a href="expenses.html">Расходы</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">Разрабочикам </a>
+              <li class="topmenu__item"><a href="api.html">Разрабочикам </a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -100,7 +100,7 @@
                   <li class="submenu__li"><a href="integrations.html">Интеграция с метрикой/коллтрекингом</a></li>
                 </ul>
               </li>
-              <li class="topmenu__item"><a href="#">База знаний</a>
+              <li class="topmenu__item"><a href="userManual.html">База знаний</a>
                 <svg class="svg-sprite-icon icon-arrow-bottom">
                   <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
                 </svg>
@@ -1742,13 +1742,19 @@
         <section class="settings">
           <div class="container">
             <h2 class="title-5">Настройки аккаунта</h2>
-            <form class="settings__account">
+            <form class="settings__account settings__form">
               <div class="settings__account-top">
                 <input class="g-input" type="text" placeholder="ФИО*">
                 <input class="g-input" type="text" placeholder="Компания">
-                <input class="g-input" type="email" placeholder="E-mail*">
-                <input class="g-input numbersPhone" type="text" placeholder="Мобильный телефон*">
-                <input class="g-input numbersPhone" type="text" placeholder="Мобильный телефон для авторизации*">
+                <div class="settings__account-top-mail">
+                  <input class="g-input" type="email" placeholder="E-mail*" data-validate-field="email" name="email">
+                </div>
+                <div class="settings__account-top-phone">
+                  <input class="g-input numbersPhone" type="text" placeholder="Мобильный телефон*" data-validate-field="tel" name="tel">
+                </div>
+                <div class="settings__account-top-phone2">
+                  <input class="g-input numbersPhone" type="text" placeholder="Мобильный телефон для авторизации*" name="tel2" data-validate-field="tel2">
+                </div>
               </div>
               <div class="settings__account-bottom">
                 <h3>Смена пароля<span>(чтобы оставить пароль прежним оставьте поле пустым)</span></h3>

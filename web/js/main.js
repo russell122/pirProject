@@ -21,6 +21,37 @@ document.addEventListener('DOMContentLoaded', function () {
   // 	sliderInp.value = e.target.value;
   // });
   // input end range
+  // Валидиция
+
+  var validateForms = function validateForms(selector, rules) {
+    if (selector && rules) {
+      new window.JustValidate(selector, {
+        rules: rules,
+        messages: {
+          name: {
+            minLength: 'My custom message about only minLength rule'
+          },
+          email: 'E-mail не указан или указан неправильно!',
+          tel: 'Телефон не указан или указан неправильно',
+          tel2: 'Телефон не указан или указан неправильно'
+        },
+        submitHandler: function submitHandler(form) {}
+      });
+    }
+  };
+
+  validateForms('.settings__form', {
+    email: {
+      required: true,
+      email: true
+    },
+    tel: {
+      required: true
+    },
+    tel2: {
+      required: true
+    }
+  }); // end валидации
   // Обрезаю кол-во симолов
 
   var myCharacterCropping = function myCharacterCropping() {
@@ -31,7 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
         arr[i] = elem.innerHTML;
 
         if (elem.innerHTML.length >= 160) {
-          elem.innerHTML = elem.innerHTML.substring(0, 160) + '...';
+          // elem.innerHTML = elem.innerHTML.substring(0, 160) + '...';
+          elem.innerHTML = elem.innerHTML.substring(0, 160);
+          var sp = document.createElement('span');
+          sp.innerHTML = '...';
+          sp.classList.add('spClass');
+          elem.append(sp);
         }
 
         elem.addEventListener('click', function (e) {
@@ -94,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
     activeModal('.templates__TargetModalVk', '.popup13', '.popup-active');
     activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
     activeModal('.issuedInvoices-modalTarget', '.popup14', '.popup-active');
+    activeModal('.phone-bodyText', '.popup14', '.popup-active');
+    activeModal('.g-card7__btn-el', '.popup4', '.popup-active');
+    activeModal('.popu4__targetIconTable ', '.popup4', '.popup-active');
   };
 
   modal(); // end modal
@@ -572,6 +611,12 @@ $(document).ready(function () {
   // setBar();
 
   var ddData = [{
+    text: "Выберите тип",
+    value: 0,
+    selected: false,
+    description: "",
+    imageSrc: ""
+  }, {
     text: "Viber",
     value: 1,
     selected: false,
@@ -579,85 +624,86 @@ $(document).ready(function () {
     imageSrc: "web/images/content/2.svg"
   }, {
     text: "SMS",
-    value: 3,
+    value: 2,
     selected: false,
     description: "",
     imageSrc: "web/images/content/1.svg"
   }, {
     text: "ВКОНТАКТЕ",
-    value: 2,
-    selected: false,
-    description: "",
-    imageSrc: "web/images/content/3.svg"
-  }];
-  var ddData2 = [{
-    text: "Viber",
-    value: 2,
-    selected: false,
-    description: "",
-    imageSrc: "web/images/content/2.svg"
-  }, {
-    text: "SMS",
     value: 3,
     selected: false,
     description: "",
-    imageSrc: "web/images/content/1.svg"
-  }, {
-    text: "ВКОНТАКТЕ",
-    value: 1,
-    selected: false,
-    description: "",
     imageSrc: "web/images/content/3.svg"
   }];
-  var ddData3 = [{
-    text: "Viber",
-    value: 1,
-    selected: false,
-    description: "",
-    imageSrc: "web/images/content/2.svg"
-  }, {
-    text: "SMS",
-    value: 3,
-    selected: false,
-    description: "",
-    imageSrc: "web/images/content/1.svg"
-  }, {
-    text: "ВКОНТАКТЕ",
-    value: 2,
-    selected: false,
-    description: "",
-    imageSrc: "web/images/content/3.svg"
-  }];
-  $('.demoBasic').ddslick({
-    data: ddData,
-    defaultSelectedIndex: 3,
-    width: 150,
-    imagePosition: "left",
-    selectText: "Select your favorite social network",
-    onSelected: function onSelected(data) {
-      console.log(data);
-    }
+  $('.demo-basic').each(function () {
+    $(this).ddslick({
+      data: ddData,
+      defaultSelectedIndex: 0,
+      width: 150,
+      imagePosition: "left",
+      onSelected: function onSelected(data) {
+        // Возвращаем в дефолт
+        $('.dd-options').children('li').css({
+          'display': 'flex'
+        });
+        $('.dd-options').each(function () {
+          var li = $(this).children('li');
+          selectChange().forEach(function (elem) {
+            return elem !== '0' ? li[elem].style.display = 'none' : false;
+          });
+        });
+      }
+    });
   });
-  $('.demoBasic2').ddslick({
-    data: ddData2,
-    defaultSelectedIndex: 2,
-    width: 150,
-    imagePosition: "left",
-    selectText: "",
-    onSelected: function onSelected(data) {
-      console.log(data);
-    }
-  });
-  $('.demoBasic3').ddslick({
-    data: ddData3,
-    defaultSelectedIndex: 1,
-    width: 150,
-    imagePosition: "left",
-    selectText: "",
-    onSelected: function onSelected(data) {
-      console.log(data);
-    }
-  });
+
+  function selectChange() {
+    var arr = [];
+    $('.dd-selected-value').each(function () {
+      arr.push($(this).val());
+    });
+    return arr;
+  } // $('body').on('submit', 'form', function (e) {
+  // 	e.preventDefault();
+  // 	$(this).find('.alert').css({ 'display': 'block' })
+  // })
+  // document.addEventListener('submit', function (e) {
+  // 	e.preventDefault()
+  // 	if (e.target.className === 'newsletter__content-casc') {
+  // 		console.log(1)
+  // 	}
+  // })
+  // $('.demoBasic').ddslick({
+  // 	data: ddData,
+  // 	defaultSelectedIndex: 0,
+  // 	width: 150,
+  // 	imagePosition: "left",
+  // 	selectText: "Select your favorite social network",
+  // 	onSelected: function (data) {
+  // 		console.log(data);
+  // 	}
+  // });
+  // $('.demoBasic2').ddslick({
+  // 	data: ddData2,
+  // 	defaultSelectedIndex: 2,
+  // 	width: 150,
+  // 	imagePosition: "left",
+  // 	selectText: "",
+  // 	onSelected: function (data) {
+  // 		console.log(data);
+  // 	}
+  // });
+  // $('.demoBasic3').ddslick({
+  // 	data: ddData3,
+  // 	defaultSelectedIndex: 1,
+  // 	width: 150,
+  // 	imagePosition: "left",
+  // 	selectText: "",
+  // 	onSelected: function (data) {
+  // 		console.log(data);
+  // 	}
+  // });
+
+
   $('input[type=file]').each(function () {
     var $input = $(this),
         $label = $input.next('.js-labelFile'),
