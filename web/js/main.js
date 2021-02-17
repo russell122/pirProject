@@ -40,19 +40,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  validateForms('.settings__form', {
-    email: {
-      required: true,
-      email: true
-    },
-    tel: {
-      required: true
-    },
-    tel2: {
-      required: true
-    }
-  }); // end валидации
+  var settingsForm = document.querySelector('.settings__form');
+
+  if (settingsForm) {
+    validateForms('.settings__form', {
+      email: {
+        required: true,
+        email: true
+      },
+      tel: {
+        required: true
+      },
+      tel2: {
+        required: true
+      }
+    });
+  } // end валидации
   // Обрезаю кол-во симолов
+
 
   var myCharacterCropping = function myCharacterCropping() {
     var characterCropping = function characterCropping(myElems) {
