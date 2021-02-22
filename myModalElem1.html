@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>123</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" type="text/css" href="web/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__burger"><span></span></div>
+          <div class="header__wrap"><a class="header__logo" href="index.html"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__tool">
+              <p>Инструмент управления<br>СМС - рассылками</p>
+            </div>
+            <div class="header__btn"><a class="button" href="indexsetUpAMailingList.html">СОЗДАТЬ РАССЫЛКУ</a></div>
+            <div class="header__phone order-2"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div>
+            <div class="header__balance order-1"><a class="header__balance-img headerIcon" href="issuedInvoices.html">
+                <svg class="svg-sprite-icon icon-wallet">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#wallet"></use>
+                </svg></a>
+              <div class="header__balance-body"><a class="headLink rub" href="issuedInvoices.html">Баланс <br> 132,96</a><a class="phone-bodyText" href="">Пополнить счет</a></div>
+            </div>
+            <div class="header__mail"><a class="header__mail-img headerIcon" href="account.html">
+                <svg class="svg-sprite-icon icon-user">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#user"></use>
+                </svg></a>
+              <div class="header__mail-body"><a class="headLink" href="account.html">gajarin@mail.ru</a><a class="phone-bodyText" href="/">Выйти</a></div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__menu">
+          <div class="container">
+            <ul class="topmenu">
+              <li class="topmenu__item"><a href="account.html">Профиль</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="account.html">Аккаунт</a></li>
+                  <li class="submenu__li"><a href="settings.html">Настройки</a></li>
+                  <li class="submenu__li"><a href="news.html">Новости</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="indexsetUpAMailingList.html">Рассылки</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="plannedDistributions.html">Запланированные </a></li>
+                  <li class="submenu__li"><a href="pendingPayment.html">Ожидает оплату</a></li>
+                  <li class="submenu__li"><a href="incoming.html">Входящие SMS</a></li>
+                  <li class="submenu__li"><a href="templates.html">Шаблоны и конструктор</a></li>
+                  <li class="submenu__li"><a href="databaseManagement.html">Базы получателей</a></li>
+                  <li class="submenu__li"><a href="registerOfSenderNames.html">Реест имен отправителей</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="statisticsByDay.html">Статистика</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="statisticsByDay.html">Статистика по дням</a></li>
+                  <li class="submenu__li"><a href="detailedStatistics.html">Детальная статистика</a></li>
+                  <li class="submenu__li"><a href="reportsForDownload.html">Отчеты для скачивания</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="issuedInvoices.html">Финансы </a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="issuedInvoices.html">Счета и оплаты</a></li>
+                  <li class="submenu__li"><a href="tariffs.html">Тарифы</a></li>
+                  <li class="submenu__li"><a href="expenses.html">Расходы</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="api.html">Разрабочикам </a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="api.html">api</a></li>
+                  <li class="submenu__li"><a href="documentationForProgrammers.html">Документация для программистов</a></li>
+                  <li class="submenu__li"><a href="integrations.html">Интеграция с метрикой/коллтрекингом</a></li>
+                </ul>
+              </li>
+              <li class="topmenu__item"><a href="userManual.html">База знаний</a>
+                <svg class="svg-sprite-icon icon-arrow-bottom">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                </svg>
+                <ul class="submenu">
+                  <li class="submenu__li"><a href="userManual.html">Руководство пользователя</a></li>
+                  <li class="submenu__li"><a href="support.html">Поддержка</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="top-line"></div>
+            <div class="header__phone-small"><a class="header__phone-img headerIcon" href="tel:88001004603">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="web/images/sprite/symbol/sprite.svg#phone"></use>
+                </svg></a>
+              <div class="header__phone-body"><a class="headLink" href="tel:88001004603">8 800 100-46-03</a>
+                <p class="phone-bodyText">Звонок бесплатный</p>
+              </div>
+            </div><a class="header__exit" href="/">Выйти</a>
+          </div>
+        </nav>
+      </header>
+      <div class="header__showLBlock">
+        <div class="container">
+          <div class="header__showLBlock__wrap"><a class="header__showLBlock-img" href="/"><img src="./web/images/content/header__logo.svg" alt="ПИР"></a>
+            <div class="header__btn-small"><a class="button" href="/">СОЗДАТЬ РАССЫЛКУ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="popup__dialog popup__dialog-if1">
+          <div class="popup__content popup__content-if1">
+            <button class="popup__close"><strong data-close>&#10005</strong></button>
+            <form>
+              <div class="popup__form">
+                <div class="popup__form-top">
+                  <h2 class="title-5">Выбор абонетов из базы <span>@Название базы по признакам</span></h2>
+                  <p>Всего абонентов <span>2200</span></p>
+                </div>
+                <div class="popup__form-block">
+                  <div class="popup__form-wrap"> 
+                    <div class="popup__form-region">
+                      <div class="popup__form-left-block">
+                        <p>Выберите регион</p>
+                        <div class="myInp">
+                          <input id="check41" type="checkbox" checked>
+                          <label for="check41">Воронежская область</label>
+                        </div>
+                        <div class="myInp">
+                          <input id="check42" type="checkbox" checked>
+                          <label for="check42">Московская область</label>
+                        </div>
+                        <div class="myInp">
+                          <input id="check52" type="checkbox" checked>
+                          <label for="check52">Воронежская область</label>
+                        </div>
+                        <div class="myInp">
+                          <input id="check53" type="checkbox" checked>
+                          <label for="check53">Московская область</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popup__form-operator">
+                      <div class="popup__form-left-block">
+                        <p>Выберите оператора</p>
+                        <div class="myInp">
+                          <input id="check43" type="checkbox" checked>
+                          <label for="check43">Tele2</label>
+                        </div>
+                        <div class="myInp">
+                          <input id="check44" type="checkbox" checked>
+                          <label for="check44">МТС</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popup__form-choice">
+                      <div class="popup__form-right-block block"> 
+                        <div class="block__top"> 
+                          <p>Пол:</p>
+                          <div class="myInp">
+                            <input id="check45" type="checkbox" checked>
+                            <label for="check45">Мужской</label>
+                          </div>
+                          <div class="myInp">
+                            <input id="check46" type="checkbox" checked>
+                            <label for="check46">Женский</label>
+                          </div>
+                        </div>
+                        <div class="block__top"> 
+                          <p>Возраст: </p>
+                          <div class="block__top-wrap">
+                            <div class="block__sel">
+                              <div class="mySelect__elem">
+                                <div class="mySelect__style">
+                                  <select class="g-input" type="text">
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                    <option>27</option>
+                                    <option>28</option>
+                                    <option>29</option>
+                                    <option>30</option>
+                                    <option>31</option>
+                                    <option>32</option>
+                                    <option>33</option>
+                                    <option>34</option>
+                                    <option>35</option>
+                                    <option>36</option>
+                                    <option>37</option>
+                                    <option>38</option>
+                                    <option>39</option>
+                                    <option>40</option>
+                                    <option>41</option>
+                                    <option>42</option>
+                                    <option>43</option>
+                                    <option>44</option>
+                                    <option>45</option>
+                                    <option>46</option>
+                                    <option>47</option>
+                                    <option>48</option>
+                                    <option>49</option>
+                                    <option>50</option>
+                                    <option>51</option>
+                                    <option>52</option>
+                                    <option>53</option>
+                                    <option>54</option>
+                                    <option>55</option>
+                                    <option>56</option>
+                                    <option>57</option>
+                                    <option>58</option>
+                                    <option>59</option>
+                                    <option>60</option>
+                                    <option>61</option>
+                                    <option>62</option>
+                                    <option>63</option>
+                                    <option>64</option>
+                                    <option>65</option>
+                                    <option>66</option>
+                                    <option>67</option>
+                                    <option>68</option>
+                                    <option>69</option>
+                                    <option>70</option>
+                                    <option>71</option>
+                                    <option>72</option>
+                                    <option>73</option>
+                                    <option>74</option>
+                                    <option>75</option>
+                                    <option>76</option>
+                                    <option>77</option>
+                                    <option>78</option>
+                                    <option>79</option>
+                                    <option>80</option>
+                                    <option>81</option>
+                                    <option>82</option>
+                                    <option>83</option>
+                                    <option>84</option>
+                                    <option>85</option>
+                                    <option>86</option>
+                                    <option>87</option>
+                                    <option>88</option>
+                                    <option>89</option>
+                                    <option>90</option>
+                                    <option>91</option>
+                                    <option>92</option>
+                                    <option>93</option>
+                                    <option>94</option>
+                                    <option>95</option>
+                                    <option>96</option>
+                                    <option>97</option>
+                                    <option>98</option>
+                                    <option>99</option>
+                                    <option>100</option>
+                                  </select>
+                                  <svg class="svg-sprite-icon icon-arrow-bottom">
+                                    <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                                  </svg>
+                                </div>
+                              </div><span class="block__sel-line">-</span>
+                            </div>
+                            <div class="block__sel">
+                              <div class="mySelect__elem">
+                                <div class="mySelect__style">
+                                  <select class="g-input" type="text">
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                    <option>27</option>
+                                    <option>28</option>
+                                    <option>29</option>
+                                    <option>30</option>
+                                    <option>31</option>
+                                    <option>32</option>
+                                    <option>33</option>
+                                    <option>34</option>
+                                    <option>35</option>
+                                    <option>36</option>
+                                    <option>37</option>
+                                    <option>38</option>
+                                    <option>39</option>
+                                    <option>40</option>
+                                    <option>41</option>
+                                    <option>42</option>
+                                    <option>43</option>
+                                    <option>44</option>
+                                    <option>45</option>
+                                    <option>46</option>
+                                    <option>47</option>
+                                    <option>48</option>
+                                    <option>49</option>
+                                    <option>50</option>
+                                    <option>51</option>
+                                    <option>52</option>
+                                    <option>53</option>
+                                    <option>54</option>
+                                    <option>55</option>
+                                    <option>56</option>
+                                    <option>57</option>
+                                    <option>58</option>
+                                    <option>59</option>
+                                    <option>60</option>
+                                    <option>61</option>
+                                    <option>62</option>
+                                    <option>63</option>
+                                    <option>64</option>
+                                    <option>65</option>
+                                    <option>66</option>
+                                    <option>67</option>
+                                    <option>68</option>
+                                    <option>69</option>
+                                    <option>70</option>
+                                    <option>71</option>
+                                    <option>72</option>
+                                    <option>73</option>
+                                    <option>74</option>
+                                    <option>75</option>
+                                    <option>76</option>
+                                    <option>77</option>
+                                    <option>78</option>
+                                    <option>79</option>
+                                    <option>80</option>
+                                    <option>81</option>
+                                    <option>82</option>
+                                    <option>83</option>
+                                    <option>84</option>
+                                    <option>85</option>
+                                    <option>86</option>
+                                    <option>87</option>
+                                    <option>88</option>
+                                    <option>89</option>
+                                    <option>90</option>
+                                    <option>91</option>
+                                    <option>92</option>
+                                    <option>93</option>
+                                    <option>94</option>
+                                    <option>95</option>
+                                    <option>96</option>
+                                    <option>97</option>
+                                    <option>98</option>
+                                    <option>99</option>
+                                    <option>100</option>
+                                  </select>
+                                  <svg class="svg-sprite-icon icon-arrow-bottom">
+                                    <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block__date"> 
+                          <div class="myInp">
+                            <input id="check47" type="checkbox" checked>
+                            <label for="check47">Дата рождения</label>
+                          </div>
+                          <div class="myCalendar__elem"><span></span>
+                            <div class="myCalendar__style">
+                              <input class="datepicker-here g-input" type="text"/>
+                              <svg class="svg-sprite-icon icon-calendar">
+                                <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popup__form-seach">
+                      <div class="block__search">
+                        <p>Найти:</p>
+                        <div class="block__search-wrap"> 
+                          <input class="g-input" type="text">
+                          <div class="mySelect__elem">
+                            <div class="mySelect__style">
+                              <select class="g-input" type="text">
+                                <option>Во всех полях</option>
+                                <option>Номер</option>
+                                <option>Фамилия</option>
+                                <option>Имя</option>
+                                <option>Отчество</option>
+                              </select>
+                              <svg class="svg-sprite-icon icon-arrow-bottom">
+                                <use xlink:href="web/images/sprite/symbol/sprite.svg#arrow-bottom"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block__info"> <a href="#">Еще поля</a></div>
+                    </div>
+                  </div>
+                  <div class="popup__form-btns">
+                    <button class="button-accent-grey button-accent" type="submit">СБРОСИТЬ ФИЛЬТР</button>
+                    <button class="button-accent" type="submit">НАЙТИ</button>
+                  </div>
+                </div>
+              </div>
+              <div class="statistics__top-elems"><a class="statistics__top-elem statistics__top-elemModal active" href="/">
+                  <svg class="svg-sprite-icon icon-icon-table">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-table"></use>
+                  </svg></a><a class="statistics__top-elem statistics__top-elemModal" href="/">
+                  <svg class="svg-sprite-icon icon-icon-cards">
+                    <use xlink:href="web/images/sprite/symbol/sprite.svg#icon-cards"></use>
+                  </svg></a></div>
+              <div class="statistics__content-item statistics__content-itemModal">
+                <div class="g-table-big statistics__content-item g-table-big6">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="myInp">
+                            <input class="statistics__target-myInp" id="check74" type="checkbox"/>
+                            <label for="check74"></label>
+                          </div>
+                        </th>
+                        <th>Номер телефона<br>(#number#)</th>
+                        <th>Область</th>
+                        <th>Оператор</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Дата рождения</th>
+                        <th>Пол</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check60" type="checkbox"/>
+                            <label for="check60"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check61" type="checkbox"/>
+                            <label for="check61"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check62" type="checkbox"/>
+                            <label for="check62"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp"> 
+                            <input class="statistics__checked-myInp" id="check63" type="checkbox"/>
+                            <label for="check63"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check64" type="checkbox"/>
+                            <label for="check64"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check65" type="checkbox"/>
+                            <label for="check65"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check66" type="checkbox"/>
+                            <label for="check66"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check67" type="checkbox"/>
+                            <label for="check67"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check68" type="checkbox"/>
+                            <label for="check68"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check69" type="checkbox"/>
+                            <label for="check69"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check70" type="checkbox"/>
+                            <label for="check70"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check71" type="checkbox"/>
+                            <label for="check71"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr>
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check72" type="checkbox"/>
+                            <label for="check72"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Воронежская область</td>
+                        <td aria-label="Оператор">билайн</td>
+                        <td aria-label="Фамилия">Тестовый</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество"></td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                      <tr class="bg">
+                        <td aria-label="">
+                          <div class="myInp">
+                            <input class="statistics__checked-myInp" id="check73" type="checkbox"/>
+                            <label for="check73"></label>
+                          </div>
+                        </td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Область">Московская область</td>
+                        <td aria-label="Оператор">Tele2</td>
+                        <td aria-label="Фамилия">Петров</td>
+                        <td aria-label="Имя">Петр</td>
+                        <td aria-label="Отчество">Петрович</td>
+                        <td aria-label="Дата рождения">23.07.2020</td>
+                        <td aria-label="Пол">мужской</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="statistics__content-item statistics__content-itemModal">
+                <div class="g-card g-card4 g-card5">
+                  <div class="g-card__row">
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card5__top"> 
+                          <div class="myInp">
+                            <input id="check49" type="checkbox">
+                            <label for="check49"></label>
+                          </div>
+                          <p>Петров Петр Петрович</p>
+                        </div>
+                        <div class="g-card4__date g-card4-elem">
+                          <div class="g-card4__date-dates">
+                            <p>Мужской</p>
+                          </div>
+                          <div class="g-card4__date-value">
+                            <p>23.07.2020</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem bg">
+                          <div class="g-card4__status-value">
+                            <p>+7897548906</p>
+                          </div>
+                          <div class="g-card4__status-stat">
+                            <p>Tele2</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem">
+                          <p>Воронежская область</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card5__top"> 
+                          <div class="myInp">
+                            <input id="check50" type="checkbox">
+                            <label for="check50"></label>
+                          </div>
+                          <p>Петров Петр Петрович</p>
+                        </div>
+                        <div class="g-card4__date g-card4-elem">
+                          <div class="g-card4__date-dates">
+                            <p>Мужской</p>
+                          </div>
+                          <div class="g-card4__date-value">
+                            <p>23.07.2020</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem bg">
+                          <div class="g-card4__status-value">
+                            <p>+7897548906</p>
+                          </div>
+                          <div class="g-card4__status-stat">
+                            <p>Tele2</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem">
+                          <p>Воронежская область</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-card__column">
+                      <div class="g-card__item">
+                        <div class="g-card5__top"> 
+                          <div class="myInp">
+                            <input id="check51" type="checkbox">
+                            <label for="check51"></label>
+                          </div>
+                          <p>Петров Петр Петрович</p>
+                        </div>
+                        <div class="g-card4__date g-card4-elem">
+                          <div class="g-card4__date-dates">
+                            <p>Мужской</p>
+                          </div>
+                          <div class="g-card4__date-value">
+                            <p>23.07.2020</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem bg">
+                          <div class="g-card4__status-value">
+                            <p>+7897548906</p>
+                          </div>
+                          <div class="g-card4__status-stat">
+                            <p>Tele2</p>
+                          </div>
+                        </div>
+                        <div class="g-card4__status g-card4-elem">
+                          <p>Воронежская область</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block__reset">
+                <div class="block__range">
+                  <div class="block__range-value"> 
+                    <p>Отобрано абонентов - <span>2000</span></p>
+                  </div>
+                  <div class="block__range-wrap">
+                    <p>Отправить первым</p>
+                    <input class="g-input" type="text" placeholder="500">
+                    <div class="block__range-elem">
+                      <input class="js-range-slider" type="text" name="my_range" value="">
+                    </div>
+                  </div>
+                </div>
+                <div class="block__reset-btns"> 
+                  <button class="button-accent" type="submit">ВЫБРАТЬ ВСЕ ОТОБРАННЫЕ НОМЕРА</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+    <script src="web/js/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="web/js/vendor/libs.js"></script>
+    <script src="web/js/plugins.js"></script>
+    <script src="web/js/ajax-settings.js"></script>
+    <script src="web/js/main.js"></script>
+  </body>
+</html>

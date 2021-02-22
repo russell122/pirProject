@@ -8,20 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return Array.isArray(v) ? a.concat(f(v)) : a.concat(v);
       }, []);
     }(this);
-  }; // input range
-  // let sliderInp = document.querySelector('.sliderInp');
-  // let rangeInput = document.querySelector('.block__range-wrap > input');
-  // let blockRangeValue = document.querySelector('.block__range-value > p >span');
-  // sliderInp.addEventListener('input', (e) => {
-  // 	// blockRangeValue.innerHTML = e.target.value;
-  // 	rangeInput.value = e.target.value;
-  // });
-  // rangeInput.addEventListener('input', (e) => {
-  // 	// blockRangeValue.innerHTML = e.target.value;
-  // 	sliderInp.value = e.target.value;
-  // });
-  // input end range
-  // Валидиция
+  }; // Валидиция
 
   var validateForms = function validateForms(selector, rules) {
     if (selector && rules) {
@@ -67,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
         arr[i] = elem.innerHTML;
 
         if (elem.innerHTML.length >= 160) {
-          // elem.innerHTML = elem.innerHTML.substring(0, 160) + '...';
           elem.innerHTML = elem.innerHTML.substring(0, 160);
           var sp = document.createElement('span');
           sp.innerHTML = '...';
@@ -87,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   myCharacterCropping(); // end обрезки символов
-  // modal
+  //modal
 
   var modal = function modal() {
     function activeModal(btnsTarget, modalWrap, activeClass) {
@@ -99,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
           btn.addEventListener('click', function (e) {
             e.preventDefault();
             modal.classList.add(activeClass.replace(/\D/, ""));
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden'; // modal.innerHTML = '<iframe src="myModalElem1.html"></iframe>';
           });
 
           if (modal) {
@@ -119,9 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         });
       }
-    }
+    } // activeModal('.modal1__target', '.popup', '.popup-active');
 
-    activeModal('.modal1__target', '.popup', '.popup-active');
+
     activeModal('.databaseManagement__modalTarget', '.popup2', '.popup-active');
     activeModal('.databaseManagement__bazes-modalTarget', '.popup3', '.popup-active');
     activeModal('.listSubNewBase__numberModalTarget', '.popup4', '.popup-active');
@@ -192,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   myTabs(); //end tabs
-  // baz
+  // baz - рассчет стоимости в таблицах
 
   var myBaz = function myBaz() {
     var baz = function baz(myElems, myWrapRez, myAbon, myBtn, myMess) {
@@ -203,9 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var mess = document.querySelector(myMess);
       var sum = 0;
       var sumAbon = 0;
-      var sumMess = 0; // wrapRez.innerHTML = '';
-      // abon.innerHTML = '';
-      // mess.innerHTML = '';
+      var sumMess = 0;
 
       if (btn) {
         btn.addEventListener('click', function (e) {
@@ -277,12 +261,12 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   myProlapse(); // end accordion
-  // 
+  // Выбор шаблона ВК на странице ВК рассылка
 
   var mySelectionInTheEkNewsletter = function mySelectionInTheEkNewsletter() {
     var selectionInTheEkNewsletter = function selectionInTheEkNewsletter(myTextArea, myGSelect, mySelectName, mySelectNumber, myInputName, myInputNumber) {
       var gSelect = document.querySelector(myGSelect);
-      var textarea = document.querySelector(myTextArea); // let rezSelectName = 'Выберите имя';
+      var textarea = document.querySelector(myTextArea);
 
       if (gSelect) {
         gSelect.addEventListener('change', function (e) {
@@ -300,8 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var myShowFlexBlock = function myShowFlexBlock() {
     var showFlexBlock = function showFlexBlock(myTarget, myWrap) {
       var target = document.querySelector(myTarget);
-      var wraps = document.querySelectorAll(myWrap);
-      var blockSearch = document.querySelector('.block__search');
+      var wraps = document.querySelector(myWrap);
       var i = 0;
 
       if (target) {
@@ -309,13 +292,13 @@ document.addEventListener('DOMContentLoaded', function () {
           i++;
 
           if (i < 4) {
-            blockSearch.innerHTML += "\n\t\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t\t<input type=\"text\" class=\"g-input\">\n\t\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\">\n\t\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t";
+            wraps.innerHTML += "\n\t\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t\t<input type=\"text\" class=\"g-input\">\n\t\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\">\n\t\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t";
           }
         });
       }
     };
 
-    showFlexBlock('.block__info', '.block__search-wrap-hide');
+    showFlexBlock('.block__info', '.block__search');
   };
 
   myShowFlexBlock(); // end Показать блок с применением флекса
@@ -366,6 +349,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }); // end Фиксирую блок "Выбор получателей сообщения" 
+  // Фиксация шапки
 
   var headerMenu = document.querySelector('.header__menu');
   var myHeader = document.querySelector('.header');
@@ -382,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
       myHeader.classList.remove('fixedMenu');
     }
   });
-}); //
+}); // end Фиксации шапки
 
 var tableBig15 = document.querySelector('.g-table-big15 > table > tbody');
 var gCard9 = document.querySelector('.g-card9 > .g-card__row');
@@ -499,6 +483,48 @@ tableBig15__tr.forEach(function (el, i) {
 // ]
 
 $(document).ready(function () {
+  var layer = $('#layer'),
+      modal = $('#modal'),
+      modalContent = '<iframe class="frame1" src="myModalElem1.html"></iframe>';
+  $('.modal1__target').click(function (e) {
+    e.preventDefault();
+    layer.show();
+    document.body.style.overflow = 'hidden';
+    modal.show().animate({}, function () {
+      $(this).html(modalContent);
+
+      document.querySelector('.frame1').onload = function () {
+        var iframe = document.querySelector('.frame1');
+        var iframeWindow = iframe.contentWindow;
+        var iframeContent = iframeWindow.$('.popup__close');
+        var myHeader = iframeWindow.$('.header');
+        myHeader.hide();
+        iframeContent.click(function () {
+          modal.fadeOut('slow', function () {
+            $(this).html('');
+            layer.fadeOut('fast');
+            document.body.style.overflow = '';
+          });
+        });
+      };
+    });
+  });
+  layer.click(function () {
+    modal.fadeOut('slow', function () {
+      $(this).html('');
+      layer.fadeOut('fast');
+      document.body.style.overflow = '';
+    });
+  });
+  document.addEventListener('keyup', function (e) {
+    if (e.key == 'Escape') {
+      modal.fadeOut('slow', function () {
+        $(this).html('');
+        layer.fadeOut('fast');
+        document.body.style.overflow = '';
+      });
+    }
+  });
   var ctx = document.getElementById("myChart");
 
   if (ctx) {
@@ -592,29 +618,7 @@ $(document).ready(function () {
     instance.update({
       from: val
     });
-  }); // var $d3 = $(".js-range-slider");
-  // var $mm = $(".block__range-wrap > input")
-  // $d3.ionRangeSlider({
-  // 	skin: "big",
-  // 	min: 0,
-  // 	max: 2000,
-  // 	from: 300
-  // });
-  // $d3.on("change", function () {
-  // 	var $inp = $(this);
-  // 	var from = $inp.prop("value"); // reading input value
-  // 	var from2 = $inp.data("from"); // reading input data-from attribute
-  // 	var inpOut = $(".block__range-wrap > input");
-  // 	inpOut.val($inp.val());
-  // });
-  // var $slider = $("#slider");
-  // var $fill = $(".bar .fill");
-  // function setBar() {
-  // 	$fill.css("width", $slider.val() + "%");
-  // }
-  // $slider.on("input", setBar);
-  // setBar();
-
+  });
   var ddData = [{
     text: "Выберите тип",
     value: 0,
@@ -667,47 +671,7 @@ $(document).ready(function () {
       arr.push($(this).val());
     });
     return arr;
-  } // $('body').on('submit', 'form', function (e) {
-  // 	e.preventDefault();
-  // 	$(this).find('.alert').css({ 'display': 'block' })
-  // })
-  // document.addEventListener('submit', function (e) {
-  // 	e.preventDefault()
-  // 	if (e.target.className === 'newsletter__content-casc') {
-  // 		console.log(1)
-  // 	}
-  // })
-  // $('.demoBasic').ddslick({
-  // 	data: ddData,
-  // 	defaultSelectedIndex: 0,
-  // 	width: 150,
-  // 	imagePosition: "left",
-  // 	selectText: "Select your favorite social network",
-  // 	onSelected: function (data) {
-  // 		console.log(data);
-  // 	}
-  // });
-  // $('.demoBasic2').ddslick({
-  // 	data: ddData2,
-  // 	defaultSelectedIndex: 2,
-  // 	width: 150,
-  // 	imagePosition: "left",
-  // 	selectText: "",
-  // 	onSelected: function (data) {
-  // 		console.log(data);
-  // 	}
-  // });
-  // $('.demoBasic3').ddslick({
-  // 	data: ddData3,
-  // 	defaultSelectedIndex: 1,
-  // 	width: 150,
-  // 	imagePosition: "left",
-  // 	selectText: "",
-  // 	onSelected: function (data) {
-  // 		console.log(data);
-  // 	}
-  // });
-
+  }
 
   $('input[type=file]').each(function () {
     var $input = $(this),
