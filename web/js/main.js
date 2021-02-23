@@ -74,59 +74,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
   myCharacterCropping(); // end обрезки символов
   //modal
-
-  var modal = function modal() {
-    function activeModal(btnsTarget, modalWrap, activeClass) {
-      var btns = document.querySelectorAll(btnsTarget);
-      var modal = document.querySelector(modalWrap);
-
-      if (btns) {
-        btns.forEach(function (btn) {
-          btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            modal.classList.add(activeClass.replace(/\D/, ""));
-            document.body.style.overflow = 'hidden'; // modal.innerHTML = '<iframe src="myModalElem1.html"></iframe>';
-          });
-
-          if (modal) {
-            modal.addEventListener('click', function (e) {
-              if (e.target === modal || e.target.getAttribute('data-close') == '') {
-                modal.classList.remove(activeClass.replace(/\D/, ""));
-                document.body.style.overflow = '';
-              }
-            });
-          }
-
-          document.addEventListener('keyup', function (e) {
-            if (modal.classList.contains(activeClass.replace(/\D/, "")) && e.key == 'Escape') {
-              modal.classList.remove(activeClass.replace(/\D/, ""));
-              document.body.style.overflow = '';
-            }
-          });
-        });
-      }
-    } // activeModal('.modal1__target', '.popup', '.popup-active');
-
-
-    activeModal('.databaseManagement__modalTarget', '.popup2', '.popup-active');
-    activeModal('.databaseManagement__bazes-modalTarget', '.popup3', '.popup-active');
-    activeModal('.listSubNewBase__numberModalTarget', '.popup4', '.popup-active');
-    activeModal('.listSubNewBase__xlsModalTarget', '.popup5', '.popup-active');
-    activeModal('.listSubNewBase__xlsModalTarget2', '.popup6', '.popup-active');
-    activeModal('.listSubNewBase__settings-link', '.popup7', '.popup-active');
-    activeModal('.registerOfSenderNames__btnModalTarget', '.popup8', '.popup-active');
-    activeModal('.listSubNewBase__numberModalTarget2', '.popup9', '.popup-active');
-    activeModal('.attachDocumentTargetModal', '.popup10', '.popup-active');
-    activeModal('.templates__TargetModal', '.popup11', '.popup-active');
-    activeModal('.templates__TargetModalVk', '.popup13', '.popup-active');
-    activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
-    activeModal('.issuedInvoices-modalTarget', '.popup14', '.popup-active');
-    activeModal('.phone-bodyText', '.popup14', '.popup-active');
-    activeModal('.g-card7__btn-el', '.popup4', '.popup-active');
-    activeModal('.popu4__targetIconTable ', '.popup4', '.popup-active');
-  };
-
-  modal(); // end modal
+  // let modal = () => {
+  // 	function activeModal(btnsTarget, modalWrap, activeClass) {
+  // 		let btns = document.querySelectorAll(btnsTarget);
+  // 		let modal = document.querySelector(modalWrap);
+  // 		if (btns) {
+  // 			btns.forEach(btn => {
+  // 				btn.addEventListener('click', (e) => {
+  // 					e.preventDefault();
+  // 					modal.classList.add(activeClass.replace(/\D/, ""));
+  // 					document.body.style.overflow = 'hidden';
+  // 					// modal.innerHTML = '<iframe src="myModalElem1.html"></iframe>';
+  // 				});
+  // 				if (modal) {
+  // 					modal.addEventListener('click', (e) => {
+  // 						if (e.target === modal || e.target.getAttribute('data-close') == '') {
+  // 							modal.classList.remove(activeClass.replace(/\D/, ""));
+  // 							document.body.style.overflow = '';
+  // 						}
+  // 					});
+  // 				}
+  // 				document.addEventListener('keyup', (e) => {
+  // 					if (modal.classList.contains(activeClass.replace(/\D/, "")) && e.key == 'Escape') {
+  // 						modal.classList.remove(activeClass.replace(/\D/, ""));
+  // 						document.body.style.overflow = '';
+  // 					}
+  // 				});
+  // 			});
+  // 		}
+  // 	}
+  // 	// activeModal('.modal1__target', '.popup', '.popup-active');
+  // 	activeModal('.databaseManagement__modalTarget', '.popup2', '.popup-active');
+  // 	activeModal('.databaseManagement__bazes-modalTarget', '.popup3', '.popup-active');
+  // 	activeModal('.listSubNewBase__numberModalTarget', '.popup4', '.popup-active');
+  // 	activeModal('.listSubNewBase__xlsModalTarget', '.popup5', '.popup-active');
+  // 	activeModal('.listSubNewBase__xlsModalTarget2', '.popup6', '.popup-active');
+  // 	activeModal('.listSubNewBase__settings-link', '.popup7', '.popup-active');
+  // 	activeModal('.registerOfSenderNames__btnModalTarget', '.popup8', '.popup-active');
+  // 	activeModal('.listSubNewBase__numberModalTarget2', '.popup9', '.popup-active');
+  // 	activeModal('.attachDocumentTargetModal', '.popup10', '.popup-active');
+  // 	activeModal('.templates__TargetModal', '.popup11', '.popup-active');
+  // 	activeModal('.templates__TargetModalVk', '.popup13', '.popup-active');
+  // 	activeModal('.inboxSettings__targetModal', '.popup12', '.popup-active');
+  // 	activeModal('.issuedInvoices-modalTarget', '.popup14', '.popup-active');
+  // 	activeModal('.phone-bodyText', '.popup14', '.popup-active');
+  // 	activeModal('.g-card7__btn-el', '.popup4', '.popup-active');
+  // 	activeModal('.popu4__targetIconTable ', '.popup4', '.popup-active');
+  // }
+  // modal();
+  // end modal
   // tabs
 
   var myTabs = function myTabs() {
@@ -483,48 +479,89 @@ tableBig15__tr.forEach(function (el, i) {
 // ]
 
 $(document).ready(function () {
-  var layer = $('#layer'),
-      modal = $('#modal'),
-      modalContent = '<iframe class="frame1" src="myModalElem1.html"></iframe>';
-  $('.modal1__target').click(function (e) {
-    e.preventDefault();
-    layer.show();
-    document.body.style.overflow = 'hidden';
-    modal.show().animate({}, function () {
-      $(this).html(modalContent);
+  function iframeModals(myNameModal, myTargetModal, myNamePage, myClassFrame, footrest) {
+    var layer = $(footrest),
+        modal = $(myNameModal),
+        modalContent = "<iframe class=\"".concat(myClassFrame, "\" src=\"").concat(myNamePage, "\"></iframe>");
 
-      document.querySelector('.frame1').onload = function () {
-        var iframe = document.querySelector('.frame1');
-        var iframeWindow = iframe.contentWindow;
-        var iframeContent = iframeWindow.$('.popup__close');
-        var myHeader = iframeWindow.$('.header');
-        myHeader.hide();
-        iframeContent.click(function () {
-          modal.fadeOut('slow', function () {
-            $(this).html('');
-            layer.fadeOut('fast');
-            document.body.style.overflow = '';
-          });
+    if (myTargetModal) {
+      $(myTargetModal).click(function (e) {
+        e.preventDefault();
+        layer.show();
+        document.body.style.overflow = 'hidden';
+        modal.show().animate({}, function () {
+          $(this).html(modalContent);
+
+          document.querySelector('.' + "".concat(myClassFrame)).onload = function () {
+            var iframe = document.querySelector('.' + "".concat(myClassFrame));
+            var iframeWindow = iframe.contentWindow;
+            var iframeContent = iframeWindow.$('.popup__close');
+            var myHeader = iframeWindow.$('.header');
+            myHeader.hide();
+            var header__showLBlock = iframeWindow.$('.header__showLBlock');
+            header__showLBlock.hide();
+            iframeContent.click(function () {
+              modal.fadeOut('slow', function () {
+                $(this).html('');
+                layer.fadeOut('fast');
+                document.body.style.overflow = '';
+              });
+            }); // let content = iframeWindow.$('.content');
+            // content.addClass('backgroundBlackout');
+
+            var popup__contentIf2 = iframeWindow.$('.cl');
+            console.log(popup__contentIf2);
+            popup__contentIf2.click(function (event) {
+              modal.fadeOut('slow', function () {
+                $(this).html('');
+                layer.fadeOut('fast');
+                document.body.style.overflow = '';
+              });
+            });
+          };
         });
-      };
-    });
-  });
-  layer.click(function () {
-    modal.fadeOut('slow', function () {
-      $(this).html('');
-      layer.fadeOut('fast');
-      document.body.style.overflow = '';
-    });
-  });
-  document.addEventListener('keyup', function (e) {
-    if (e.key == 'Escape') {
-      modal.fadeOut('slow', function () {
-        $(this).html('');
-        layer.fadeOut('fast');
-        document.body.style.overflow = '';
       });
     }
-  });
+
+    if (layer) {
+      layer.click(function () {
+        modal.fadeOut('slow', function () {
+          $(this).html('');
+          layer.fadeOut('fast');
+          document.body.style.overflow = '';
+        });
+      });
+    } // console.log(layer)
+
+
+    document.addEventListener('keyup', function (e) {
+      if (e.key == 'Escape') {
+        modal.fadeOut('slow', function () {
+          $(this).html('');
+          layer.fadeOut('fast');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+  }
+
+  iframeModals('.myModal1', '.modal1__target', 'myModalElem1.html', 'frame1', '.layer1');
+  iframeModals('.myModal2', '.databaseManagement__modalTarget', 'myModalElem2.html', 'frame2', '.layer2');
+  iframeModals('.myModal3', '.databaseManagement__bazes-modalTarget', 'myModalElem3.html', 'frame3', '.layer3');
+  iframeModals('.myModal4', '.listSubNewBase__numberModalTarget', 'myModalElem4.html', 'frame4', '.layer4');
+  iframeModals('.myModal4', '.popu4__targetIconTable', 'myModalElem4.html', 'frame4', '.layer4');
+  iframeModals('.myModal4', '.g-card7__btn-el', 'myModalElem4.html', 'frame4', '.layer4');
+  iframeModals('.myModal5', '.listSubNewBase__xlsModalTarget', 'myModalElem5.html', 'frame5', '.layer5');
+  iframeModals('.myModal6', '.listSubNewBase__xlsModalTarget2', 'myModalElem6.html', 'frame6', '.layer6');
+  iframeModals('.myModal7', '.listSubNewBase__settings-link', 'myModalElem7.html', 'frame7', '.layer7');
+  iframeModals('.myModal8', '.registerOfSenderNames__btnModalTarget', 'myModalElem8.html', 'frame8', '.layer8');
+  iframeModals('.myModal9', '.listSubNewBase__numberModalTarget2', 'myModalElem9.html', 'frame9', '.layer9');
+  iframeModals('.myModal10', '.attachDocumentTargetModal', 'myModalElem10.html', 'frame10', '.layer10');
+  iframeModals('.myModal11', '.templates__TargetModal', 'myModalElem11.html', 'frame11', '.layer11');
+  iframeModals('.myModal13', '.templates__TargetModalVk', 'myModalElem13.html', 'frame13', '.layer13');
+  iframeModals('.myModal14', '.issuedInvoices-modalTarget', 'myModalElem14.html', 'frame14', '.layer14');
+  iframeModals('.myModal14', '.phone-bodyText', 'myModalElem14.html', 'frame14', '.layer14');
+  iframeModals('.myModal12', '.inboxSettings__targetModal', 'myModalElem12.html', 'frame12', '.layer12');
   var ctx = document.getElementById("myChart");
 
   if (ctx) {
