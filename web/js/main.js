@@ -853,10 +853,46 @@ $(document).ready(function () {
     var txt = parentElem.find('.txt');
     var dataText = txt.attr('data-txt');
     var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]"));
+    var flag = true;
     txt.val(txt.val() + $(this).attr('data-number'));
     transElem.val(rus_to_latin(txt.val()));
+    var str = txt.val();
+
+    if (/^([#а-яА-ЯёЁ]*)$/.test(str)) {
+      // console.log('В поле только кириллица')
+      flag = false; // lengthSMS.innerHTML = countSms($(this).val().length, 70)
+      // if ($(this).val().length > 70) {
+      // 	lengthSMS.innerHTML = Math.ceil($(this).val().length / 67);
+      // }
+    }
+
+    if (/^([#a-zA-Z]*)$/.test(str)) {
+      // console.log('В поле только латиница')
+      flag = true; // lengthSMS.innerHTML = countSms($(this).val().length, 160)
+      // if ($(this).val().length > 160) {
+      // 	lengthSMS.innerHTML = Math.ceil($(this).val().length / 153);
+      // }
+    }
+
+    if (/^([\s%&@])*$/.test(str)) console.log('В поле недопустимые символы'); //если нужно запретить ввод определёных символов
+
+    this.value = str.replace(/[\%&@]/g, '');
     lengthLetters.innerHTML = txt.val().length;
-    lengthSMS.innerHTML = countSms(txt.val().length, 170);
+
+    if (flag) {
+      lengthSMS.innerHTML = countSms(txt.val().length, 160);
+
+      if ($(this).val().length > 160) {
+        lengthSMS.innerHTML = countSms(txt.val().length, 153);
+      }
+    } else {
+      lengthSMS.innerHTML = countSms(txt.val().length, 70);
+
+      if ($(this).val().length > 70) {
+        lengthSMS.innerHTML = countSms(txt.val().length, 67);
+      }
+    }
+
     translengthLetters.innerHTML = transElem.val().length;
     transLengthSMS.innerHTML = countSms(transElem.val().length, 160);
   });
@@ -865,8 +901,34 @@ $(document).ready(function () {
     var txtValue = $(this).val();
     var transElem = $("[data-txtTrans=\"".concat(dataText, "\"]"));
     transElem.val(rus_to_latin(txtValue));
-    lengthLetters.innerHTML = $(this).val().length;
-    lengthSMS.innerHTML = countSms($(this).val().length, 170);
+    var str = this.value;
+
+    if (/^([а-яА-ЯёЁ]*)$/.test(str)) {
+      // console.log('В поле только кириллица')
+      lengthSMS.innerHTML = countSms($(this).val().length, 70);
+
+      if ($(this).val().length > 70) {
+        lengthSMS.innerHTML = Math.ceil($(this).val().length / 67);
+      }
+    }
+
+    if (/^([a-zA-Z]*)$/.test(str)) {
+      // console.log('В поле только латиница')
+      lengthSMS.innerHTML = countSms($(this).val().length, 160);
+
+      if ($(this).val().length > 160) {
+        lengthSMS.innerHTML = Math.ceil($(this).val().length / 153);
+      }
+    }
+
+    if (/^([\s%&@])*$/.test(str)) {
+      // console.log('В поле недопустимые символы')
+      this.value = str.replace(/[\%&@]/g, '');
+    } //если нужно запретить ввод определёных символов
+
+
+    lengthLetters.innerHTML = transElem.val().length; // lengthSMS.innerHTML = countSms($(this).val().length, 70)
+
     translengthLetters.innerHTML = transElem.val().length;
     transLengthSMS.innerHTML = countSms(transElem.val().length, 160);
   });
@@ -876,10 +938,46 @@ $(document).ready(function () {
     var txt2 = parentElem2.find('.txt2');
     var dataText2 = txt2.attr('data-txt2');
     var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]"));
+    var flag = true;
     txt2.val(txt2.val() + $(this).attr('data-number2'));
     transElem2.val(rus_to_latin(txt2.val()));
+    var str = txt2.val();
+
+    if (/^([#а-яА-ЯёЁ]*)$/.test(str)) {
+      // console.log('В поле только кириллица')
+      flag = false; // lengthSMS.innerHTML = countSms($(this).val().length, 70)
+      // if ($(this).val().length > 70) {
+      // 	lengthSMS.innerHTML = Math.ceil($(this).val().length / 67);
+      // }
+    }
+
+    if (/^([#a-zA-Z]*)$/.test(str)) {
+      // console.log('В поле только латиница')
+      flag = true; // lengthSMS.innerHTML = countSms($(this).val().length, 160)
+      // if ($(this).val().length > 160) {
+      // 	lengthSMS.innerHTML = Math.ceil($(this).val().length / 153);
+      // }
+    }
+
+    if (/^([\s%&@])*$/.test(str)) console.log('В поле недопустимые символы'); //если нужно запретить ввод определёных символов
+
+    this.value = str.replace(/[\%&@]/g, '');
     lengthLetters2.innerHTML = txt2.val().length;
-    lengthSMS2.innerHTML = countSms(txt2.val().length, 170);
+
+    if (flag) {
+      lengthSMS2.innerHTML = countSms(txt2.val().length, 160);
+
+      if ($(this).val().length > 160) {
+        lengthSMS2.innerHTML = countSms(txt2.val().length, 153);
+      }
+    } else {
+      lengthSMS2.innerHTML = countSms(txt2.val().length, 70);
+
+      if ($(this).val().length > 70) {
+        lengthSMS2.innerHTML = countSms(txt2.val().length, 67);
+      }
+    }
+
     translengthLetters2.innerHTML = transElem2.val().length;
     transLengthSMS2.innerHTML = countSms(transElem2.val().length, 160);
   });
@@ -888,8 +986,34 @@ $(document).ready(function () {
     var txtValue2 = $(this).val();
     var transElem2 = $("[data-txtTrans2=\"".concat(dataText2, "\"]"));
     transElem2.val(rus_to_latin(txtValue2));
-    lengthLetters2.innerHTML = $(this).val().length;
-    lengthSMS2.innerHTML = countSms($(this).val().length, 170);
+    var str = this.value;
+
+    if (/^([а-яА-ЯёЁ]*)$/.test(str)) {
+      // console.log('В поле только кириллица')
+      lengthSMS2.innerHTML = countSms($(this).val().length, 70);
+
+      if ($(this).val().length > 70) {
+        lengthSMS2.innerHTML = Math.ceil($(this).val().length / 67);
+      }
+    }
+
+    if (/^([a-zA-Z]*)$/.test(str)) {
+      // console.log('В поле только латиница')
+      lengthSMS2.innerHTML = countSms($(this).val().length, 160);
+
+      if ($(this).val().length > 160) {
+        lengthSMS2.innerHTML = Math.ceil($(this).val().length / 153);
+      }
+    }
+
+    if (/^([\s%&@])*$/.test(str)) {
+      // console.log('В поле недопустимые символы')
+      this.value = str.replace(/[\%&@]/g, '');
+    } //если нужно запретить ввод определёных символов
+
+
+    lengthLetters2.innerHTML = $(this).val().length; // lengthSMS2.innerHTML = countSms($(this).val().length, 170)
+
     translengthLetters2.innerHTML = transElem2.val().length;
     transLengthSMS2.innerHTML = countSms(transElem2.val().length, 160);
   });
