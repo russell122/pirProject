@@ -224,11 +224,11 @@
                   <div class="newsletter__form-left">
                     <div class="newsletter__form-sms">
                       <h3 class="title-3">Рассылка Вконтакте</h3>
-                      <input class="g-input" type="text" placeholder="введите имя рассылки">
+                      <input class="g-input" type="text" placeholder="введите имя рассылки" name="mailingListName">
                     </div>
                     <div class="newsletter__form-sel">
                       <div class="newsletter__form-template newsletter__form-sel-el newsletter__form-selVk-el">
-                        <select class="g-select">
+                        <select class="g-select" name="patternSelection">
                           <option>выберите шаблон Вконтакте</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -240,20 +240,20 @@
                       </div>
                     </div>
                     <div class="newsletter__form-vk-text">
-                      <textarea placeholder="#Name1# #Number1#"></textarea>
+                      <textarea placeholder="#Name1# #Number1#" name="textareaTemp"></textarea>
                     </div>
                     <div class="newsletter__form-vkTemplate">
                       <div class="newsletter__form-vkTemplate-name"><span> </span><span>#Name1#</span><span>#Namber1#</span></div>
                       <div class="newsletter__form-vkTemplate-baz">
                         <p>Из базы</p>
                         <div class="newsletter__form-vkTemplate-baz-name">
-                          <select class="g-select">
+                          <select class="g-select" name="nameBaz1">
                             <option value="Имя">Имя</option>
                             <option value="Имя2">Имя2</option>
                           </select>
                         </div>
                         <div class="newsletter__form-vkTemplate-baz-number">
-                          <select class="g-select">
+                          <select class="g-select" name="numberBaz1">
                             <option value="Номер">Номер</option>
                             <option value="Номер2">Номер</option>
                           </select>
@@ -262,10 +262,10 @@
                       <div class="newsletter__form-vkTemplate-manually">
                         <p>Вручную</p>
                         <div class="newsletter__form-vkTemplate-manually-name">
-                          <input class="g-input" type="text" placeholder="#Name1#">
+                          <input class="g-input" type="text" placeholder="#Name1#" name="manuallyName">
                         </div>
                         <div class="newsletter__form-vkTemplate-manually-number">
-                          <input class="g-input" type="text" placeholder="#Number1#">
+                          <input class="g-input" type="text" placeholder="#Number1#" name="manuallyNumber">
                         </div>
                       </div>
                     </div>

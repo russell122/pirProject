@@ -224,11 +224,11 @@
                   <div class="newsletter__form-left">
                     <div class="newsletter__form-sms">
                       <h3 class="title-3">Viber рассылка</h3>
-                      <input class="g-input" type="text" placeholder="введите имя рассылки">
+                      <input class="g-input" type="text" placeholder="введите имя рассылки" name="mailingListName">
                     </div>
                     <div class="newsletter__form-sel">
                       <div class="newsletter__form-sender newsletter__form-sel-el">
-                        <select class="g-select">
+                        <select class="g-select" name="senderType">
                           <option>выберите отправителя</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -236,7 +236,7 @@
                         </select><a href="/">Добавить отправителя</a>
                       </div>
                       <div class="newsletter__form-template newsletter__form-sel-el">
-                        <select class="g-select">
+                        <select class="g-select" name="patternSelection">
                           <option>выберите шаблон</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -245,7 +245,7 @@
                       </div>
                     </div>
                     <div class="newsletter__form-text">
-                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="2"></textarea>
+                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="2" name="textareaTxt"></textarea>
                       <div class="newsletter__form-text-block">
                         <p class="newsletter__form-text-symbol">Введено <span value="220">0</span>символов</p>
                         <p class="newsletter__form-text-sms">Итого: <span value="2">0</span>sms</p><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button" href="/">Отправить</a>
@@ -254,18 +254,18 @@
                         <div class="personalisation__head"><span>Персонализация </span></div>
                         <div class="personalisation__wrap">
                           <div class="personalisation__left">
-                            <button data-number="#number">номер телефона</button>
-                            <button data-number="#lastname">фамилия</button>
-                            <button data-number="#name">имя</button>
-                            <button data-number="#patronymic">отчество</button>
-                            <button data-number="#dateBirth">дата рождения</button>
+                            <button data-number="#number" name="number">номер телефона</button>
+                            <button data-number="#lastname" name="lastname">фамилия</button>
+                            <button data-number="#name" name="name">имя</button>
+                            <button data-number="#patronymic" name="patronymic">отчество</button>
+                            <button data-number="#dateBirth" name="dateBirth">дата рождения</button>
                           </div>
                           <div class="personalisation__right">
-                            <button data-number="#floor">пол</button>
-                            <button data-number="#note1">примечание1</button>
-                            <button data-number="#note2">примечание2</button>
-                            <button data-number="#note3">примечание3</button>
-                            <button data-number="#endings">окончания -ый/-ая</button>
+                            <button data-number="#floor" name="floor">пол</button>
+                            <button data-number="#note1" name="note1">примечание1</button>
+                            <button data-number="#note2" name="note2">примечание2</button>
+                            <button data-number="#note3" name="note3">примечание3</button>
+                            <button data-number="#endings" name="endings">окончания -ый/-ая</button>
                           </div>
                         </div>
                         <div class="personalisation__btn-small"><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button-accent" href="/">Отправить</a></div>
@@ -273,7 +273,7 @@
                     </div>
                     <div class="newsletter__transliteration">
                       <div class="newsletter__transliteration-top myInp">
-                        <input class="checkTrans" id="check16" type="checkbox" data-check="2">
+                        <input class="checkTrans" id="check16" type="checkbox" data-check="2" name="checkTrans">
                         <label for="check16">Включить транслитерацию</label>
                         <button class="myToolTips" data-tooltip="Info">
                           <svg class="svg-sprite-icon icon-qw">
@@ -282,7 +282,7 @@
                         </button>
                       </div>
                       <div class="newsletter__transliteration-text" data-check-trans="2">
-                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="2" readonly></textarea>
+                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="2" readonly name="textareaTxtTrans"></textarea>
                         <div class="newsletter__transliteration-block">
                           <p class="newsletter__transliteration-symbol">Введено <span value="220">0 </span>символов</p>
                           <p class="newsletter__transliteration-sms">Итого: <span value="2">0</span>sms</p>
@@ -304,10 +304,10 @@
                         </div>
                         <div class="newsletter__left-wrap">
                           <div class="newsletter__left-name"><span>Название кнопки</span>
-                            <input class="g-input" type="text">
+                            <input class="g-input" type="text" name="nameBtn">
                           </div>
                           <div class="newsletter__left-link"><span>Ссылка</span>
-                            <input class="g-input" type="text">
+                            <input class="g-input" type="text" name="nameLink">
                           </div>
                         </div>
                       </div>
@@ -331,7 +331,7 @@
                             </label>
                           </div>
                           <div class="newsletter__right-link"><span>Ссылка</span>
-                            <input class="g-input" type="text">
+                            <input class="g-input" type="text" name="nameLinkImg">
                           </div>
                         </div>
                       </div>
@@ -349,7 +349,7 @@
                         <div class="myCalendar">
                           <div class="myCalendar__elem"><span>с</span>
                             <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text" name="'undefined'"/>
+                              <input class="time-calendar g-input" type="text" name="'asOfThisDate'"/>
                               <svg class="svg-sprite-icon icon-calendar">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                               </svg>
@@ -357,7 +357,7 @@
                           </div>
                           <div class="myCalendar__elem"><span>до</span>
                             <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text" name="'undefined'"/>
+                              <input class="time-calendar g-input" type="text" name="'upToThatDate'"/>
                               <svg class="svg-sprite-icon icon-calendar">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                               </svg>
@@ -367,26 +367,26 @@
                         <div class="block__wrap">
                           <div class="block__left">
                             <div class="block__left-el myInp">
-                              <input id="check17" type="checkbox" checked>
+                              <input id="check17" type="checkbox" checked name="UseTheSubscribTimeZone">
                               <label for="check17">Использовать часовой пояс абонента</label>
                             </div>
                             <div class="block__left-el myInp">
-                              <input id="check18" type="checkbox">
+                              <input id="check18" type="checkbox" name="MSK">
                               <label for="check18">по МСК, GMT+4:00</label>
                             </div>
                             <div class="block__left-el myInp">
-                              <input id="check19" type="checkbox" checked>
+                              <input id="check19" type="checkbox" checked name="SmoothDistribution">
                               <label for="check19">Плавная рассылка</label>
                             </div>
                           </div>
                           <div class="block__right">
                             <div class="block__left-el myInp">
-                              <input id="check20" type="checkbox">
+                              <input id="check20" type="checkbox" name="LimitTheLifeOfSnSMS">
                               <label for="check20">Ограничивать срок жизни SMS</label>
                             </div>
                             <div class="block__right-inp">
-                              <input class="numbers" id="number-mask" type="text" placeholder="72"><span>часа</span>
-                              <input class="numbers" id="number-mask2" type="text" placeholder="00"><span>минут</span>
+                              <input class="numbers" id="number-mask" type="text" placeholder="72" name="watch"><span>часа</span>
+                              <input class="numbers" id="number-mask2" type="text" placeholder="00" name="minutes"><span>минут</span>
                             </div>
                           </div>
                         </div>
@@ -415,7 +415,7 @@
                                 <tbody>
                                   <tr class="bg">
                                     <td class="myInp">
-                                      <input id="check21" type="checkbox">
+                                      <input id="check21" type="checkbox" name="baze1">
                                       <label for="check21">Тестовая база</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -426,7 +426,7 @@
                                   </tr>
                                   <tr>
                                     <td class="myInp">
-                                      <input id="check22" type="checkbox">
+                                      <input id="check22" type="checkbox" name="baze2">
                                       <label for="check22">Тестовая база1</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -437,7 +437,7 @@
                                   </tr>
                                   <tr class="bg">
                                     <td class="myInp">
-                                      <input id="check23" type="checkbox">
+                                      <input id="check23" type="checkbox" name="baze3">
                                       <label for="check23">Тестовая база2</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -455,7 +455,7 @@
                         <div class="g-content-item recipients__content-item recipients__content-item2 myHide">
                           <div class="g-content-elem">
                             <div class="recipients__content-textarea">
-                              <textarea placeholder="Введите номера получателей списком"></textarea>
+                              <textarea placeholder="Введите номера получателей списком" name="textAreaMobileNumbers"></textarea>
                             </div>
                           </div>
                           <div class="recipients__content-text">
@@ -467,11 +467,11 @@
                     <div class="recipients__info">
                       <p>*При наличии одинаковых номеров в базах СМС будет отправлена <br>только на один из них</p>
                       <div class="recipients__info-elem myInp">
-                        <input id="check24" type="checkbox">
+                        <input id="check24" type="checkbox" name="SendDuplicateNumbers">
                         <label for="check24">Отправлять дублирующие номера</label>
                       </div>
                       <div class="recipients__info-elem myInp">
-                        <input id="check25" type="checkbox">
+                        <input id="check25" type="checkbox" name="RemoveSubscribersFromTheMailingList">
                         <label for="check25">Исключить абонентов из рассылки без заполненных<br>(полей) адресной книги</label>
                       </div>
                     </div>
@@ -496,21 +496,21 @@
                               <tr class="bg">
                                 <td class="myInp">
                                   <input class="valueBaz" id="check26" type="checkbox" data-valueBaz="500" data-valueAbon="8000" data-valueMess="2000">
-                                  <label for="check26">Тестовая база</label>
+                                  <label for="check26" name="textBaz1">Тестовая база</label>
                                 </td>
                                 <td>8000</td>
                               </tr>
                               <tr>
                                 <td class="myInp">
                                   <input class="valueBaz" id="check27" type="checkbox" data-valueBaz="200" data-valueAbon="2000" data-valueMess="3000">
-                                  <label for="check27">Тестовая база1</label>
+                                  <label for="check27" name="textBaz2">Тестовая база1</label>
                                 </td>
                                 <td>2000</td>
                               </tr>
                               <tr class="bg">
                                 <td class="myInp">
                                   <input class="valueBaz" id="check28" type="checkbox" data-valueBaz="300" data-valueAbon="2000" data-valueMess="4000">
-                                  <label for="check28">Тестовая база2</label>
+                                  <label for="check28" name="textBaz3">Тестовая база2</label>
                                 </td>
                                 <td>2000</td>
                               </tr>
