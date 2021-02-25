@@ -145,19 +145,19 @@
                       <div class="popup__form-left-block">
                         <p>Выберите регион</p>
                         <div class="myInp">
-                          <input id="check41" type="checkbox" checked>
+                          <input id="check41" type="checkbox" checked name="reg1">
                           <label for="check41">Воронежская область</label>
                         </div>
                         <div class="myInp">
-                          <input id="check42" type="checkbox" checked>
+                          <input id="check42" type="checkbox" checked name="reg2">
                           <label for="check42">Московская область</label>
                         </div>
                         <div class="myInp">
-                          <input id="check52" type="checkbox" checked>
+                          <input id="check52" type="checkbox" checked name="reg3">
                           <label for="check52">Воронежская область</label>
                         </div>
                         <div class="myInp">
-                          <input id="check53" type="checkbox" checked>
+                          <input id="check53" type="checkbox" checked name="reg4">
                           <label for="check53">Московская область</label>
                         </div>
                       </div>
@@ -166,11 +166,11 @@
                       <div class="popup__form-left-block">
                         <p>Выберите оператора</p>
                         <div class="myInp">
-                          <input id="check43" type="checkbox" checked>
+                          <input id="check43" type="checkbox" checked name="oper1">
                           <label for="check43">Tele2</label>
                         </div>
                         <div class="myInp">
-                          <input id="check44" type="checkbox" checked>
+                          <input id="check44" type="checkbox" checked name="oper2">
                           <label for="check44">МТС</label>
                         </div>
                       </div>
@@ -180,11 +180,11 @@
                         <div class="block__top"> 
                           <p>Пол:</p>
                           <div class="myInp">
-                            <input id="check45" type="checkbox" checked>
+                            <input id="check45" type="checkbox" checked name="gend1">
                             <label for="check45">Мужской</label>
                           </div>
                           <div class="myInp">
-                            <input id="check46" type="checkbox" checked>
+                            <input id="check46" type="checkbox" checked name="gend2">
                             <label for="check46">Женский</label>
                           </div>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="block__sel">
                               <div class="mySelect__elem">
                                 <div class="mySelect__style">
-                                  <select class="g-input" type="text">
+                                  <select class="g-input" type="text" name="'age1'">
                                     <option>18</option>
                                     <option>19</option>
                                     <option>20</option>
@@ -288,7 +288,7 @@
                             <div class="block__sel">
                               <div class="mySelect__elem">
                                 <div class="mySelect__style">
-                                  <select class="g-input" type="text">
+                                  <select class="g-input" type="text" name="'age2'">
                                     <option>18</option>
                                     <option>19</option>
                                     <option>20</option>
@@ -383,12 +383,12 @@
                         </div>
                         <div class="block__date"> 
                           <div class="myInp">
-                            <input id="check47" type="checkbox" checked>
+                            <input id="check47" type="checkbox" checked name="date1">
                             <label for="check47">Дата рождения</label>
                           </div>
                           <div class="myCalendar__elem"><span></span>
                             <div class="myCalendar__style">
-                              <input class="datepicker-here g-input" type="text"/>
+                              <input class="datepicker-here g-input" type="text" name="dr"/>
                               <svg class="svg-sprite-icon icon-calendar">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                               </svg>
@@ -401,10 +401,10 @@
                       <div class="block__search">
                         <p>Найти:</p>
                         <div class="block__search-wrap"> 
-                          <input class="g-input" type="text">
+                          <input class="g-input" type="text" name="search">
                           <div class="mySelect__elem">
                             <div class="mySelect__style">
-                              <select class="g-input" type="text">
+                              <select class="g-input" type="text" name="'search__location'">
                                 <option>Во всех полях</option>
                                 <option>Номер</option>
                                 <option>Фамилия</option>
@@ -421,10 +421,7 @@
                       <div class="block__info"> <a href="#">Еще поля</a></div>
                     </div>
                   </div>
-                  <div class="popup__form-btns">
-                    <button class="button-accent-grey button-accent" type="submit">СБРОСИТЬ ФИЛЬТР</button>
-                    <button class="button-accent" type="submit">НАЙТИ</button>
-                  </div>
+                  <div class="popup__form-btns"><a class="button-accent-grey button-accent" href="#">СБРОСИТЬ ФИЛЬТР</a><a class="button-accent" href="#">НАЙТИ</a></div>
                 </div>
               </div>
               <div class="statistics__top-elems"><a class="statistics__top-elem statistics__top-elemModal active" href="/">
@@ -441,7 +438,7 @@
                       <tr>
                         <th>
                           <div class="myInp">
-                            <input class="statistics__target-myInp" id="check74" type="checkbox"/>
+                            <input class="statistics__target-myInp" id="check74" type="checkbox" name="fullTel"/>
                             <label for="check74"></label>
                           </div>
                         </th>
@@ -457,13 +454,13 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td aria-label="">
+                        <td class="g-table-big6-checked" aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check60" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check60" type="checkbox" name="tel4" value="+7891236512"/>
                             <label for="check60"></label>
                           </div>
                         </td>
-                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236578</a></td>
+                        <td aria-label="Номер телефона(#number#)"><a href="tel:+7891236578">+7891236512</a></td>
                         <td aria-label="Область">Воронежская область</td>
                         <td aria-label="Оператор">билайн</td>
                         <td aria-label="Фамилия">Тестовый</td>
@@ -475,7 +472,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check61" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check61" type="checkbox" name="tel5" value="+7891236578"/>
                             <label for="check61"></label>
                           </div>
                         </td>
@@ -491,7 +488,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check62" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check62" type="checkbox" name="tel6" value="+7891236578"/>
                             <label for="check62"></label>
                           </div>
                         </td>
@@ -507,7 +504,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp"> 
-                            <input class="statistics__checked-myInp" id="check63" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check63" type="checkbox" name="tel7" value="+7891236578"/>
                             <label for="check63"></label>
                           </div>
                         </td>
@@ -523,7 +520,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check64" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check64" type="checkbox" name="tel8" value="+7891236578"/>
                             <label for="check64"></label>
                           </div>
                         </td>
@@ -539,7 +536,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check65" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check65" type="checkbox" name="tel8" value="+7891236578"/>
                             <label for="check65"></label>
                           </div>
                         </td>
@@ -555,7 +552,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check66" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check66" type="checkbox" name="tel9" value="+7891236578"/>
                             <label for="check66"></label>
                           </div>
                         </td>
@@ -571,7 +568,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check67" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check67" type="checkbox" name="tel10" value="+7891236578"/>
                             <label for="check67"></label>
                           </div>
                         </td>
@@ -587,7 +584,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check68" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check68" type="checkbox" name="tel11" value="+7891236578"/>
                             <label for="check68"></label>
                           </div>
                         </td>
@@ -603,7 +600,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check69" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check69" type="checkbox" name="tel12" value="+7891236578"/>
                             <label for="check69"></label>
                           </div>
                         </td>
@@ -619,7 +616,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check70" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check70" type="checkbox" name="tel13" value="+7891236578"/>
                             <label for="check70"></label>
                           </div>
                         </td>
@@ -635,7 +632,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check71" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check71" type="checkbox" name="tel14" value="+7891236578"/>
                             <label for="check71"></label>
                           </div>
                         </td>
@@ -651,7 +648,7 @@
                       <tr>
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check72" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check72" type="checkbox" name="tel15" value="+7891236578"/>
                             <label for="check72"></label>
                           </div>
                         </td>
@@ -667,7 +664,7 @@
                       <tr class="bg">
                         <td aria-label="">
                           <div class="myInp">
-                            <input class="statistics__checked-myInp" id="check73" type="checkbox"/>
+                            <input class="statistics__checked-myInp" id="check73" type="checkbox" name="tel16" value="+7891236578"/>
                             <label for="check73"></label>
                           </div>
                         </td>
@@ -691,7 +688,7 @@
                       <div class="g-card__item">
                         <div class="g-card5__top"> 
                           <div class="myInp">
-                            <input id="check49" type="checkbox">
+                            <input class="statistics__checked-myInp" id="check49" type="checkbox" name="tel1" value="+7897548913">
                             <label for="check49"></label>
                           </div>
                           <p>Петров Петр Петрович</p>
@@ -706,7 +703,7 @@
                         </div>
                         <div class="g-card4__status g-card4-elem bg">
                           <div class="g-card4__status-value">
-                            <p>+7897548906</p>
+                            <p>+7897548913</p>
                           </div>
                           <div class="g-card4__status-stat">
                             <p>Tele2</p>
@@ -721,7 +718,7 @@
                       <div class="g-card__item">
                         <div class="g-card5__top"> 
                           <div class="myInp">
-                            <input id="check50" type="checkbox">
+                            <input class="statistics__checked-myInp" id="check50" type="checkbox" name="tel2" value="+7897548911">
                             <label for="check50"></label>
                           </div>
                           <p>Петров Петр Петрович</p>
@@ -736,7 +733,7 @@
                         </div>
                         <div class="g-card4__status g-card4-elem bg">
                           <div class="g-card4__status-value">
-                            <p>+7897548906</p>
+                            <p>+7897548911</p>
                           </div>
                           <div class="g-card4__status-stat">
                             <p>Tele2</p>
@@ -751,7 +748,7 @@
                       <div class="g-card__item">
                         <div class="g-card5__top"> 
                           <div class="myInp">
-                            <input id="check51" type="checkbox">
+                            <input class="statistics__checked-myInp" id="check51" type="checkbox" name="tel3" value="+7897548910">
                             <label for="check51"></label>
                           </div>
                           <p>Петров Петр Петрович</p>
@@ -766,7 +763,7 @@
                         </div>
                         <div class="g-card4__status g-card4-elem bg">
                           <div class="g-card4__status-value">
-                            <p>+7897548906</p>
+                            <p>+7897548910</p>
                           </div>
                           <div class="g-card4__status-stat">
                             <p>Tele2</p>
@@ -787,14 +784,14 @@
                   </div>
                   <div class="block__range-wrap">
                     <p>Отправить первым</p>
-                    <input class="g-input" type="text" placeholder="500">
+                    <input class="g-input" type="text" placeholder="500" name="my_range-valueInp">
                     <div class="block__range-elem">
                       <input class="js-range-slider" type="text" name="my_range" value="">
                     </div>
                   </div>
                 </div>
                 <div class="block__reset-btns"> 
-                  <button class="button-accent" type="submit">ВЫБРАТЬ ВСЕ ОТОБРАННЫЕ НОМЕРА</button>
+                  <button class="button-accent" type="submit" name="selectAllTheSelectedNum">ВЫБРАТЬ ВСЕ ОТОБРАННЫЕ НОМЕРА</button>
                 </div>
               </div>
             </form>

@@ -219,16 +219,16 @@
                   <div class="newsletter__tabs-link"> Создание каскадной рассылки</div></a></li>
             </ul>
             <div class="newsletter__content-wrap">
-              <form class="newsletter__content-item newsletter__form">
+              <form class="newsletter__content-item newsletter__form gettingIt__form">
                 <div class="newsletter__form-row">
                   <div class="newsletter__form-left">
                     <div class="newsletter__form-sms">
                       <h3 class="title-3">SMS рассылка</h3>
-                      <input class="g-input" type="text" placeholder="введите имя рассылки">
+                      <input class="g-input" type="text" placeholder="введите имя рассылки" name="mailingListName">
                     </div>
                     <div class="newsletter__form-sel">
                       <div class="newsletter__form-sender newsletter__form-sel-el">
-                        <select class="g-select">
+                        <select class="g-select" name="senderType">
                           <option>выберите отправителя</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -236,7 +236,7 @@
                         </select><a href="/">Добавить отправителя</a>
                       </div>
                       <div class="newsletter__form-template newsletter__form-sel-el">
-                        <select class="g-select">
+                        <select class="g-select" name="patternSelection">
                           <option>выберите шаблон</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -245,7 +245,7 @@
                       </div>
                     </div>
                     <div class="newsletter__form-text">
-                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="1"></textarea>
+                      <textarea class="txt" placeholder="введите текст sms сообщения" data-txt="1" name="textareaTxt"></textarea>
                       <div class="newsletter__form-text-block">
                         <p class="newsletter__form-text-symbol">Введено <span value="220">0 </span>символов</p>
                         <p class="newsletter__form-text-sms">Итого: <span value="2">0</span>sms</p><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button" href="/">Отправить</a>
@@ -254,18 +254,18 @@
                         <div class="personalisation__head"><span>Персонализация </span></div>
                         <div class="personalisation__wrap">
                           <div class="personalisation__left">
-                            <button data-number="#number">номер телефона</button>
-                            <button data-number="#lastname">фамилия</button>
-                            <button data-number="#name">имя</button>
-                            <button data-number="#patronymic">отчество</button>
-                            <button data-number="#dateBirth">дата рождения</button>
+                            <button data-number="#number" name="number">номер телефона</button>
+                            <button data-number="#lastname" name="lastname">фамилия</button>
+                            <button data-number="#name" name="name">имя</button>
+                            <button data-number="#patronymic" name="patronymic">отчество</button>
+                            <button data-number="#dateBirth" name="dateBirth">дата рождения</button>
                           </div>
                           <div class="personalisation__right">
-                            <button data-number="#floor">пол</button>
-                            <button data-number="#note1">примечание1</button>
-                            <button data-number="#note2">примечание2</button>
-                            <button data-number="#note3">примечание3</button>
-                            <button data-number="#endings">окончания -ый/-ая</button>
+                            <button data-number="#floor" name="floor">пол</button>
+                            <button data-number="#note1" name="note1">примечание1</button>
+                            <button data-number="#note2" name="note2">примечание2</button>
+                            <button data-number="#note3" name="note3">примечание3</button>
+                            <button data-number="#endings" name="endings">окончания -ый/-ая</button>
                           </div>
                         </div>
                         <div class="personalisation__btn-small"><a class="button button-accent-grey" href="/">Добавить шаблон</a><a class="button-accent" href="/">Отправить</a></div>
@@ -273,7 +273,7 @@
                     </div>
                     <div class="newsletter__transliteration">
                       <div class="newsletter__transliteration-top myInp">
-                        <input class="checkTrans" id="check1" type="checkbox" data-check="1">
+                        <input class="checkTrans" id="check1" type="checkbox" data-check="1" name="checkTrans">
                         <label for="check1">Включить транслитерацию</label>
                         <button class="myToolTips" data-tooltip="Info">
                           <svg class="svg-sprite-icon icon-qw">
@@ -282,7 +282,7 @@
                         </button>
                       </div>
                       <div class="newsletter__transliteration-text" data-check-trans="1">
-                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="1" readonly></textarea>
+                        <textarea class="txtTrans" placeholder="введите текст sms сообщения" data-txtTrans="1" readonly name="textareaTxtTrans"></textarea>
                         <div class="newsletter__transliteration-block">
                           <p class="newsletter__transliteration-symbol">Введено <span value="220">0 </span>символов</p>
                           <p class="newsletter__transliteration-sms">Итого: <span value="2">0</span>sms</p>
@@ -302,7 +302,7 @@
                         <div class="myCalendar">
                           <div class="myCalendar__elem"><span>с</span>
                             <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text"/>
+                              <input class="time-calendar g-input" type="text" name="'asOfThisDate'"/>
                               <svg class="svg-sprite-icon icon-calendar">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                               </svg>
@@ -310,7 +310,7 @@
                           </div>
                           <div class="myCalendar__elem"><span>до</span>
                             <div class="myCalendar__style">
-                              <input class="time-calendar g-input" type="text"/>
+                              <input class="time-calendar g-input" type="text" name="'upToThatDate'"/>
                               <svg class="svg-sprite-icon icon-calendar">
                                 <use xlink:href="web/images/sprite/symbol/sprite.svg#calendar"></use>
                               </svg>
@@ -320,26 +320,26 @@
                         <div class="block__wrap">
                           <div class="block__left">
                             <div class="block__left-el myInp">
-                              <input id="check12" type="checkbox" checked>
+                              <input id="check12" type="checkbox" checked name="UseTheSubscribTimeZone">
                               <label for="check12">Использовать часовой пояс абонента</label>
                             </div>
                             <div class="block__left-el myInp">
-                              <input id="check13" type="checkbox">
+                              <input id="check13" type="checkbox" name="MSK">
                               <label for="check13">по МСК, GMT+4:00</label>
                             </div>
                             <div class="block__left-el myInp">
-                              <input id="check14" type="checkbox" checked>
+                              <input id="check14" type="checkbox" checked name="SmoothDistribution">
                               <label for="check14">Плавная рассылка</label>
                             </div>
                           </div>
                           <div class="block__right">
                             <div class="block__left-el myInp">
-                              <input id="check15" type="checkbox">
+                              <input id="check15" type="checkbox" name="LimitTheLifeOfSnSMS">
                               <label for="check15">Ограничивать срок жизни SMS</label>
                             </div>
                             <div class="block__right-inp">
-                              <input class="numbers" id="number-mask3" type="text" placeholder="72"><span>часа</span>
-                              <input class="numbers" id="number-mask4" type="text" placeholder="00"><span>минут</span>
+                              <input class="numbers" id="number-mask3" type="text" placeholder="72" name="watch"><span>часа</span>
+                              <input class="numbers" id="number-mask4" type="text" placeholder="00" name="minutes"><span>минут</span>
                             </div>
                           </div>
                         </div>
@@ -368,7 +368,7 @@
                                 <tbody>
                                   <tr class="bg">
                                     <td class="myInp">
-                                      <input id="check3" type="checkbox">
+                                      <input id="check3" type="checkbox" name="baze1">
                                       <label for="check3">Тестовая база</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -379,7 +379,7 @@
                                   </tr>
                                   <tr>
                                     <td class="myInp">
-                                      <input id="check4" type="checkbox">
+                                      <input id="check4" type="checkbox" name="baze2">
                                       <label for="check4">Тестовая база1</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -390,7 +390,7 @@
                                   </tr>
                                   <tr class="bg">
                                     <td class="myInp">
-                                      <input id="check5" type="checkbox">
+                                      <input id="check5" type="checkbox" name="baze3">
                                       <label for="check5">Тестовая база2</label>
                                     </td>
                                     <td><a class="modal1__target" href="/">
@@ -408,7 +408,7 @@
                         <div class="g-content-item recipients__content-item recipients__content-item1 myHide">
                           <div class="g-content-elem">
                             <div class="recipients__content-textarea">
-                              <textarea placeholder="Введите номера получателей списком"></textarea>
+                              <textarea placeholder="Введите номера получателей списком" name="textAreaMobileNumbers"></textarea>
                             </div>
                           </div>
                           <div class="recipients__content-text">
@@ -420,11 +420,11 @@
                     <div class="recipients__info">
                       <p>*При наличии одинаковых номеров в базах СМС будет отправлена <br>только на один из них</p>
                       <div class="recipients__info-elem myInp">
-                        <input id="check6" type="checkbox">
+                        <input id="check6" type="checkbox" name="SendDuplicateNumbers">
                         <label for="check6">Отправлять дублирующие номера</label>
                       </div>
                       <div class="recipients__info-elem myInp">
-                        <input id="check7" type="checkbox">
+                        <input id="check7" type="checkbox" name="RemoveSubscribersFromTheMailingList">
                         <label for="check7">Исключить абонентов из рассылки без заполненных<br>(полей) адресной книги</label>
                       </div>
                     </div>
@@ -449,21 +449,21 @@
                               <tr class="bg">
                                 <td class="myInp">
                                   <input class="valueBaz" id="check9" type="checkbox" data-valueBaz="500" data-valueAbon="8000" data-valueMess="2000">
-                                  <label for="check9">Тестовая база</label>
+                                  <label for="check9" name="textBaz1">Тестовая база</label>
                                 </td>
                                 <td>8000</td>
                               </tr>
                               <tr>
                                 <td class="myInp">
                                   <input class="valueBaz" id="check10" type="checkbox" data-valueBaz="200" data-valueAbon="2000" data-valueMess="3000">
-                                  <label for="check10">Тестовая база1</label>
+                                  <label for="check10" name="textBaz2">Тестовая база1</label>
                                 </td>
                                 <td>2000</td>
                               </tr>
                               <tr class="bg">
                                 <td class="myInp">
                                   <input class="valueBaz" id="check11" type="checkbox" data-valueBaz="300" data-valueAbon="2000" data-valueMess="4000">
-                                  <label for="check11">Тестовая база2</label>
+                                  <label for="check11" name="textBaz3">Тестовая база2</label>
                                 </td>
                                 <td>2000</td>
                               </tr>
@@ -487,12 +487,6 @@
                     </div>
                   </div>
                 </div>
-              </form>
-              <form class="newsletter__content-item newsletter__form myHide">
-                <h1>3</h1>
-              </form>
-              <form class="newsletter__content-item newsletter__form myHide">
-                <h1>4</h1>
               </form>
             </div>
           </div>

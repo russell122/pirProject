@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
           i++;
 
           if (i < 4) {
-            wraps.innerHTML += "\n\t\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t\t<input type=\"text\" class=\"g-input\">\n\t\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\">\n\t\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t";
+            wraps.innerHTML += "\n\t\t\t\t\t\t<div class=\"block__search-wrap-hide\">\n\t\t\t\t\t\t\t<input type=\"text\" class=\"g-input\" name=\"search".concat(i + 1, "\">\n\t\t\t\t\t\t\t<div class=\"mySelect__elem\">\n\t\t\t\t\t\t\t\t<div class=\"mySelect__style\">\n\t\t\t\t\t\t\t\t\t<select class=\"g-input\" type=\"text\" name=\"search__location").concat(i + 1, "\">\n\t\t\t\t\t\t\t\t\t\t<option>\u0412\u043E \u0432\u0441\u0435\u0445 \u043F\u043E\u043B\u044F\u0445</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041D\u043E\u043C\u0435\u0440</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0424\u0430\u043C\u0438\u043B\u0438\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u0418\u043C\u044F</option>\n\t\t\t\t\t\t\t\t\t\t<option>\u041E\u0442\u0432\u0435\u0441\u0442\u0432\u043E</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<svg class=\"svg-sprite-icon\" width=\"9\" height=\"9\" viewBox=\"0 0 9 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t\t\t\t\t\t\t\t\t\t<g clip-path=\"url(#clip0)\">\n\t\t\t\t\t\t\t\t\t\t<path d=\"M8.94265 2.4881C9.0177 2.41041 9.01554 2.28657 8.93785 2.21152C8.86204 2.13832 8.74187 2.13832 8.66608 2.21152L4.50099 6.37622L0.336291 2.21113C0.261236 2.13344 0.137422 2.13129 0.0597076 2.20633C-0.0179882 2.28138 -0.020133 2.4052 0.054903 2.48291C0.0564804 2.48454 0.0580759 2.48614 0.0597076 2.48772L4.3629 6.7909C4.43927 6.86726 4.56309 6.86726 4.63948 6.7909L8.94265 2.4881Z\" fill=\"#fff\"/>\n\t\t\t\t\t\t\t\t\t\t<path d=\"M0.0021963 2.34964C0.00199413 2.24161 0.089427 2.15389 0.197453 2.15369C0.249531 2.15359 0.2995 2.17428 0.336286 2.21116L4.50099 6.37624L8.66567 2.21116C8.74215 2.13467 8.86615 2.13467 8.94264 2.21116C9.01912 2.28764 9.01912 2.41164 8.94264 2.48812L4.63945 6.79131C4.56308 6.86767 4.43926 6.86767 4.36287 6.79131L0.0597019 2.48812C0.0228987 2.45145 0.0021963 2.40161 0.0021963 2.34964Z\" fill=\"white\"/>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t<defs>\n\t\t\t\t\t\t\t\t\t\t<clipPath id=\"clip0\">\n\t\t\t\t\t\t\t\t\t\t<rect width=\"9\" height=\"9\" fill=\"white\" transform=\"translate(9) rotate(90)\"/>\n\t\t\t\t\t\t\t\t\t\t</clipPath>\n\t\t\t\t\t\t\t\t\t\t</defs>\n\t\t\t\t\t\t\t\t\t</svg>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t");
           }
         });
       }
@@ -479,6 +479,32 @@ tableBig15__tr.forEach(function (el, i) {
 // ]
 
 $(document).ready(function () {
+  $('.gettingIt__form').submit(function (e) {
+    e.preventDefault();
+    var localStor = JSON.parse(localStorage.getItem('myKey'));
+    console.log(localStor);
+
+    if (localStor) {
+      for (var i = 0; i < localStor.length; i++) {
+        $(this).append($('<input type="hidden" name="set_phone[' + i + ']" value="' + localStor[i] + '">'));
+      }
+    }
+
+    var $form = $(this);
+    $.ajax({
+      type: "POST",
+      url: 'web/server.php',
+      data: $form.serialize(),
+      success: function success(data) {
+        console.log(data);
+      },
+      error: function error(_error) {
+        console.log('Ошибка');
+      }
+    });
+  });
+  var myArrNumber = []; // console.log(myArrNumber)
+
   function iframeModals(myNameModal, myTargetModal, myNamePage, myClassFrame, footrest) {
     var layer = $(footrest),
         modal = $(myNameModal),
@@ -487,6 +513,8 @@ $(document).ready(function () {
     if (myTargetModal) {
       $(myTargetModal).click(function (e) {
         e.preventDefault();
+        var myArrNumber = [];
+        localStorage.setItem('myKey', JSON.stringify(myArrNumber));
         layer.show();
         document.body.style.overflow = 'hidden';
         modal.show().animate({}, function () {
@@ -518,6 +546,31 @@ $(document).ready(function () {
                 document.body.style.overflow = '';
               });
             });
+            iframeWindow.$('.statistics__checked-myInp').click(function (event) {
+              if ($(this).prop('checked')) {
+                console.log($(this).val());
+                myArrNumber.push($(this).val());
+                localStorage.setItem('myKey', JSON.stringify(myArrNumber));
+              } else {
+                var ind = $.inArray($(this).val(), myArrNumber);
+                myArrNumber.splice(ind, 1);
+                localStorage.setItem('myKey', JSON.stringify(myArrNumber));
+              }
+            });
+            iframeWindow.$('.statistics__target-myInp').click(function (event) {
+              if ($(this).prop('checked')) {
+                myArrNumber = []; // console.log('Чекнул все')
+
+                iframeWindow.$('.statistics__checked-myInp').each(function (i, el) {
+                  myArrNumber.push($(this).val());
+                  localStorage.setItem('myKey', JSON.stringify(myArrNumber));
+                });
+              } else {
+                // console.log('Отчекнул все')
+                myArrNumber = [];
+                localStorage.setItem('myKey', JSON.stringify(myArrNumber));
+              }
+            }); // console.log(tr)
           };
         });
       });
@@ -541,6 +594,7 @@ $(document).ready(function () {
           layer.fadeOut('fast');
           document.body.style.overflow = '';
         });
+        console.log(myArrNumber);
       }
     });
   }
