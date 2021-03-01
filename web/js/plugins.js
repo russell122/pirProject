@@ -1,127 +1,102 @@
-"use strict";
-
-var $plugins = {};
-window.$plugins = $plugins;
-/*
-	beforebegin
-	afterbegin 
-	beforeend
-	afterend 
-*/
-// Element.prototype.appendPositionElem = function(position, parentElem) {
-// 	parentElem.insertAdjacentElement(position, this);
+// let $plugins = {}
+// window.$plugins = $plugins
+// Element.prototype.appendAfter = function (element) {
+// 	element.parentNode.insertBefore(this, element.nextSibling)
 // }
-
-Element.prototype.appendAfter = function (element) {
-  element.parentNode.insertBefore(this, element.nextSibling);
-};
-
-function noop() {}
-
-function _createModalFooter() {
-  var buttons = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-  if (buttons.length === 0) {
-    return document.createElement('div');
-  }
-
-  var wrap = document.createElement('div');
-  wrap.classList.add('vmodal__footer');
-  buttons.forEach(function (btn) {
-    var $btn = document.createElement(btn.tag || 'button');
-
-    if (btn.tag === 'a') {
-      $btn.setAttribute('href', btn.link);
-    }
-
-    $btn.innerHTML = btn.text;
-    $btn.classList.add("".concat(btn.class || 'g-btn'));
-    $btn.onclick = btn.handler || noop;
-    wrap.appendChild($btn);
-  });
-  return wrap;
-}
-
-;
-
-function _createModal(options) {
-  var DEFAULT_WIDTH = '600px';
-  var modal = document.createElement('div');
-  modal.classList.add('vmodal');
-  modal.insertAdjacentHTML('afterbegin', "\n\t\t<div class=\"vmodal__overlay\">\n\t\t\t<div class=\"vmodal__window\" style=\"max-width: ".concat(options.width || DEFAULT_WIDTH, "\">\n\t\t\t\t<div class=\"vmodal__header\">\n\t\t\t\t\t<span class=\"vmodal__title\" data-title='true'>").concat(options.title || 'Модальное окно', "</span>\n\t\t\t\t\t").concat(options.closable ? "<span class=\"vmodal__close\" data-close=\"true\">&times;</span>" : '', "\n\t\t\t\t</div>\n\t\t\t\t<div class=\"vmodal__body ").concat(options.bodyClass || '', "\" data-content=\"true\">\n\t\t\t\t\t").concat(options.content || '', "\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t"));
-
-  var footer = _createModalFooter(options.footerButtons);
-
-  footer.appendAfter(modal.querySelector('[data-content]'));
-  document.body.appendChild(modal);
-  return modal;
-}
-
-$plugins.modal = function (options) {
-  var ANIMATION_SPEED = 200;
-
-  var $modal = _createModal(options);
-
-  var closing = false;
-  var destroyed = false;
-  var modal = {
-    open: function open() {
-      if (destroyed) {
-        return console.log('destroyed true');
-      }
-
-      !closing && $modal.classList.add('open');
-      !closing && document.body.classList.add('show-modal');
-    },
-    close: function close() {
-      closing = true;
-      $modal.classList.remove('open');
-      $modal.classList.add('hide');
-      setTimeout(function () {
-        $modal.classList.remove('hide');
-        document.body.classList.remove('show-modal');
-        closing = false;
-      }, ANIMATION_SPEED);
-    }
-  };
-
-  var listener = function listener(e) {
-    if (e.target.dataset.close) {
-      modal.close();
-      setTimeout(function () {
-        return modal.destroy();
-      }, 1000);
-    } else if (e.target.classList.contains('vmodal__overlay')) {
-      modal.close();
-      setTimeout(function () {
-        return modal.destroy();
-      }, 1000);
-    }
-  };
-
-  var keyPressEvent = function keyPressEvent(e) {
-    if (e.key == 'Escape') {
-      modal.close();
-      setTimeout(function () {
-        return modal.destroy();
-      }, 1000);
-    }
-  };
-
-  $modal.addEventListener('click', listener);
-  document.addEventListener('keydown', keyPressEvent);
-  return Object.assign(modal, {
-    destroy: function destroy() {
-      $modal.parentNode.removeChild($modal);
-      $modal.removeEventListener('click', listener);
-      $modal.removeEventListener('click', keyPressEvent);
-      destroyed = true;
-    },
-    setContent: function setContent() {
-      var title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Модальное окно';
-      var content = arguments.length > 1 ? arguments[1] : undefined;
-      $modal.querySelector('[data-title]').innerHTML = title;
-      $modal.querySelector('[data-content]').innerHTML = content;
-    }
-  });
-};
+// function noop() { }
+// function _createModalFooter(buttons = []) {
+// 	if (buttons.length === 0) {
+// 		return document.createElement('div')
+// 	}
+// 	const wrap = document.createElement('div')
+// 	wrap.classList.add('vmodal__footer')
+// 	buttons.forEach(btn => {
+// 		const $btn = document.createElement(btn.tag || 'button')
+// 		if (btn.tag === 'a') {
+// 			$btn.setAttribute('href', btn.link)
+// 		}
+// 		$btn.innerHTML = btn.text
+// 		$btn.classList.add(`${btn.class || 'g-btn'}`)
+// 		$btn.onclick = btn.handler || noop
+// 		wrap.appendChild($btn)
+// 	})
+// 	return wrap
+// }
+// function _createModal(options) {
+// 	const DEFAULT_WIDTH = '600px'
+// 	const modal = document.createElement('div')
+// 	modal.classList.add('vmodal')
+// 	modal.insertAdjacentHTML('afterbegin', `
+// 		<div class="vmodal__overlay">
+// 			<div class="vmodal__window" style="max-width: ${options.width || DEFAULT_WIDTH}">
+// 				<div class="vmodal__header">
+// 					<span class="vmodal__title" data-title='true'>${options.title || 'Модальное окно'}</span>
+// 					${options.closable ? `<span class="vmodal__close" data-close="true">&times;</span>` : ''}
+// 				</div>
+// 				<div class="vmodal__body" data-content="true">
+// 					${options.content || ''}
+// 				</div>
+// 			</div>
+// 		</div>
+// 	`)
+// 	const footer = _createModalFooter(options.footerButtons)
+// 	footer.appendAfter(modal.querySelector('[data-content]'))
+// 	document.body.appendChild(modal)
+// 	return modal
+// }
+// $plugins.modal = function (options) {
+// 	const ANIMATION_SPEED = 200
+// 	let $modal = _createModal(options)
+// 	let closing = false
+// 	let destroyed = false
+// 	const modal = {
+// 		open() {
+// 			if (destroyed) {
+// 				return console.log('destroyed true')
+// 			}
+// 			!closing && $modal.classList.add('open')
+// 			!closing && (document.body.classList.add('show-modal'))
+// 		},
+// 		close() {
+// 			closing = true
+// 			$modal.classList.remove('open')
+// 			$modal.classList.add('hide')
+// 			document.body.classList.remove('show-modal')
+// 			setTimeout(() => {
+// 				$modal.classList.remove('hide')
+// 				closing = false
+// 			}, ANIMATION_SPEED)
+// 		}
+// 	}
+// 	const listener = (e) => {
+// 		if (e.target.dataset.close) {
+// 			modal.close()
+// 			setTimeout(() => modal.destroy(), 1000)
+// 		}
+// 		else if (e.target.classList.contains('vmodal__overlay')) {
+// 			modal.close()
+// 			setTimeout(() => modal.destroy(), 1000)
+// 		}
+// 	}
+// 	const keyPressEvent = (e) => {
+// 		if (e.key == 'Escape') {
+// 			modal.close()
+// 			setTimeout(() => modal.destroy(), 1000)
+// 		}
+// 	}
+// 	$modal.addEventListener('click', listener)
+// 	document.addEventListener('keydown', keyPressEvent)
+// 	return Object.assign(modal, {
+// 		destroy() {
+// 			$modal.parentNode.removeChild($modal)
+// 			$modal.removeEventListener('click', listener)
+// 			$modal.removeEventListener('click', keyPressEvent)
+// 			destroyed = true
+// 		},
+// 		setContent(title = 'Модальное окно', content) {
+// 			$modal.querySelector('[data-title]').innerHTML = title
+// 			$modal.querySelector('[data-content]').innerHTML = content
+// 		}
+// 	})
+// }
+"use strict";
